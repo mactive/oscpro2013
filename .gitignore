@@ -1,0 +1,9 @@
+upgrade/*
+uploads/*
+themes/*
+languages/*
+plugins/woocommerce/*
+plugin/akismet/*
+
+
+.DS_Store
