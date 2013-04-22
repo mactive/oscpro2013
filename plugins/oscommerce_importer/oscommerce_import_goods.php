@@ -115,7 +115,8 @@
 			  	'menu_order'	=> $value['goods_id'],
 			);
 
-			insert_product($my_post,$value['cat_name'],$value['brand_name']);
+			// import handle
+			// insert_product($my_post,$value['cat_name'],$value['brand_name']);
 
 
 			if(empty($value['brand_name'])){
