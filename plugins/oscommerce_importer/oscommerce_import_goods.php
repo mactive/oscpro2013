@@ -9,10 +9,23 @@
 			// Insert the post into the database
 			$wp_error = '';
 			$post_id = wp_insert_post( $my_post, $wp_error);
-			update_product($post_id);
+			update_product_guid($post_id);
+
+			wp_set_object_terms($post_id,2,'product_type');
+
+			insert_goods_relationship($post_id,$my_post['cat_name'],'product_cat'); 	// refresh cat count
+			insert_goods_relationship($post_id,$my_post['brand_name'],'product_brand');	// refresh brand count
 		} 
 
-		function update_product_cat($post_id){
+		function insert_goods_relationship($post_id,$cat_name,$taxonomy){
+			$term = term_exists( $cat_name, $taxonomy ); 
+			// wp_set_object_terms( $post_id, $term['term_id'], $type);  // get numeric term id
+
+			$tt_ids = wp_get_object_terms( $post_id, $taxonomy);
+			// wp_update_term_count( $tt_ids, $taxonomy );
+		}
+
+		function update_product_guid($post_id){
 			$my_post = array();
   			$guid_string = "http://local.osc-pro.com/?post_type=product&#038;p=".$post_id;
 
@@ -30,8 +43,9 @@
 	global $wpdb;
 	// goods_desc,goods_thumb,goods_img,original_img,add_time,goods_shortname,goods_target
 	$result = $wpdb->get_results( 
-		" SELECT g.goods_id,g.goods_name,g.cat_id,g.shop_price,g.goods_desc, b.brand_name FROM sm_goods as g ".
-		" LEFT JOIN sm_brand as b on b.brand_id = g.brand_id "
+		" SELECT g.goods_id,g.goods_name,g.cat_id,g.shop_price,g.goods_desc, b.brand_name,c.cat_name FROM sm_goods as g ".
+		" LEFT JOIN sm_brand as b on b.brand_id = g.brand_id ".
+		" LEFT JOIN sm_category as c on c.cat_id = g.cat_id "
 	 	,ARRAY_A);
 	// print_r($result);
 	if($_POST['oscimp_hidden'] == 'Y') {
@@ -39,7 +53,7 @@
 	// print_r($sm_brand);
 
 	   	foreach ($result as $key => $value) {
-			echo $key."-".$value['goods_name'].'-'.$value['brand_name']."<br>"; //
+			echo $value['goods_id']."-".$value['goods_name'].'-'.$value['brand_name'].'-'.$value['cat_name']; //
 
 			$my_post = array(
 				'post_title'    => $value['goods_name'],
@@ -47,14 +61,29 @@
 			  	'post_status'   => 'publish',
 			  	'post_author'   => 1,
 			  	'post_type'     => 'product',
-			  	'guid'			=> $value['goods_name'],
-			  	'post_category' => array( 8,39 )
+			  	'menu_order'	=> $value['goods_id']
 			);
+
+			insert_product($my_post);
 
 
 			if(empty($value['brand_name'])){
-				echo "empty_brand";
+				echo "empty_brand<br>";
+			}else{
+				$term = term_exists( $value['brand_name'], 'product_brand' ); 
+				echo ' brand_id:'.$term['term_id'];
 			}
+
+
+			if(empty($value['cat_name'])){
+				echo "empty_category<br>";
+			}else{
+				$term = term_exists( $value['cat_name'], 'product_cat' ); 
+				echo ' cat_id:'.$term['term_id'];
+			}
+
+
+			echo "<br>";
 		}
 
 	}
