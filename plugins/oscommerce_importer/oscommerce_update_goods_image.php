@@ -2,7 +2,7 @@
 <?php    echo "<h2>" . __( 'OSCommerce Product Display Options', 'oscimp_trdom' ) . "</h2>"; ?>
 
 <?php 
-		function insert_productinsert_product($my_post,$cat_name,$brand_name){
+		function insert_product_image($my_post,$coname,$goods_sn,$shop_price){
 			// $parent_term = term_exists( $_parent, 'product_cat' ); // array is returned if taxonomy is given
 			// $parent_term_id = $parent_term['term_id'] > 0 ? $parent_term_id : ''; // get numeric term id
 
@@ -12,47 +12,17 @@
 			echo "<br>=====".$post_id."=======<br>";
 			
 			// update_product_guid($post_id);
-			wp_set_object_terms($post_id, 2, 'product_type');
-
-			insert_goods_relationship($post_id,$cat_name,'product_cat'); 	// refresh cat count
-			insert_goods_relationship($post_id,$brand_name,'product_brand');	// refresh brand count
-
-			insert_wp_postmeta($post_id); 	//ID 83
+			add_post_meta($post_id,'_wp_attached_file',$coname);
+			add_post_meta($my_post['post_parent'], '_sku', $goods_sn);
+			add_post_meta($my_post['post_parent'], '_thumbnail_id', $post_id);
+			add_post_meta($my_post['post_parent'], '_product_image_gallery', '');
+			add_post_meta($my_post['post_parent'], '_price', $shop_price);
+			add_post_meta($my_post['post_parent'], '_sale_price', $shop_price);
+			add_post_meta($my_post['post_parent'], '_regular_price', $shop_price);
 			
 		}
 
-		function insert_goods_relationship($post_id,$name,$taxonomy){
 
-
-			$item = term_exists( $name, $taxonomy ); 
-			if (!empty($item)) {
-				# code...
-				$term = get_term($item['term_id'], $taxonomy, ARRAY_A);
-
-				wp_set_object_terms( $post_id, $term['slug'], $taxonomy);  // get numeric term id
-
-				echo $post_id."-".$name."-".$term['term_taxonomy_id']."-".$taxonomy."<br><br>";
-
-			}
-
-			// update count
-			// $tt_ids = wp_get_object_terms( $post_id, $taxonomy);
-			// wp_update_term_count( $tt_ids, $taxonomy );
-		}
-
-		function update_product_guid($post_id,$year,$month,$name){
-			$my_post = array();
-  			$guid_string = "http://local.osc-pro.com/wp-content/uploads/".$year."/".$month."/".strtolower($name); //古典吉他（6N03）.jpg
-
-  			$my_post['ID'] = $post_id;
-  			$my_post['guid'] = $guid_string;
-			
-			wp_update_post( $my_post );
-		}
-
-		function insert_wp_postmeta($post_id){
-			add_post_meta($post_id, '_visibility', 'visible');
-		}
  ?>
 
 <?php 
@@ -62,7 +32,7 @@
 	global $wpdb;
 	// goods_desc,goods_thumb,goods_img,original_img,add_time,goods_shortname,goods_target
 	$result = $wpdb->get_results( 
-		" SELECT g.goods_id,g.goods_name,g.goods_thumb, g.goods_img, g.original_img,p.ID FROM sm_goods as g ".
+		" SELECT g.goods_id,g.goods_name, g.goods_sn, g.shop_price, g.goods_thumb, g.goods_img, g.original_img,p.ID FROM sm_goods as g ".
 		" LEFT JOIN wp_posts as p on p.menu_order = g.goods_id "
 		." WHERE g.goods_id > 0 "
 	 	,ARRAY_A);
@@ -95,9 +65,13 @@
 				$post_mine_type = "image/png";
 			}
 
-			echo "year:".$year."-month:".$month."-name:".$namex."-title:".$image_title."-mine_type:".$post_mine_type;
+			$goods_sn = empty($value['goods_sn']) ? 'osc'.$value['ID']: $value['goods_sn'];
+
+			echo "price:".$value['shop_price']."-month:".$month."-name:".$namex."-title:".$image_title."-mine_type:".$post_mine_type;
 
 			// update_product_guid($value['post_id'],$year, $month, $namex);
+			$coname = $year."/".$month."/".strtolower($namex);
+			$guid_string = "http://local.osc-pro.com/wp-content/uploads/".$coname; //古典吉他（6N03）.jpg
 
 			$my_post = array(
 				'post_title'    => $image_title,
@@ -106,8 +80,16 @@
 			  	'post_status'   => 'inherit',
 			  	'post_author'   => 1,
 			  	'post_type'     => 'attachment',
-			  	'post_mime_type' => $post_mine_type
+			  	'post_mime_type' => $post_mine_type,
+			  	'guid'			=> $guid_string
 			);
+
+			insert_product_image($my_post,$coname,$goods_sn,$value['shop_price']);
+
+
+
+			// insert  wp_postmeta
+
 
 			// import handle
 			// insert_product($my_post,$value['cat_name'],$value['brand_name']);
