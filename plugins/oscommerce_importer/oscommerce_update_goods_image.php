@@ -244,7 +244,7 @@
 
 			if (!empty($value['original_img'])) {
 				# code...
-				movefile($_path,$_target,$_source,$name,$year,$month,$value['ID']);
+				// movefile($_path,$_target,$_source,$name,$year,$month,$value['ID']);
 
 			}
 			// insert_product_image($my_post,$coname,$goods_sn,$value['shop_price']);
