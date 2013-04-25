@@ -22,8 +22,12 @@
 		
 	}
 
-	function movefile($target_path,$target, $source,$name)
+	function movefile($target_path,$target, $source,$name,$year,$month,$post_id)
 	{
+		$thumbnail_id = get_post_meta($post_id,'_thumbnail_id',true);
+		echo "<br>";
+		print_r($thumbnail_id);
+
 		echo "<br>".$target_path."<br>".$target."<br>".$source."<br>";
 
 		if (!is_dir($target_path)) {
@@ -33,26 +37,139 @@
 		copy($source,$target);
 		echo "<br>=========<br>";
 
-		resize_save(100,100,$target,$target_path,$name,true);
-		resize_save(200,150,$target,$target_path,$name,false);
-		resize_save(400,300,$target,$target_path,$name,false);
-
-	}
-
-	function resize_save($width, $height,$target,$target_path, $name, $is_crop){
 		$image = wp_get_image_editor( $target ); // Return an implementation that extends <tt>WP_Image_Editor</tt>
 		$image_title = substr($name, 0, strpos($name,'.'));
 		$_mime_type = substr($name, strpos($name,'.')+1, 3);
-		print_r($image);
+
+		$size_array = $image->get_size();
+
+		$res = array();
+		$res['width'] 	= $size_array['width'];
+		$res['height'] 	= $size_array['height'];
+		$res['file'] 	= $year."/".$month."/".$name;
+		$res['sizes'] 	= array();
+		$res['image_meta'] 	= array(
+            'aperture' => 0,
+            'title' => $image_title,
+            'credit' => 'osc_pro',
+            'camera' => 'trans',
+            'caption'=>'',
+            'created_timestamp'=>'',
+            'copyright'=>'',
+            'focal_length'=>'',
+            'iso'=>'',
+            'shutter_speed'=>''
+        );
+
+            // [credit] => Getty Images/Altrendo
+            // [camera] => 
+            // [caption] => Businesswoman looking up
+            // [created_timestamp] => 0
+            // [copyright] => 
+            // [focal_length] => 0
+            // [iso] => 0
+            // [shutter_speed] => 0
+            // [] => 76509146
+    	// $res['sizes']['thumbnail']		= resize_save(150,150,$target,$target_path,$name,true);	
+    	// $res['sizes']['medium']			= resize_save(300,300,$target,$target_path,$name,false);
+    	// $res['sizes']['large']			= resize_save(1024,1024,$target,$target_path,$name,false);
+    	// $res['sizes']['brand-thumb']	= resize_save(300,300,$target,$target_path,$name,false);
+    	// $res['sizes']['post-thumbnail'] = resize_save(624,624,$target,$target_path,$name,false);
+
+
+		$res['sizes']['shop_thumbnail'] = resize_save(100,100,$target,$target_path,$name,true);	
+		$res['sizes']['shop_catalog'] 	= resize_save(200,150,$target,$target_path,$name,false);
+		$res['sizes']['shop_single'] 	= resize_save(360,270,$target,$target_path,$name,false);
+
+		$string = serialize($res);
+		// echo "<br>==".$string;
+		// add_post_meta($thumbnail_id,'_wp_attachment_metadata',$string,false);
+
+
+
+
+		global $wpdb;
+
+			$wpdb->insert( 
+				'wp_postmeta', 
+				array( 
+					'post_id' 		=> $thumbnail_id, 
+					'meta_key' 		=> '_wp_attachment_metadata',
+					'meta_value' 	=> $string
+				), 
+				array( 
+					'%d', 
+					'%s',
+					'%s'
+				) 
+			);
+
+	}
+
+	function resize_save($max_width, $max_height,$target,$target_path, $name, $is_crop){
+		$image = wp_get_image_editor( $target ); // Return an implementation that extends <tt>WP_Image_Editor</tt>
+		$image_title = substr($name, 0, strpos($name,'.'));
+		$_mime_type = substr($name, strpos($name,'.')+1, 3);
+
+		$size_array = $image->get_size();
+		print_r($size_array);
+
+
+		// 等比例缩放
+		$name_width = 0;
+		$name_height = 0;
+
+		if ($is_crop) {
+			$name_width = $max_width;
+			$name_height = $max_height;
+		}else{
+			if ($size_array['width'] >= $size_array['height'] ) {
+			# code...
+			$name_width = $max_width;
+			$name_height = round($max_height * $size_array['height']/$size_array['width']);
+			}else{
+				$name_height = $max_height;
+				$name_width = round($max_width * $size_array['width']/$size_array['height']);
+			}
+		}
+
+		
 
 
 		if ( ! is_wp_error( $image ) ) {			
-		    $image->resize( $width, $height, $is_crop );
-		    $path = $target_path."/".$image_title."-".$width."x".$height.".".$_mime_type;
+		    $image->resize( $max_width, $max_height, $is_crop );
+		    $path = $target_path."/".$image_title."-".$name_width."x".$name_height.".".$_mime_type;
 		    $image->save( $path);
-
 		}
+
+		$res = array('file' => $image_title."-".$name_width."x".$name_height.".".$_mime_type,
+					'width' => $name_width,
+		            'height' => $name_height,
+		            'mime-type' => 'image/jpeg');
+
+		return $res;
 	}
+
+	function get_datea()
+	{	
+		echo "<pre>";
+		$tt = get_post_meta(2205, '_wp_attachment_metadata',true);
+		// print_r($tt);
+		// $mydata = unserialize();
+		// print_r($mydata);
+
+		$image_attribute1 = wp_get_attachment_image_src(1121,'shop_single'); // returns an array
+		$image_attribute2 = wp_get_attachment_image_src(2212,'shop_single'); // returns an array
+		print_r($image_attribute1);
+		print_r($image_attribute2);
+
+		echo "</pre>";
+
+
+	}
+
+	// get_datea();
+
 
  ?>
 
@@ -65,7 +182,13 @@
 	$result = $wpdb->get_results( 
 		" SELECT g.goods_id,g.goods_name, g.goods_sn, g.shop_price, g.goods_thumb, g.goods_img, g.original_img,p.ID FROM sm_goods as g ".
 		" LEFT JOIN wp_posts as p on p.menu_order = g.goods_id "
-		." WHERE g.goods_id = 106 "
+		// ." WHERE g.goods_id < 350 "
+		// ." WHERE g.goods_id >= 350 AND g.goods_id < 600 "
+		// ." WHERE g.goods_id >= 600 AND g.goods_id < 800 "
+		// ." WHERE g.goods_id >= 800 AND g.goods_id < 979 "
+		// ." WHERE g.goods_id >= 979 AND g.goods_id < 1100 "
+		." WHERE g.goods_id >= 1100  "
+
 	 	,ARRAY_A);
 	// print_r($result);
 	if($_POST['oscimp_hidden'] == 'Y') {
@@ -119,7 +242,11 @@
 			$_target 	= $_prefix.$coname;
 			$_source 	= $_prefix.$value['original_img'];
 
-			movefile($_path,$_target,$_source,$name);
+			if (!empty($value['original_img'])) {
+				# code...
+				movefile($_path,$_target,$_source,$name,$year,$month,$value['ID']);
+
+			}
 			// insert_product_image($my_post,$coname,$goods_sn,$value['shop_price']);
 
 
