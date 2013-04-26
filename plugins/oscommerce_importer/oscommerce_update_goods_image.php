@@ -84,7 +84,7 @@
 			  	'guid'			=> $guid_string
 			);
 
-			insert_product_image($my_post,$coname,$goods_sn,$value['shop_price']);
+			// insert_product_image($my_post,$coname,$goods_sn,$value['shop_price']);
 
 
 
