@@ -41,8 +41,8 @@ function oscimp_getproducts($product_cnt=1) {
 function oscimp_admin() {
 	// include('oscommerce_import_admin.php');
 	// include('oscommerce_import_goods.php');
-	include('oscommerce_update_goods_image.php');	//指定image 然后刷新数量
-	// include('oscommerce_update_goods_gallery.php');	//gallery 机制
+	// include('oscommerce_update_goods_image.php');	//指定image 然后刷新数量
+	include('oscommerce_update_goods_gallery.php');	//gallery 机制
 }
 
 function oscimp_admin_actions() {
