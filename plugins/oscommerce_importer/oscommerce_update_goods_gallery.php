@@ -231,9 +231,9 @@
 				# code...
 
 				
-				$gallery_id = insert_product_image($my_post,$coname);
+				// $gallery_id = insert_product_image($my_post,$coname);
 
-				movefile($_path,$_target,$_source,$name,$year,$month,$gallery_id);
+				// movefile($_path,$_target,$_source,$name,$year,$month,$gallery_id);
 
 
 			}
