@@ -659,7 +659,7 @@ footer[role="contentinfo"] {
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
-	max-width: 960px;
+	max-width: 980px;
 	max-width: 68.571428571rem;
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
@@ -1430,7 +1430,7 @@ img#wpstats {
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 980px;
 		max-width: 68.571428571rem;
 		overflow: hidden;
 	}
@@ -1584,13 +1584,11 @@ img#wpstats {
 }
 
 /* Minimum width of 960 pixels. */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 980px) {
 	body {
-		background-color: #e6e6e6;
+		background-color: #fbfbfb;
 	}
 	body .site {
-		padding: 0 40px;
-		padding: 0 2.857142857rem;
 		margin-top: 48px;
 		margin-top: 3.428571429rem;
 		margin-bottom: 48px;
@@ -1725,3 +1723,46 @@ img#wpstats {
 		margin-left: 3.57142857rem;
 	}
 }
+
+/* osc-pro feature*/
+#top_nav{background: #000;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
+section.inner{width: 980px; margin:0px auto;display: block;}
+#top_nav span,a{
+	display: block;margin: 0px 5px 5px 0px; 
+	height: 30px; line-height: 30px;
+	color: #fff; 
+	float: left;
+	text-decoration: none;
+}
+#top_nav a:hover{color: #ccc;}
+#top_nav a.taobao_30{
+	background: url(img/sns_taobao_30.png) no-repeat;
+	width: 30px; height: 30px;
+}
+
+#top_nav a.weibo_30{
+	background: url(img/sns_weibo_30.png) no-repeat;
+	width: 30px; height: 30px;
+}
+
+
+#top_nav .top_tel{float: left;}
+#top_nav .top_sns{float: right;}
+#top_nav .top_action{float: right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
