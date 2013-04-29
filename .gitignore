@@ -1,9 +1,10 @@
 upgrade/*
 uploads/*
-themes/*
+themes/twentyten/*
+themes/twentyeleven/*
 languages/*
 plugins/woocommerce/*
 plugin/akismet/*
 
-
+*.tar
 .DS_Store
