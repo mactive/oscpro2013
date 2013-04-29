@@ -524,8 +524,6 @@ a:hover {
 
 /* Page structure */
 .site {
-	padding: 0 24px;
-	padding: 0 1.714285714rem;
 	background-color: #fff;
 }
 .site-content {
@@ -542,34 +540,7 @@ a:hover {
 	padding: 24px 0;
 	padding: 1.714285714rem 0;
 }
-.site-header h1,
-.site-header h2 {
-	text-align: center;
-}
-.site-header h1 a,
-.site-header h2 a {
-	color: #515151;
-	display: inline-block;
-	text-decoration: none;
-}
-.site-header h1 a:hover,
-.site-header h2 a:hover {
-	color: #21759b;
-}
-.site-header h1 {
-	font-size: 24px;
-	font-size: 1.714285714rem;
-	line-height: 1.285714286;
-	margin-bottom: 14px;
-	margin-bottom: 1rem;
-}
-.site-header h2 {
-	font-weight: normal;
-	font-size: 13px;
-	font-size: 0.928571429rem;
-	line-height: 1.846153846;
-	color: #757575;
-}
+
 .header-image {
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
@@ -580,6 +551,7 @@ a:hover {
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
 	text-align: center;
+	width: 700px;
 }
 .main-navigation li {
 	margin-top: 24px;
@@ -1432,6 +1404,7 @@ img#wpstats {
 		margin: 0 auto;
 		max-width: 980px;
 		max-width: 68.571428571rem;
+		width: 980px;
 		overflow: hidden;
 	}
 	.site-content {
@@ -1589,10 +1562,6 @@ img#wpstats {
 		background-color: #fbfbfb;
 	}
 	body .site {
-		margin-top: 48px;
-		margin-top: 3.428571429rem;
-		margin-bottom: 48px;
-		margin-bottom: 3.428571429rem;
 		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 	}
 	body.custom-background-empty {
@@ -1723,8 +1692,12 @@ img#wpstats {
 		margin-left: 3.57142857rem;
 	}
 }
+/*
+//=================================================================
+//=================================================================
+osc-pro feature
 
-/* osc-pro feature*/
+ */
 #top_nav{background: #000;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
 section.inner{width: 980px; margin:0px auto;display: block;}
 #top_nav span,a{
@@ -1749,6 +1722,13 @@ section.inner{width: 980px; margin:0px auto;display: block;}
 #top_nav .top_tel{float: left;}
 #top_nav .top_sns{float: right;}
 #top_nav .top_action{float: right;}
+
+
+a.logo{
+	background: url(img/logo.png) no-repeat;
+	width: 220px; height: 70px;
+	display: block; margin: 25px 10px;
+}
 
 
 
