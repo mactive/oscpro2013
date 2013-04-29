@@ -1,0 +1,98 @@
+/* mactive's personal collection*/
+/* mactive style*/
+.ml_10px{margin-left: 10px;}
+.ml_15px{margin-left: 15px;}
+.ml_20px{margin-left: 20px;}
+.ml_30px{margin-left: 30px;}
+.ml_40px{margin-left: 40px;}
+
+.pl_10px{padding-left: 10px;}
+.pl_15px{padding-left: 15px;}
+.pl_20px{padding-left: 20px;}
+
+.mr_10px{margin-right: 10px;}
+.mr_15px{margin-right: 15px;}
+.mr_20px{margin-right: 20px;}
+
+.mt_0px{margin-top: 0px;}
+.mt_10px{margin-top: 10px;}
+.mt_15px{margin-top: 15px;}
+.mt_20px{margin-top: 20px;}
+
+.pt_10px{padding-top: 10px;}
+.pt_15px{padding-top: 15px;}
+.pt_20px{padding-top: 20px;}
+
+.pr_10px{padding-right: 10px;}
+.pr_15px{padding-right: 15px;}
+.pr_20px{padding-right: 20px;}
+
+.bold{ font-weight:bold;}
+.italic{ font-style:italic;}
+.underline{ text-decoration:underline;}
+.font9px{ font-size:9px;}
+.font10px{ font-size:10px;}
+.font11px{ font-size:11px;}
+.font12px{ font-size:12px;}
+.font13px{ font-size:13px;}
+.font14px{ font-size:14px;}
+.font16px{ font-size:16px;}
+.font18px{ font-size:18px;}
+.font20px{ font-size:20px;}
+.font24px{ font-size:24px;}
+.font28px{ font-size:28px;}
+.light_blue{color:#a0d5f5;}
+.purple{color:#9f38a3;}
+.pure-red-color{color: #FF0000;}
+.blue-color{color: #80016C;}
+.green-color{color: #6AB30F;}
+.red-color{color: #FF1A00;}
+.grey333{color:#333333;}
+.grey666{ color:#666666;}
+.grey999{ color:#999999;}
+.light_purple{color:#A745AA;}
+.purple{color:#80016C;}
+.titlepad5px{padding:5px;padding-left:13px;}
+.f_left{ float:left;}
+.f_right{ float:right;}
+.clear {
+  clear: both;line-height:1px;
+}
+.yellow_notice{text-align:center;border:1px solid #ccc;background:#fffead;margin:10px 0px;padding:10px auto;height:40px;line-height:40px;}
+.white_color{color:#ffffff;}
+.blue_color{color:#0c7bed;}
+.gray_color{color:#5c5c5c;}
+.red_color{color:#ff0103;}
+
+.radius_2px{-moz-border-radius: 2px;-khtml-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;}
+.radius_3px{-moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}
+.radius_5px{-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.radius_10px{-moz-border-radius: 10px;-khtml-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
+.radius_12px{-moz-border-radius: 12px;-khtml-border-radius: 12px;-webkit-border-radius: 12px;border-radius: 12px;}
+.radius_15px{-moz-border-radius: 15px;-khtml-border-radius: 15px;-webkit-border-radius: 15px;border-radius: 15px;}
+.radius_20px{-moz-border-radius: 20px;-khtml-border-radius: 20px;-webkit-border-radius: 20px;border-radius: 20px;}
+.shadow_10px{-moz-box-shadow: 0 0 5px 5px #444444;-webkit-box-shadow: 0 0 5px 5px #444444;box-shadow: 0 0 5px 5px #444444;}
+
+.table_standard {margin-bottom:5px;}
+.table_standard tr{height:25px;line-height:25px;font-size:12px;}
+.table_standard td{padding:5px 5px;height:25px;line-height:25px; text-align:left;vertical-align:middle;}
+.table_standard td.center{padding:0px 5px;height:25px;line-height:25px; text-align:center;}
+.table_standard td.right{padding:0px 5px;height:25px;line-height:25px; text-align:right;}
+.table_standard td.left{padding:0px 5px;height:25px;line-height:25px; text-align:left;}
+.table_standard th{padding:0px 5px;height:25px;line-height:25px;}
+
+.table_standard tr.city_upload{background:#e3e3e3;}
+.table_standard tr.city_audit_confirm{background:#D2FC89;}
+.table_standard tr.city_audit_cancel{background:#FFACAC;}
+.table_standard tr.hover_tr{background:#6ce2ff;}
+.table_border{border:1px solid #DADADA;border-collapse:collapse;}
+.table_border_dark{border:1px solid #666666;border-collapse:collapse;}
+
+div.height_1px{height:1px;line-height:1px;font-size:1px;width:100%;}
+div.height_2px{height:2px;line-height:1px;font-size:1px;width:100%;}
+div.height_3px{height:3px;line-height:1px;font-size:1px;width:100%;}
+div.height_5px{height:5px;line-height:5px;font-size:1px;width:100%;#width:750px;_width:750px;}
+div.height_8px{height:8px;line-height:1px;font-size:1px;width:100%;#width:750px;_width:750px;}
+div.height_10px{height:10px;line-height:10px;font-size:8px;width:100%;#width:750px;_width:750px;}
+div.height_20px{height:20px;line-height:20px;}
+div.height_70px{height:70px;line-height:70px;}
