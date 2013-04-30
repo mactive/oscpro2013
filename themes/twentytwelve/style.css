@@ -548,10 +548,10 @@ a:hover {
 
 /* Navigation Menu */
 .main-navigation {
-	margin-top: 24px;
-	margin-top: 1.714285714rem;
+	margin-top: 40px;
+	margin-left: 20px;
 	text-align: center;
-	width: 700px;
+	width: 680px;
 }
 .main-navigation li {
 	margin-top: 24px;
@@ -1432,35 +1432,44 @@ img#wpstats {
 	}
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
-		border-bottom: 1px solid #ededed;
-		border-top: 1px solid #ededed;
 		display: inline-block !important;
 		text-align: left;
 		width: 100%;
+		background: #1c1c1c;
+		-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;
 	}
 	.main-navigation ul {
 		margin: 0;
 		text-indent: 0;
 	}
+
 	.main-navigation li a,
 	.main-navigation li {
-		display: inline-block;
+		display: block;
 		text-decoration: none;
+		font-size: 14px;
+		float: left;
 	}
 	.main-navigation li a {
 		border-bottom: 0;
-		color: #6a6a6a;
-		line-height: 3.692307692;
+		color: #fff;font-weight: bold;
 		text-transform: uppercase;
 		white-space: nowrap;
+		width: 100%; display: block; text-align: center;
+		line-height: 35px;
+		height: 35px;
+		margin: 0 !important;
 	}
 	.main-navigation li a:hover {
-		color: #000;
+		color: #aaaaaa;
+
 	}
 	.main-navigation li {
-		margin: 0 40px 0 0;
-		margin: 0 2.857142857rem 0 0;
+		margin: 0;
 		position: relative;
+		width: 90px; max-width: 90px;
+		border-right:1px solid #8f8f8f; 
+		height: 100%;
 	}
 	.main-navigation li ul {
 		display: none;
@@ -1478,18 +1487,17 @@ img#wpstats {
 		border-left: 0;
 		display: block;
 	}
+	.main-navigation li ul li {border: none !important; background: #333;}
 	.main-navigation li ul li a {
-		background: #efefef;
-		border-bottom: 1px solid #ededed;
-		display: block;
-		font-size: 11px;
-		font-size: 0.785714286rem;
-		line-height: 2.181818182;
-		padding: 8px 10px;
-		padding: 0.571428571rem 0.714285714rem;
-		width: 180px;
-		width: 12.85714286rem;
-		white-space: normal;
+		border-bottom: 0;
+		color: #ddd;
+		font-size: 12px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		width: 100%; display: block; text-align: center;
+		line-height: 35px;
+		height: 35px;
+		margin: 0 !important;
 	}
 	.main-navigation li ul li a:hover {
 		background: #e3e3e3;
@@ -1499,7 +1507,7 @@ img#wpstats {
 	.main-navigation .current-menu-ancestor > a,
 	.main-navigation .current_page_item > a,
 	.main-navigation .current_page_ancestor > a {
-		color: #636363;
+		color: #aaaaaa;
 		font-weight: bold;
 	}
 	.menu-toggle {
