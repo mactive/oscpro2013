@@ -1,3 +1,7 @@
+header#masthead{
+	width: 980px; height: 300px;clear: both;
+}
+
 /* mactive's personal collection*/
 /* mactive style*/
 .ml_10px{margin-left: 10px;}

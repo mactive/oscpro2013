@@ -54,10 +54,13 @@
 
 <div id="page" class="hfeed site">
 	<header id="masthead" role="banner">
-		<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
-
-		<nav id="site-navigation" class="main-navigation f_left" role="navigation">
+		<div class="logo f_left">
+			<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>-->
+		</div>
+		<nav id="site-navigation" class="main-navigation f_left radius_5px" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php get_search_form() ?>
+
 		</nav><!-- #site-navigation -->
 
 		<?php $header_image = get_header_image();
