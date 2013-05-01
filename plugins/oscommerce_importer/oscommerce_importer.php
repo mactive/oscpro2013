@@ -37,6 +37,9 @@ function oscimp_getproducts($product_cnt=1) {
 	return $retval;
 }
 */
+
+
+
 //*************** Admin function ***************
 function oscimp_admin() {
 	// include('goods_transform/import_admin.php');
@@ -52,7 +55,7 @@ function oscimp_admin_actions() {
 }
 
 add_action('admin_menu', 'oscimp_admin_actions');
-require_once( 'class-widget-foo.php' );
+require_once( 'classes/class-widget-foo.php' );
 add_action( 'widgets_init', create_function( '', 'register_widget( "Foo_Widget" );' ) );
 
 

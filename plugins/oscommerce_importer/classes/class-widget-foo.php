@@ -37,7 +37,7 @@ class Foo_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$catid = $instance['catid'];
 
-		global $wpdb;
+		// global $wpdb;
 		$posts = get_posts('category='.$catid);
 		$out = '<ul class="news_image_slider">';
 		foreach($posts as $post) {
@@ -49,7 +49,12 @@ class Foo_Widget extends WP_Widget {
 
 		echo $before_widget;
 		echo $before_title.$title.$after_title;
-		echo $out;
+		// echo $out;
+		woocommerce_get_template( 'widgets/category_slider.php', array(
+			'posts'	=> $posts
+		), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
+
+
 		echo $after_widget;
 	}
 
