@@ -39,11 +39,16 @@ function oscimp_getproducts($product_cnt=1) {
 */
 //*************** Admin function ***************
 function oscimp_admin() {
-	// include('oscommerce_import_admin.php');
-	// include('oscommerce_import_goods.php');
-	// include('oscommerce_update_goods_image.php');	//指定image 然后刷新数量
-	// include('oscommerce_update_goods_gallery.php');	//gallery 机制
-	include('download_parse.php');
+	// include('goods_transform/import_admin.php');
+	// include('goods_transform/import_goods.php');
+	// include('goods_transform/update_goods_image.php');	//指定image 然后刷新数量
+	// include('goods_transform/update_goods_gallery.php');	//gallery 机制
+	// include('download_parse.php');
+
+	echo "string";	
+	
+
+
 }
 
 function oscimp_admin_actions() {
@@ -51,5 +56,9 @@ function oscimp_admin_actions() {
 }
 
 add_action('admin_menu', 'oscimp_admin_actions');
+require_once( 'class-widget-foo.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "Foo_Widget" );' ) );
+
+
 
 ?>

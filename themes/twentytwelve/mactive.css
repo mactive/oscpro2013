@@ -1,6 +1,11 @@
 header#masthead{
-	width: 980px; height: 300px;clear: both;
+	width: 980px; 
+	clear: both;
 }
+
+.product_meta span{display: inline-block;}
+.product_meta span a{width: 100%;}
+
 
 /* mactive's personal collection*/
 /* mactive style*/

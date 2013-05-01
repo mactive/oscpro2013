@@ -1737,7 +1737,7 @@ section.inner{width: 980px; margin:0px auto;display: block;}
 #top_nav span,a{
 	display: block;margin: 0px 5px 5px 0px; 
 	height: 30px; line-height: 30px;
-	color: #fff; 
+	/*color: #fff; */
 	float: left;
 	text-decoration: none;
 }

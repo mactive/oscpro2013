@@ -41,7 +41,7 @@
 
 	function parse($str)
 	{	
-
+      echo $str;
 		// 从 URL 中取得主机名
 		preg_match("/^(http://)?([^/]+)/i",$str, $matches);
 		$host = $matches[2];
