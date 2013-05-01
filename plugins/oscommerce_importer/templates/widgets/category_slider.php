@@ -89,7 +89,11 @@ $.fn.simpleSpy = function (limit, interval) {
 			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
 			$url = $thumb['0'];
 	?>
-		<li><a href="<?php get_permalink($post->ID)?>" style="background-image:url(<?php echo $url; ?>);"></a></li>
+		<li>
+            <a href="<?php get_permalink($post->ID)?>" title="<?php echo $post->post_title ?>" style="background-image:url(<?php echo $url; ?>);">
+                <b><?php echo $post->post_title ?></b>
+            </a>
+        </li>
 	<?php } ?>
 	</ul>
 </div>

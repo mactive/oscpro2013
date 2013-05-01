@@ -56,7 +56,7 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" role="banner">
 		<div class="logo f_left">
-			<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>-->
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
 		</div>
 		<nav id="site-navigation" class="main-navigation f_left radius_5px" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
