@@ -33,24 +33,7 @@ class Foo_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		extract( $args );
-		/*
-		$title = apply_filters( 'widget_title', $instance['title'] );
 
-		echo $before_widget;
-		if ( ! empty( $title ) )
-			echo $before_title . $title . $after_title;
-		echo __( 'Hello, World!', 'text_domain' );
-
-		// woocommerce_get_template( 'widgets/brand-description.php', array(
-		// 	'thumbnail'	=> $thumbnail
-		// ), 'woocommerce-brands', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/templates/' );
-
-
-		echo $after_widget;
-
-		*/
-
-		// $title = $instance['title'];
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$catid = $instance['catid'];
 
@@ -60,15 +43,7 @@ class Foo_Widget extends WP_Widget {
 		foreach($posts as $post) {
 			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
 			$url = $thumb['0'];
-
-			// $tt = get_the_post_thumbnail($post->ID, 'medium'); 
-			// echo $tt;
-			// $out .= '<li><a href="'.get_permalink($post->ID).'">'.$post->post_title.'</a></li>';
-			$out .= '<li><a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');">';
-			// $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-
-			// $out .= '<img src="'.$url.'">';
-			$out .= '</a></li>';
+			$out .= '<li><a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a></li>';
 		}
 		$out .= '</ul>';
 
