@@ -11,8 +11,7 @@ header#masthead{
 	height: 100px; 
 	line-height: 100px;
 	width: 200px;
-/*	margin-bottom:5px;
-*/
+	display: block;
 }
 .news_image_slider li a{
 	display: block;
@@ -20,7 +19,7 @@ header#masthead{
 	height: 100%;
 	background-repeat:no-repeat;
 	background-position:  center center;
-	background-size: 200px;
+	background-size: 100%;
 	margin: 0 !important;
 }
 
