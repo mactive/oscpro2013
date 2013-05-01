@@ -58,8 +58,11 @@ class Foo_Widget extends WP_Widget {
 		$posts = get_posts('category='.$catid);
 		$out = '<ul class="news_image_slider">';
 		foreach($posts as $post) {
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+			$url = $thumb['0'];
 
+			// $tt = get_the_post_thumbnail($post->ID, 'medium'); 
+			// echo $tt;
 			// $out .= '<li><a href="'.get_permalink($post->ID).'">'.$post->post_title.'</a></li>';
 			$out .= '<li><a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');">';
 			// $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
