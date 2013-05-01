@@ -552,6 +552,7 @@ a:hover {
 	margin-left: 30px;
 	text-align: center;
 	width: 680px;
+	height: 36px;
 	background: #1c1c1c;
 }
 .main-navigation div:first-child{
@@ -1459,7 +1460,7 @@ img#wpstats {
 	}
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
-		display: inline-block !important;
+		display: block !important;
 		text-align: left;
 		width: 100%;
 	}
@@ -1481,8 +1482,8 @@ img#wpstats {
 		text-transform: uppercase;
 		white-space: nowrap;
 		width: 100%; display: block; text-align: center;
-		line-height: 35px;
-		height: 35px;
+		line-height: 36px;
+		height: 36px;
 		margin: 0 !important;
 	}
 	.main-navigation li a:hover {
@@ -1520,8 +1521,8 @@ img#wpstats {
 		text-transform: uppercase;
 		white-space: nowrap;
 		width: 100%; display: block; text-align: center;
-		line-height: 35px;
-		height: 35px;
+		line-height: 36px;
+		height: 36px;
 		margin: 0 !important;
 	}
 	.main-navigation li ul li a:hover {
