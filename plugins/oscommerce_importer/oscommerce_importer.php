@@ -45,10 +45,6 @@ function oscimp_admin() {
 	// include('goods_transform/update_goods_gallery.php');	//gallery 机制
 	// include('download_parse.php');
 
-	echo "string";	
-	
-
-
 }
 
 function oscimp_admin_actions() {

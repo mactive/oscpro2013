@@ -6,6 +6,24 @@ header#masthead{
 .product_meta span{display: inline-block;}
 .product_meta span a{width: 100%;}
 
+.news_image_slider{}
+.news_image_slider li{
+	height: 100px; 
+	line-height: 100px;
+	width: 200px;
+	margin-bottom:5px;
+}
+.news_image_slider li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-position:  center center;
+	background-size: 200px;
+	box-shadow: 0 2px 2px rgba(100, 100, 100, 0.3);
+}
+
+
 
 /* mactive's personal collection*/
 /* mactive style*/
