@@ -36,7 +36,6 @@ class WC_Widget_Brand_Description extends WP_Widget {
 	/** @see WP_Widget */
 	function widget( $args, $instance ) {
 		extract( $args );
-
 		if ( ! is_tax( 'product_brand' ) )
 			return;
 

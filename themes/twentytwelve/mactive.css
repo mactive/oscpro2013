@@ -1,6 +1,35 @@
 header#masthead{
-	width: 980px; height: 300px;clear: both;
+	width: 980px; 
+	clear: both;
 }
+
+.product_meta span{display: inline-block;}
+.product_meta span a{width: 100%;}
+
+.news_image_slider{}
+.news_image_slider li{
+	height: 100px; 
+	line-height: 100px;
+	width: 200px;
+	display: block;
+}
+.news_image_slider li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-position:  center center;
+	background-size: 100%;
+	margin: 0 !important;
+}
+
+#sidebar .spyWrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;    
+}
+
+
 
 /* mactive's personal collection*/
 /* mactive style*/
