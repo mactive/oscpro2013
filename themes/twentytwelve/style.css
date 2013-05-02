@@ -659,7 +659,7 @@ footer[role="contentinfo"] {
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
-	max-width: 980px;
+	max-width: 975px;
 	max-width: 68.571428571rem;
 	margin-top: 24px;
 	margin-top: 1.714285714rem;
@@ -1422,7 +1422,6 @@ img#wpstats {
 	.author-avatar {
 		float: left;
 		margin-top: 8px;
-		margin-top: 0.571428571rem;
 	}
 	.author-description {
 		float: right;
@@ -1430,9 +1429,8 @@ img#wpstats {
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 980px;
-		max-width: 68.571428571rem;
-		width: 980px;
+		max-width: 975px;
+		width: 975px;
 		/*overflow: hidden;*/
 	}
 	.site-content {
@@ -1591,7 +1589,7 @@ img#wpstats {
 }
 
 /* Minimum width of 960 pixels. */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 975px) {
 	body {
 		background-color: #fbfbfb;
 	}
@@ -1733,9 +1731,9 @@ osc-pro feature
 
  */
 #top_nav{background: #000;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
-section.inner{width: 980px; margin:0px auto;display: block;}
+section.inner{width: 975px; margin:0px auto;display: block;}
 #top_nav span,a{
-	display: block;margin: 0px 5px 5px 0px; 
+	display: block;margin: 0px; 
 	height: 30px; line-height: 30px;
 	/*color: #fff; */
 	float: left;
