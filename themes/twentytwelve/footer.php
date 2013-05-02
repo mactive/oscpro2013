@@ -13,12 +13,26 @@
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<div class="footer_custom">
+	<section class="inner">
+		<h3>HERE OUR CUSTOMER</h3>
+		<p>“Dear Sirs, I am writing you to let you know you have a newly acquired life long customer thanks to your sales rep Carl. As a singer songwriter, who has found himself thrust into the unfamiliar world of self production, the extent of the hand holding and tutelage has been unprecedented and doesn't go unappreciated.” <br><br>
+		- Tony T</p>
+	</section>
+
+</div>
+
+<div id="top_nav">
+	<section class="inner"> 
+		<a class="footer_a" href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>">
+			Copyright © 2009 osc pro.All rights reserved. 京工网安备：110112002015</a>
+	</section>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

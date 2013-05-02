@@ -51,6 +51,7 @@ div.logo a{display: block; width: 100%; height: 100%;}
 .index_roll_news{
 	float:left;
 	width: 100%;
+	height: 403px;
 }
 
 .index_roll_news aside.widget_foo_widget{
@@ -78,7 +79,21 @@ div.logo a{display: block; width: 100%; height: 100%;}
 }
 #wooslider-id-1 {width: 100%; height: 403px;}
 
-
+/*footer*/
+.site-info a{text-align: center;width: 100%;}
+a.footer_a{width: 100%; text-align: center;}
+.footer_custom{
+	background: #333132;
+	height: 200px; line-height: 22px;color: #fff;font-size: 14px;
+	padding-top: 20px;
+}
+.footer_custom h3{
+	font-size: 20px;margin:10px 0px;
+}
+.footer_custom p{
+	width: 80%;
+	text-align: left;
+}
 /* mactive's personal collection*/
 /* mactive style*/
 .ml_10px{margin-left: 10px;}

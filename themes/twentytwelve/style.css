@@ -1732,12 +1732,14 @@ osc-pro feature
  */
 #top_nav{background: #000;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
 section.inner{width: 975px; margin:0px auto;display: block;}
+section.inner a{color: #fff;}
 #top_nav span,a{
 	display: block;margin: 0px; 
 	height: 30px; line-height: 30px;
 	/*color: #fff; */
 	float: left;
 	text-decoration: none;
+	margin: 0px 5px;
 }
 #top_nav a:hover{color: #ccc;}
 #top_nav a.taobao_30{
