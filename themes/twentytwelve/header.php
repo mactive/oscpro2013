@@ -32,7 +32,6 @@
 
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'template_url' ); ?>/img/favicon.png" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/mactive.css" />
-<script src="http://code.jquery.com/jquery-1.7.min.js" type="text/javascript" charset="utf-8" async defer></script>
 
 </head>
 

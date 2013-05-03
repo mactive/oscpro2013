@@ -31,7 +31,15 @@ get_header(); ?>
 			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
+
+	<div class="pt_10px clear"> 
+		<?php $upload_dir = wp_upload_dir("2013/05"); ?>
+		<img src="<?php echo $upload_dir['url']."/index_1.jpg" ?>" alt="">
+	</div>
+
 </div>
+
+
 
 
 

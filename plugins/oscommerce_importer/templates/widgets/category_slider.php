@@ -6,7 +6,7 @@
 <script type="text/javascript" charset="utf-8">
 
 jQuery(document).ready(function ($) {
-	$('ul.news_image_slider').simpleSpy(3,4000);
+	$('ul.news_image_slider').simpleSpy(4,4000);
 });
 
 (function ($) {
