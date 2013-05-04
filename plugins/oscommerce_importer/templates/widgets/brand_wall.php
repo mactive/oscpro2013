@@ -10,8 +10,8 @@
 
 <div id="brand_wall_div">
     <div class="brand_wall_title">
-        <a href="" class="black_block">推荐厂牌 Top Brand</a>
-        <a href="" class="gray_block">所有品牌 All Brand</a>
+        <a class="black_block">推荐厂牌 Top Brand</a>
+        <a href="brand-list/" class="gray_block">所有品牌 All Brand</a>
     </div>
 
 	<ul class="brand_wall">
