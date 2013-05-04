@@ -6,13 +6,14 @@
 <script type="text/javascript" charset="utf-8">
 
 jQuery(document).ready(function ($) {
-	$('ul.news_image_slider').simpleSpy(4,4000);
+	$('ul.news_image_slider').simpleSpy(4,4000,1);
 });
 
 (function ($) {
-$.fn.simpleSpy = function (limit, interval) {
+$.fn.simpleSpy = function (limit, interval, sep_height) {
     limit = limit || 4;
     interval = interval || 4000;
+    sep_height = sep_height || 1; // border-bottom 
     
     return this.each(function () {
         // 1. setup
@@ -22,7 +23,7 @@ $.fn.simpleSpy = function (limit, interval) {
             items = [], // uninitialised
             currentItem = limit,
             total = 0, // initialise later on
-            height = $list.find('> li:first').height();
+            height = $list.find('> li:first').height() + sep_height;
 
         // capture the cache
         $list.find('> li').each(function () {

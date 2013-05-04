@@ -5,7 +5,7 @@
 
 body .wooslider.wooslider-type-posts img, body .wooslider.wooslider-type-attachments img { border: 0; padding: 0; margin: 0; height: auto; }
 body .wooslider .slides, body .wooslider .wooslider-control-nav, body .wooslider .wooslider-direction-nav { padding: 0; margin: 0;  }
-.wooslider-control-nav {margin-top: -20px !important;}
+.wooslider-control-nav {margin-top: -30px !important;}
 
 body .wooslider .wooslider-control-nav li, body .wooslider .wooslider-direction-nav li { list-style: none; float: right; }
 
