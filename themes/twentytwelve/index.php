@@ -27,7 +27,7 @@ get_header(); ?>
 
 <div id="custom_index">
 	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-		<div id="secondary" class="index_roll_news" >
+		<div id="secondary" class="index_theme" >
 			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>

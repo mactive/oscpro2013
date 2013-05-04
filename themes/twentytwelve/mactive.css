@@ -48,38 +48,73 @@ div.logo a{display: block; width: 100%; height: 100%;}
 }
 
 /*首页模板*/
-.index_roll_news{
+.index_theme{
 	float:left;
 	width: 100%;
-	height: 403px;
+	height: 603px;
 }
 
-.index_roll_news aside.widget_news_widget{
+.index_theme aside.widget_news_widget{
 	float:left;
 	width: 250px;
 	height: 403px;
 	margin-left: 1px;
 }
 
-.index_roll_news aside.widget_wooslider_slideshow_slides{
+.index_theme aside.widget_wooslider_slideshow_slides{
 	float:left;
 	width: 720px;
 	height: 403px;
 	margin-left: 2px;
 }
 
-.index_roll_news aside.widget_wooslider_slideshow_slides{
+.index_theme aside.widget_wooslider_slideshow_slides{
 	float:left;
 	width: 720px;
 	height: 403px;
 	margin-left: 2px;
 }
-.index_roll_news img{
+
+.index_theme aside.widget_brandwall_widget{
+	float:left;
+	width: 100%;
+	height: 110px;
+	margin-top: 20px;
+
+}
+.index_theme img{
 	-moz-border-radius: 0 !important;
 	-khtml-border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
 	border-radius:0 !important; 
 }
+
+/* index brand wall*/
+.brand_wall_title a{float:left; width: 170px;height: 24px; line-height: 24px;}
+
+a.gray_block{
+	background: #e3e3e3;
+	display: block; text-align: center;
+	color: #000; font-size: 12px;
+}
+a.black_block{
+	background: #333132;
+	display: block; text-align: center;
+	color: #fff; font-size: 12px;
+}
+
+.brand_wall{height: 70px; clear: both; margin-top: 10px; float: left;}
+.brand_wall li{height: 70px;width: 145px; display: block; margin: 0px 8px; float: left;}
+.brand_wall li a{
+	display: block;
+	background: #f6f6f6;
+	color: #828282; font-size: 20px; font-weight: bold;
+	width:100%; height:100%;line-height: 70px;
+	border: 1px solid #dcdcdc; text-align: center;
+	box-shadow:inset 0  1px #fff;
+}
+
+
 
 #slide_example{
 	width: 720px;

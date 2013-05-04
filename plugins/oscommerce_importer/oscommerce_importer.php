@@ -68,6 +68,8 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "News_Widget"
  * Widget top_brand
  * 首页的推荐品牌
  */
+require_once( 'classes/class-widget-brandwall.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "Brandwall_Widget" );' ) );
 
 
 
