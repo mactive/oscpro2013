@@ -55,8 +55,22 @@ function oscimp_admin_actions() {
 }
 
 add_action('admin_menu', 'oscimp_admin_actions');
-require_once( 'classes/class-widget-foo.php' );
-add_action( 'widgets_init', create_function( '', 'register_widget( "Foo_Widget" );' ) );
+
+/*
+ * Widget Foo_widget
+ * new_slider
+ */
+require_once( 'classes/class-widget-news.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "News_Widget" );' ) );
+
+
+/*
+ * Widget top_brand
+ * 首页的推荐品牌
+ */
+
+
+
 
 
 

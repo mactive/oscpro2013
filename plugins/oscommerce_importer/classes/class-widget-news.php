@@ -36,6 +36,8 @@ class News_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$catid = $instance['catid'];
+		$width = $instance['width'];
+		$count = $instance['count'];
 
 		// global $wpdb;
 		$posts = get_posts('category='.$catid);
@@ -51,7 +53,9 @@ class News_Widget extends WP_Widget {
 		echo $before_title.$title.$after_title;
 		// echo $out;
 		woocommerce_get_template( 'widgets/category_slider.php', array(
-			'posts'	=> $posts
+			'posts'	=> $posts,
+			'width' => $width,
+			'count' => $count
 		), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
 
 
@@ -72,6 +76,8 @@ class News_Widget extends WP_Widget {
 		$instance = array();
 		$instance['title'] = strip_tags( $new_instance['title'] );
   		$instance['catid'] = $new_instance['catid'];
+  		$instance['width'] = $new_instance['width'];
+  		$instance['count'] = $new_instance['count'];
 
 		return $instance;
 	}
@@ -88,8 +94,23 @@ class News_Widget extends WP_Widget {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'New title', 'text_domain' );
+			$title = __( 'News Slider', 'text_domain' );
 		}
+
+		if ( isset( $instance[ 'width' ] ) ) {
+			$width = $instance[ 'width' ];
+		}
+		else {
+			$width = __( '250', 'text_domain' );
+		}
+
+		if ( isset( $instance[ 'count' ] ) ) {
+			$count = $instance[ 'count' ];
+		}
+		else {
+			$count = __( '4', 'text_domain' );
+		}
+
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
@@ -99,6 +120,16 @@ class News_Widget extends WP_Widget {
 		<p>
 		    <label for="<?php echo $this->get_field_id('catid'); ?>">Category ID:</label>
 			<?php wp_dropdown_categories('hide_empty=0&hierarchical=1&id='.$this->get_field_id('catid').'&name='.$this->get_field_name('catid').'&selected='.$instance['catid']); ?>
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" name="<?php echo $this->get_field_name( 'width' ); ?>" type="text" value="<?php echo esc_attr( $width ); ?>" />
+		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Count:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>" />
 		</p>
 		<?php 
 	}

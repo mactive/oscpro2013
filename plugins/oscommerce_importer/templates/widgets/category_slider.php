@@ -6,7 +6,7 @@
 <script type="text/javascript" charset="utf-8">
 
 jQuery(document).ready(function ($) {
-	$('ul.news_image_slider').simpleSpy(4,4000,1);
+	$('ul.news_image_slider').simpleSpy(<?php _e($count); ?>,4000,1);
 });
 
 (function ($) {
@@ -83,7 +83,7 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
 <?php global $woocommerce; ?>
 <?php if ( $posts ) : ?>
 
-<div id="sidebar">
+<div id="sidebar" style="width: <?php _e($width); ?>px !important;">
 	<ul class="news_image_slider">
 	<?php 
 		foreach($posts as $post){
