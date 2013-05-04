@@ -39,8 +39,10 @@ class Brandwall_Widget extends WP_Widget {
 		$count = $instance['count'];
 
 		// global $wpdb;
+		$topbrand = get_term_by('slug', 'topbrand', 'product_brand');
+
 		$posts = get_terms( 'product_brand', array(
-			'orderby'    => 'name',
+			'child_of'    => $topbrand->term_id,
 		 	'hide_empty' => 0,
 		 	'number'	=> $count
 		) );
