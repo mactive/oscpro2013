@@ -1739,7 +1739,7 @@ section.inner a{color: #fff;}
 	/*color: #fff; */
 	float: left;
 	text-decoration: none;
-	margin: 0px 5px;
+	/*margin: 0px 5px;*/
 }
 #top_nav a:hover{color: #ccc;}
 #top_nav a.taobao_30{
