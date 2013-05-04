@@ -39,17 +39,13 @@ class Showcase_Widget extends WP_Widget {
 		$width = $instance['width']; // 宽高大小
 		$count = $instance['count']; // 数量
 
-		echo "==".$catslug."==";
+		$term = get_term_by('slug',$catslug,'product_cat');
+		print_r($term);
 
 		// global $wpdb;
 		$posts = get_posts('category='.$catslug);
-		$out = '<ul class="news_image_slider">';
-		foreach($posts as $post) {
-			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
-			$url = $thumb['0'];
-			$out .= '<li><a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a></li>';
-		}
-		$out .= '</ul>';
+
+		term_taxonomy_id
 
 		echo $before_widget;
 		echo $before_title.$title.$after_title;
