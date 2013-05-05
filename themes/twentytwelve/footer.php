@@ -11,12 +11,8 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
-			
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+
+	</div><!-- #page -->
 
 <div class="footer_custom">
 	<section class="inner">

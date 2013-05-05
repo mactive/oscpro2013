@@ -56,7 +56,7 @@
                 $url = $thumb['0'];
             ?>
 
-            <a href="<?php get_permalink($post->ID)?>" style="background-image:url('<?php _e($url);?>');">
+            <a href="<?php echo get_permalink($post->ID)?>" style="background-image:url('<?php _e($url);?>');">
                 <div class="show_hover">
                     <b>查看产品</b>
                 </div>
