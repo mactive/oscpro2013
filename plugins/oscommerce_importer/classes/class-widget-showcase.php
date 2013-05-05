@@ -39,10 +39,9 @@ class Showcase_Widget extends WP_Widget {
 		$width = $instance['width']; // 宽高大小
 		$count = $instance['count']; // 数量
 
+		// get the $term->term_taxonomy_id 和分类相关的产品
 		$term = get_term_by('slug',$catslug,'product_cat');
-		print_r($term->term_taxonomy_id);
-
-
+		// data
 		global $wpdb;
 		$posts = $wpdb->get_results( 
 			" SELECT posts.post_title, posts.ID FROM {$wpdb->term_relationships} AS rel ".

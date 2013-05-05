@@ -25,7 +25,7 @@
                 $out = '<a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a>';
                 echo $out;
             ?>
-            <?php echo $post->post_title ?>
+            <span><?php echo $post->post_title ?></span>
         </li>
 	<?php } ?>
 	</ul>
