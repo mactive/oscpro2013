@@ -4,7 +4,8 @@
  */
 ?>
 
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-ui.js"></script>
+
 <script type="text/javascript" charset="utf-8" async defer>
     jQuery(document).ready(function ($) {
         $(function() {

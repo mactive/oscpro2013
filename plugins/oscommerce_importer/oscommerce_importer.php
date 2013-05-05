@@ -78,6 +78,12 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Brandwall_Wi
 require_once( 'classes/class-widget-showcase.php' );
 add_action( 'widgets_init', create_function( '', 'register_widget( "Showcase_Widget" );' ) );
 
+/*
+ * Widget why oscpro
+ * 首页的橱窗展示 后台指定一个产品分类 可以自己新建分类 比如推荐和新品
+ */
+require_once( 'classes/class-widget-whyosc.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "Whyosc_Widget" );' ) );
 
 
 
