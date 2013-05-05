@@ -549,19 +549,19 @@ a:hover {
 /* Navigation Menu */
 .main-navigation {
 	margin-top: 40px;
-	margin-left: 30px;
+	margin-left: 20px;
 	text-align: center;
-	width: 680px;
+	width: 700px;
 	height: 36px;
 	background: #1c1c1c;
 }
 .main-navigation div:first-child{
-	width: 546px;float: left;
+	width: 581px;float: left;
 }
 
 .main-navigation form#searchform{
 	float: left;display: block;
-	width: 120px;
+	width: 100px;
 }
 
 .main-navigation form#searchform div{
@@ -572,7 +572,7 @@ a:hover {
 }
 .main-navigation form#searchform input[type="text"]{
 	display: block;
-	background: url(img/search_13.png) #fff no-repeat 5px center;
+	background: url(img/icon_search.png) #fff no-repeat 5px center;
 	height: 22px; line-height: 22px;
 	color: #666; padding: 0; margin:6px;
 	width: 100%;
@@ -945,7 +945,6 @@ img.aligncenter {
 	padding: 6px 10px 6px 0;
 }
 .site-content article {
-	border-bottom: 4px double #ededed;
 	margin-bottom: 72px;
 	margin-bottom: 5.142857143rem;
 	padding-bottom: 24px;
@@ -1435,7 +1434,7 @@ img#wpstats {
 	}
 	.site-content {
 		float: left;
-		width: 65.104166667%;
+		width: 740px;
 	}
 	body.template-front-page .site-content,
 	body.single-attachment .site-content,
@@ -1444,7 +1443,7 @@ img#wpstats {
 	}
 	.widget-area {
 		float: right;
-		width: 26.041666667%;
+		width: 225px;
 	}
 	.site-header h1,
 	.site-header h2 {
@@ -1491,7 +1490,7 @@ img#wpstats {
 	.main-navigation li {
 		margin: 0;
 		position: relative;
-		width: 90px; max-width: 90px;
+		width: 82px; max-width: 82px;
 		border-right:1px solid #8f8f8f; 
 		height: 100%;
 	}

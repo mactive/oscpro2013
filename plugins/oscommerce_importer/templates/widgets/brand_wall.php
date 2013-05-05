@@ -19,7 +19,7 @@
 		foreach($posts as $post){
 	?>
 		<li style="width: <?php _e($width); ?>px !important;">
-            <a href="brand/<?php _e($post->slug)?>" title="<?php echo $post->name ?>" class="radius_3px">
+            <a href="brand/<?php _e($post->slug)?>" title="<?php echo $post->name ?>" class="block radius_3px">
                 <?php echo $post->name ?>
             </a>
         </li>

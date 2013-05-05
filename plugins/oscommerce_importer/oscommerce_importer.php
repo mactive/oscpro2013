@@ -86,6 +86,14 @@ require_once( 'classes/class-widget-whyosc.php' );
 add_action( 'widgets_init', create_function( '', 'register_widget( "Whyosc_Widget" );' ) );
 
 
+/*
+ * Widget very big
+ * 横贯全页面面 随机展示大图
+ */
+require_once( 'classes/class-widget-fullad.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "Fullad_Widget" );' ) );
+
+
 
 
 ?>
