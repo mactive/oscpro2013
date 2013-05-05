@@ -170,7 +170,23 @@ ul.show_case li a{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	position: relative;
 }
+ul.show_case li a:hover .show_hover{display: block;}
+ul.show_case li a .show_hover{
+	display: none; 
+	background: url(img/show_hover.png) no-repeat center center;
+	width: 100%; height: 100%; margin: 0;
+}
+ul.show_case li a .show_hover b{
+	background: url(img/right_arraw.png ) no-repeat #333132 90% center; 
+	color: #fff; text-indent: 20px; font-size: 14px;
+	width: 120px; height: 40px; line-height: 40px;
+	margin: auto ; text-align: left;
+	position: absolute; top:60px; left: 40px;
+	display: block;
+}
+
 ul.show_case li span{
 	display: block; text-align: center; float: left;
 	height: 40px; line-height: 40px; background: #fff;

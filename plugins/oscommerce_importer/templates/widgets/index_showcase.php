@@ -28,12 +28,17 @@
 		foreach($posts_first as $post){
 	?>
 		<li style="width: <?php _e($width); ?>px !important;">
+
             <?php 
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
                 $url = $thumb['0'];
-                $out = '<a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a>';
-                echo $out;
             ?>
+
+            <a href="<?php echo get_permalink($post->ID)?>" style="background-image:url('<?php _e($url);?>');">
+                <div class="show_hover">
+                    <b>查看产品</b>
+                </div>
+            </a>
             <span><?php echo $post->post_title ?></span>
         </li>
 	<?php } ?>
@@ -45,12 +50,17 @@
         foreach($posts_second as $post){
     ?>
         <li style="width: <?php _e($width); ?>px !important;">
+
             <?php 
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
                 $url = $thumb['0'];
-                $out = '<a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a>';
-                echo $out;
             ?>
+
+            <a href="<?php get_permalink($post->ID)?>" style="background-image:url('<?php _e($url);?>');">
+                <div class="show_hover">
+                    <b>查看产品</b>
+                </div>
+            </a>
             <span><?php echo $post->post_title ?></span>
         </li>
     <?php } ?>
