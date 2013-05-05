@@ -4,19 +4,27 @@
  */
 ?>
 
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" charset="utf-8" async defer>
+    jQuery(document).ready(function ($) {
+        $(function() {
+            $( "#show_case_div" ).tabs();
+        });
+    });
+</script>
 
 <?php global $woocommerce; ?>
-<?php if ( $posts ) : ?>
+<?php if ( $posts_first ) : ?>
 
 <div id="show_case_div">
-    <div class="show_case_title">
-        <a class="black_block">推荐产品 Recommend</a>
-        <a href="brand-list/" class="gray_block">新上产品 New</a>
-    </div>
+    <ul class="show_case_title">
+        <li><a href="#ul_first" class="black_block">推荐产品 Recommend</a></li>
+        <li><a href="#ul_second" class="gray_block">新上产品 New</a></li>
+    </ul>
 
-	<ul class="show_case">
+	<ul class="show_case" id="ul_first">
 	<?php 
-		foreach($posts as $post){
+		foreach($posts_first as $post){
 	?>
 		<li style="width: <?php _e($width); ?>px !important;">
             <?php 
@@ -29,6 +37,25 @@
         </li>
 	<?php } ?>
 	</ul>
+
+
+    <ul class="show_case" id="ul_second">
+    <?php 
+        foreach($posts_second as $post){
+    ?>
+        <li style="width: <?php _e($width); ?>px !important;">
+            <?php 
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+                $url = $thumb['0'];
+                $out = '<a href="'.get_permalink($post->ID).'" style="background-image:url('.$url.');"></a>';
+                echo $out;
+            ?>
+            <span><?php echo $post->post_title ?></span>
+        </li>
+    <?php } ?>
+    </ul>
+
+
 </div>
 
 

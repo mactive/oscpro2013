@@ -35,18 +35,30 @@ class Showcase_Widget extends WP_Widget {
 		extract( $args );
 
 		$title = apply_filters( 'widget_title', $instance['title'] );
-		$catslug = $instance['catslug']; // product_cat
+		$catslug_first 	= $instance['catslug_first']; // product_cat
+		$catslug_second = $instance['catslug_second']; // product_cat
 		$width = $instance['width']; // 宽高大小
 		$count = $instance['count']; // 数量
 
-		// get the $term->term_taxonomy_id 和分类相关的产品
-		$term = get_term_by('slug',$catslug,'product_cat');
-		// data
 		global $wpdb;
-		$posts = $wpdb->get_results( 
+
+		// get the $term->term_taxonomy_id 和分类相关的产品
+		$term_first = get_term_by('slug',$catslug_first,'product_cat');
+		// data
+		$posts_first = $wpdb->get_results( 
 			" SELECT posts.post_title, posts.ID FROM {$wpdb->term_relationships} AS rel ".
 			" LEFT JOIN {$wpdb->posts} AS posts ON posts.ID=rel.object_ID".
-			" WHERE rel.term_taxonomy_id = $term->term_taxonomy_id ".
+			" WHERE rel.term_taxonomy_id = $term_first->term_taxonomy_id ".
+			" limit 0,$count "
+		 );
+
+		// get the $term->term_taxonomy_id 和分类相关的产品
+		$term_second = get_term_by('slug',$catslug_second,'product_cat');
+		// data
+		$posts_second = $wpdb->get_results( 
+			" SELECT posts.post_title, posts.ID FROM {$wpdb->term_relationships} AS rel ".
+			" LEFT JOIN {$wpdb->posts} AS posts ON posts.ID=rel.object_ID".
+			" WHERE rel.term_taxonomy_id = $term_second->term_taxonomy_id ".
 			" limit 0,$count "
 		 );
 		
@@ -54,7 +66,8 @@ class Showcase_Widget extends WP_Widget {
 		echo $before_widget;
 		echo $before_title.$title.$after_title;
 		woocommerce_get_template( 'widgets/index_showcase.php', array(
-			'posts'	=> $posts,
+			'posts_first'	=> $posts_first,
+			'posts_second'	=> $posts_second,
 			'width' => $width,
 			'count' => $count
 		), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
@@ -76,7 +89,8 @@ class Showcase_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = strip_tags( $new_instance['title'] );
-  		$instance['catslug'] = $new_instance['catslug'];
+  		$instance['catslug_first'] = $new_instance['catslug_first'];
+  		$instance['catslug_second'] = $new_instance['catslug_second'];
   		$instance['width'] = $new_instance['width'];
   		$instance['count'] = $new_instance['count'];
 
@@ -98,11 +112,20 @@ class Showcase_Widget extends WP_Widget {
 			$title = __( 'Showcase Slider', 'text_domain' );
 		}
 
-		if ( isset( $instance[ 'catslug' ] ) ) {
-			$catslug = urldecode($instance[ 'catslug' ]);
+		// catslug_first
+		if ( isset( $instance[ 'catslug_first' ] ) ) {
+			$catslug_first = urldecode($instance[ 'catslug_first' ]);
 		}
 		else {
-			$catslug = __( '从上面选择', 'text_domain' );
+			$catslug_first = __( 'first cat', 'text_domain' );
+		}
+
+		// catslug_second
+		if ( isset( $instance[ 'catslug_second' ] ) ) {
+			$catslug_second = urldecode($instance[ 'catslug_second' ]);
+		}
+		else {
+			$catslug_second = __( 'second cat', 'text_domain' );
 		}
 
 
@@ -126,23 +149,32 @@ class Showcase_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 
-		<p>
-		    <label for="<?php echo $this->get_field_id('catslug'); ?>">Category Name:</label>
-		    <?php 
-		    	woocommerce_product_dropdown_categories();
-
-		    	// wp_dropdown_categories('hide_empty=0&hierarchical=1&id='.$this->get_field_id('catslug').'&name='.$this->get_field_name('catslug').'&selected='.$instance['catslug']); ?>
-		    <input class="widefat" id="<?php echo $this->get_field_id( 'catslug' ); ?>" name="<?php echo $this->get_field_name( 'catslug' ); ?>" type="text" value="<?php echo esc_attr( $catslug ); ?>" />
+		<p id="catslug_first">
+		    <label for="<?php echo $this->get_field_id('catslug_first'); ?>">First Category Name:</label>
+		    <?php woocommerce_product_dropdown_categories();?>
+		    <input class="widefat" id="<?php echo $this->get_field_id( 'catslug_first' ); ?>" name="<?php echo $this->get_field_name( 'catslug_first' ); ?>" type="text" value="<?php echo esc_attr( $catslug_first ); ?>" />
 		    <script type="text/javascript">
-		    jQuery(document).ready(function ($) {
-		    	console.log($("#dropdown_product_cat"));
-				$('#dropdown_product_cat').live('change', function() {
-					$(this).next('input').val($(this).val());
-				});	
+			    jQuery(document).ready(function ($) {
+			    	console.log($("#dropdown_product_cat"));
+					$('#catslug_first #dropdown_product_cat').live('change', function() {
+						$(this).next('input').val($(this).val());
+					});	
+				});	    
+			</script>
+		</p>
 
-			});
 
-					    
+		<p id="catslug_second">
+		    <label for="<?php echo $this->get_field_id('catslug_second'); ?>">Second Category Name:</label>
+		    <?php woocommerce_product_dropdown_categories();?>
+		    <input class="widefat" id="<?php echo $this->get_field_id( 'catslug_second' ); ?>" name="<?php echo $this->get_field_name( 'catslug_second' ); ?>" type="text" value="<?php echo esc_attr( $catslug_second ); ?>" />
+		    <script type="text/javascript">
+			    jQuery(document).ready(function ($) {
+			    	console.log($("#dropdown_product_cat"));
+					$('#catslug_second #dropdown_product_cat').live('change', function() {
+						$(this).next('input').val($(this).val());
+					});	
+				});	    
 			</script>
 		</p>
 

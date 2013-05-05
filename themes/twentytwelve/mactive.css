@@ -133,11 +133,13 @@ a.gray_block{
 	display: block; text-align: center;
 	color: #000; font-size: 14px;
 }
+a.gray_block:hover{background: #ccc;}
 a.black_block{
 	background: #333132;
 	display: block; text-align: center;
 	color: #fff; font-size: 14px;
 }
+a.black_block:hover{background: #000;}
 
 ul.show_case{height: 424px; clear: both; margin-top: 10px; float: left;
 	background: #efefef; width: 765px;
