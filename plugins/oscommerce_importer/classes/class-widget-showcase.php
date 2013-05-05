@@ -40,21 +40,25 @@ class Showcase_Widget extends WP_Widget {
 		$count = $instance['count']; // 数量
 
 		$term = get_term_by('slug',$catslug,'product_cat');
-		print_r($term);
+		print_r($term->term_taxonomy_id);
 
-		// global $wpdb;
-		$posts = get_posts('category='.$catslug);
 
-		term_taxonomy_id
+		global $wpdb;
+		$posts = $wpdb->get_results( 
+			" SELECT posts.post_title, posts.ID FROM {$wpdb->term_relationships} AS rel ".
+			" LEFT JOIN {$wpdb->posts} AS posts ON posts.ID=rel.object_ID".
+			" WHERE rel.term_taxonomy_id = $term->term_taxonomy_id ".
+			" limit 0,$count "
+		 );
+		
 
 		echo $before_widget;
 		echo $before_title.$title.$after_title;
-		// echo $out;
-		// woocommerce_get_template( 'widgets/category_slider.php', array(
-		// 	'posts'	=> $posts,
-		// 	'width' => $width,
-		// 	'count' => $count
-		// ), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
+		woocommerce_get_template( 'widgets/index_showcase.php', array(
+			'posts'	=> $posts,
+			'width' => $width,
+			'count' => $count
+		), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
 
 
 		echo $after_widget;
