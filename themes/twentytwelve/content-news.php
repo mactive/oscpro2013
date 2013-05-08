@@ -28,7 +28,7 @@
 			<?php 
 				$content = get_the_content();
       			$content = strip_tags($content);
-				echo mb_substr($content, 0, 90);
+				echo mb_substr($content, 0, 75);
 			?>
 		</div>
 

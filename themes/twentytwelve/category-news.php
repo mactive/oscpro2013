@@ -33,7 +33,7 @@ get_header(); ?>
 				get_template_part( 'content', $cat[0]->slug );
 
 			endwhile;
-
+			
 			twentytwelve_content_nav( 'nav-below' );
 			?>
 

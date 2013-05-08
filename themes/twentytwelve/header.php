@@ -42,13 +42,13 @@
 		<span class="top_tel">服务热线:010-81596084 | 13720028098 </span>
 
 		<span class="top_action">
-			<span>欢迎来到奥斯中乐!</span> 
-			<a href="">登录</a>
-			<a href="">注册</a>
+			<span class="f_left">欢迎来到奥斯中乐!</span> 
+			<a class="f_left" href="">登录</a>
+			<a class="f_left" href="">注册</a>
 		</span>
 		<span class="top_sns">
-			<a href="" class="taobao_30"></a>
-			<a href="" class="weibo_30"></a>
+			<a href="" class="taobao_30 f_left"></a>
+			<a href="" class="weibo_30 f_left"></a>
 		</span>
 	</section>
 </div>
