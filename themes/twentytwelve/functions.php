@@ -422,7 +422,7 @@ add_filter( 'body_class', 'twentytwelve_body_class' );
 function twentytwelve_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
 		global $content_width;
-		$content_width = 960;
+		$content_width = 975;
 	}
 }
 add_action( 'template_redirect', 'twentytwelve_content_width' );
