@@ -54,7 +54,7 @@ class Postcale_Widget extends WP_Widget {
 
 		wp_get_archives( 
 					array( 
-						'type' => 'daily', 
+						'type' => 'monthly', 
 						'limit' => 12, 
 						'show_post_count' => true
 						) 

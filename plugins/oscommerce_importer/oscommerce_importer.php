@@ -106,6 +106,9 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Fullad_Widge
 require_once( 'classes/class-widget-postcale.php' );
 add_action( 'widgets_init', create_function( '', 'register_widget( "Postcale_Widget" );' ) );
 
+require_once( 'classes/class-widget-catside.php' );
+add_action( 'widgets_init', create_function('', 'register_widget("cb_archive_widget");') );
+
 
 
 ?>

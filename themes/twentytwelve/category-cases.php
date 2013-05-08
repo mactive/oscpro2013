@@ -21,9 +21,9 @@ get_header(); ?>
 	<?php endif; ?>
 
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main" class="category_news">
-		<div class="list_title">
+	<section id="primary" class="site-content category_cases">
+		<div id="content" role="main" >
+		<div class="list_title ml_20px mb_20px">
 		<?php 
 			$cat = get_the_category();
 			echo "全部".$cat[0]->name;
@@ -50,5 +50,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

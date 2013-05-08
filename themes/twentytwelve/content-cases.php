@@ -9,7 +9,7 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="article_thumbnail f_left">
+		<div class="article_square_thumbnail f_left">
 			<?php 
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
                 $url = $thumb['0'];
@@ -21,14 +21,14 @@
 
 		</div>
 		<div class="article_brief f_left">
-			<a class="article_title">
+			<a class="article_title" href="<?php echo get_permalink($post->ID)?>">
 				<?php the_title() ?>
 				<span class="time f_right"><?php echo get_post_time('Y-m-d'); ?></span>
 			</a>
 			<?php 
 				$content = get_the_content();
       			$content = strip_tags($content);
-				echo mb_substr($content, 0, 75);
+				echo mb_substr($content, 0, 70);
 			?>
 		</div>
 

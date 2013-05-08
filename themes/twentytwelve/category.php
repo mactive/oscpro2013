@@ -22,15 +22,21 @@ get_header(); ?>
 
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main">
-		<div class="list_title">全部新闻</div>
+		<div id="content" role="main" class="category_news">
+		<div class="list_title">
+		<?php 
+			$cat = get_the_category();
+			echo "全部".$cat[0]->name;
+		 ?>
+		</div>
 		<?php if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-				echo get_the_category();		
-				get_template_part( 'content', get_post_format() );
+				$cat = get_the_category() ;
+				get_template_part( 'content', 'comm' );
+
 			endwhile;
 
 			twentytwelve_content_nav( 'nav-below' );
@@ -43,4 +49,6 @@ get_header(); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
