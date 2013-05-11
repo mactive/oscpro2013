@@ -22,7 +22,7 @@ get_header(); ?>
 
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main" class="category_news">
+		<div id="content" role="main" class="ml_30px">
 		<div class="list_title">
 		<?php 
 			$cat = get_the_category();

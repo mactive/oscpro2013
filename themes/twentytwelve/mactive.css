@@ -249,7 +249,7 @@ article.format-standard{ height: 105px; margin:15px 0px !important; padding: 0 !
 /* cases */
 
 section.category_cases{width: 100%;}
-
+.category_content{margin-left: 30px; width: 100%;}
 div.category_cases{width: 100%;}
 .article_square_thumbnail{}
 .article_square_thumbnail a{
@@ -258,7 +258,7 @@ div.category_cases{width: 100%;}
 	box-shadow: 0 0 1px #ccc;
 }
 
-article.category-cases {width: 450px; height: 150px !important; float: left; margin:10px 0px 20px 30px !important;}
+article.category-cases {width: 450px; height: 150px !important; float: left; margin:10px 30px 20px 0px !important;}
 article.category-cases .article_brief{
 	width: 220px;
 }

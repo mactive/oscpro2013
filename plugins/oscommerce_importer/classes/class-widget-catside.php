@@ -64,21 +64,21 @@ class cb_archive_widget extends WP_Widget {
         if ($checked == 'on') { $counter_arc = 1; } else { $counter_arc = 0; };
         $args = array(
                 'show_post_count' => $counter_arc,
+                'format' => 'html',
             );
-        ?>
 
-        <!-- Display HTML -->
-        <?php
+
+        $cat_info = get_category($catID);
+
         echo $before_widget;
         echo $before_title . $arc_title . $after_title;
-        $tt = get_the_category_by_ID($catID);
-        echo '<div class="news_title">'.$tt.'日历</div>';
-        ?>
 
-        <ul class="calendar">
-            <?php wp_get_archives($args); ?>
-        </ul>
-        <?php 
+        woocommerce_get_template( 'widgets/catside_date.php', array(
+            'title' => $cat_info->name,
+            'args' => $args,
+            'slug' => $cat_info->slug,
+        ), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
+
         echo $after_widget;
     }
 

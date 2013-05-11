@@ -109,6 +109,13 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Postcale_Wid
 require_once( 'classes/class-widget-catside.php' );
 add_action( 'widgets_init', create_function('', 'register_widget("cb_archive_widget");') );
 
+/* 	
+	hooks 按照日期显示分类的
+	http://local.osc-pro.com/archives/category/news/2013/05
+ */
+
+require_once( 'classes/date_archive_for_category.php' );
+
 
 
 ?>

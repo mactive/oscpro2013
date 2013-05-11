@@ -20,7 +20,7 @@
 get_header(); ?>
 
 	<section id="primary" class="site-content">
-		<div id="content" role="main">
+		<div id="content" role="main" class="ml_30px">
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
@@ -45,7 +45,8 @@ get_header(); ?>
 				 * this in a child theme then include a file called called content-___.php
 				 * (where ___ is the post format) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+				echo get_post_format();
+				get_template_part( 'content', 'comm' );
 
 			endwhile;
 

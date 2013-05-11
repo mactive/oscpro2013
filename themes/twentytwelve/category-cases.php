@@ -21,9 +21,9 @@ get_header(); ?>
 	<?php endif; ?>
 
 
-	<section id="primary" class="site-content category_cases">
+	<section id="primary" class="site-content category_content">
 		<div id="content" role="main" >
-		<div class="list_title ml_20px mb_20px">
+		<div class="list_title mb_20px">
 		<?php 
 			$cat = get_the_category();
 			echo "全部".$cat[0]->name;
