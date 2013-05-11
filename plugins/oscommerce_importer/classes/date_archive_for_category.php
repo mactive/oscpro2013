@@ -55,13 +55,30 @@ function my_date_archive_for_category() {
 			}
 		}
 		else {
-			// $is404 = true;
+
+			/*
+			 * 正常的分页数据
+			 * /archives/category/cases/page/2
+			 * 
+			 */
+
 			$category_array = get_term_by('slug', $request_parts["3"], "category", ARRAY_A);
+
 			if(!empty($category_array)) {
-				query_posts(array(
-					'cat' => $category_array["term_id"],
+				if ($request_parts["4"] == 'page' && !empty($request_parts["5"]) ) {
+					# code...
+					query_posts(array(
+						'cat' => $category_array["term_id"],
+						'paged' => $request_parts["5"]
 					));
+				}else{
+					query_posts(array(
+						'cat' => $category_array["term_id"],
+					));
+				}
+				
 			}
+
 			include(TEMPLATEPATH . '/category-'.$category_array['slug'].'.php');
 
 		}
