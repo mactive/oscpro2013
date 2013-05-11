@@ -7,7 +7,7 @@ function my_date_archive_for_category() {
 
 		$request_parts = explode('/', $request);
 
-		print_r($request_parts);
+		// print_r($request_parts);
 
         /* lets make sure yyyy and mm are integers */
 		$request_parts["4"] = intval($request_parts["4"]);
@@ -36,17 +36,16 @@ function my_date_archive_for_category() {
 								'cat' => $category_array["term_id"],
 								'year'=> $request_parts["4"],
 								'monthnum'=>$request_parts["5"],
+								'posts_per_page'=>100,
 								));
+
+
 
 				if ( have_posts() ) :
 
-					while ( have_posts() ) : the_post();
-						/* your post stuff goes here */
-						/* I'm using the_title function only to show post titles */
-						// the_title();
-						$cat = get_the_category() ;
-						get_template_part( 'content', $cat[0]->slug );
-					endwhile;
+					include(TEMPLATEPATH . '/archive-catgory.php');
+
+
 				else:
 					$is404 = true;
 				endif;
