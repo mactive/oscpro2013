@@ -100,6 +100,22 @@ div.logo a{display: block; width: 100%; height: 100%;}
 	margin-bottom: 20px;
 }
 
+#left_side{
+	width: 210px; 
+	float: left;
+	margin-left: 20px;
+}
+#left_side a{
+	color: #757575;
+	font-size: 12px;
+	text-align: left;
+}
+
+aside.widget_otherpost_widget{
+	width: 210px;
+	margin-top: 20px;
+}
+
 
 
 .index_theme img{
@@ -277,7 +293,41 @@ ul.calendar a{text-decoration: none;}
 }
 
 
+.single_nav{ 
+	height: 40px; margin-bottom: 40px;
+}
 
+.single_nav span{ 
+	height: 40px !important; line-height: 40px !important; 
+	width: 85px !important; margin:0px 5px; 
+}
+.nav-single{
+	width: 200px; height: 100%;
+	margin-left: 10px; margin-bottom: 20px;
+	float: left; display: block;
+}
+.single_nav_title{width:  750px; height: 40px; line-height: 40px; text-indent: 30px;margin-top: 10px;}
+.single_nav_title b{
+	display: block; color: #ccc; width: 150px; margin-top: -10px;
+}
+
+.entry-content{width: 600px;}
+
+
+
+.keyline{
+	height: 1px; font-size: 1px; background-color: #ccc;
+	padding: 0px; line-height: 1px;
+	border-bottom:1px solid #fff; 
+	width: 100%; margin:10px 0px; 
+	clear: both;
+}
+
+.lite_full_ad {
+	height: 170px;
+	overflow:hidden; max-height: 170px;
+	margin-bottom: 30px; 
+}
 
 
 
@@ -424,7 +474,7 @@ a.block:hover{
 	background: #f0f0f0;
 	box-shadow:inset 0 1px #f6f6f6;
 }
-li.block{
+span.block, li.block{
 	display: block;
 	background: #f6f6f6;
 	color: #7a7a7a; font-size: 14px; font-weight: bold;
@@ -435,7 +485,7 @@ li.block{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-li.block:hover{
+span.block:hover, li.block:hover{
 	background: #f0f0f0;
 	box-shadow:inset 0 1px #f6f6f6;
 }

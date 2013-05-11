@@ -96,7 +96,7 @@ endif;
 
 				</article><!-- #post -->
 
-				<?php comments_template(); ?>
+				<?php //comments_template(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 

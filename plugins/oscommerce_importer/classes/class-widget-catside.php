@@ -28,8 +28,10 @@ class cb_archive_widget extends WP_Widget {
     public function widget( $args, $instance ) {
         extract( $args );
         global $cat;
-        $cat = $instance['arc_cat'];
-        $catID = get_cat_ID( $cat );
+        // $cat = $instance['arc_cat'];
+        $cat = get_the_category();
+
+        $catID = $cat[0]->cat_ID;
         $arc_title = $instance['arc_title'];
 
         //add the archive filters
@@ -51,7 +53,8 @@ class cb_archive_widget extends WP_Widget {
 
             global $wpdb;
             global $cat;
-            $catID = get_cat_ID( $cat );
+            // $catID = get_cat_ID( $cat );
+            $catID = $cat[0]->cat_ID;
 
             $sql = "WHERE post_type = 'post' AND post_status = 'publish' ";
             $sql = $sql . "AND $wpdb->term_taxonomy.term_id IN ($catID)";

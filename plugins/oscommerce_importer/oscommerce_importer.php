@@ -106,15 +106,30 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Fullad_Widge
 require_once( 'classes/class-widget-postcale.php' );
 add_action( 'widgets_init', create_function( '', 'register_widget( "Postcale_Widget" );' ) );
 
+/* 	
+ *	新闻页面的当前分类下的文章 按照日期统计
+ *	http://local.osc-pro.com/archives/category/news/
+ */
+
 require_once( 'classes/class-widget-catside.php' );
 add_action( 'widgets_init', create_function('', 'register_widget("cb_archive_widget");') );
 
 /* 	
-	hooks 按照日期显示分类的
-	http://local.osc-pro.com/archives/category/news/2013/05
+ *	hooks 按照日期显示分类的
+ *	http://local.osc-pro.com/archives/category/news/2013/05
  */
 
 require_once( 'classes/date_archive_for_category.php' );
+
+
+/* 	
+ *	新闻页面的当前分类下的文章 按照日期统计
+ *	http://local.osc-pro.com/archives/category/news/
+ */
+
+require_once( 'classes/class-widget-otherpost.php' );
+add_action( 'widgets_init', create_function('', 'register_widget("Otherpost_widget");') );
+
 
 
 

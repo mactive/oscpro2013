@@ -13,13 +13,11 @@
 
 get_header(); ?>
 
-
-	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 		<div id="secondary">
-			<?php dynamic_sidebar( 'sidebar-3' ); ?>
+			<?php dynamic_sidebar( 'sidebar-4' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
-
 
 	<section id="primary" class="site-content">
 		<div id="content" role="main" class="ml_30px">
