@@ -131,6 +131,8 @@ require_once( 'classes/class-widget-otherpost.php' );
 add_action( 'widgets_init', create_function('', 'register_widget("Otherpost_widget");') );
 
 
+require_once( 'classes/class-product-metabox.php' );
+require_once( 'classes/class-product-metatest.php' );
 
 
 ?>
