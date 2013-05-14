@@ -123,6 +123,14 @@ require_once( 'classes/date_archive_for_category.php' );
 
 
 /* 	
+ *	get custom fired
+ *	http://local.osc-pro.com/archives/category/news/
+ */
+
+require_once( 'classes/class-widget-customfield.php' );
+add_action( 'widgets_init', create_function('', 'register_widget("Customfield_widget");') );
+
+/* 	
  *	新闻页面的当前分类下的文章 按照日期统计
  *	http://local.osc-pro.com/archives/category/news/
  */
@@ -131,8 +139,8 @@ require_once( 'classes/class-widget-otherpost.php' );
 add_action( 'widgets_init', create_function('', 'register_widget("Otherpost_widget");') );
 
 
-require_once( 'classes/class-product-metabox.php' );
-require_once( 'classes/class-product-metatest.php' );
+// require_once( 'classes/class-product-metabox.php' );
+// require_once( 'classes/class-product-metatest.php' );
 
 
 ?>

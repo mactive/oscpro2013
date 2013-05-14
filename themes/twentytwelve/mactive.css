@@ -241,6 +241,12 @@ ul.show_case li span{
 	font-size: 16px; color: #666666;
 	height: 30px; line-height: 30px;
 }
+.tag_title{
+	background:url(img/icon_tag.png) no-repeat 10px center;
+	text-indent: 40px;
+	font-size: 16px; color: #666666;
+	height: 30px; line-height: 30px;
+}
 
 /* NEWS */
 .article_thumbnail{}
