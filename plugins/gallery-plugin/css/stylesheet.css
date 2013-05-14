@@ -66,7 +66,7 @@ ul.gallery {
 }
 .clear {
 	clear:both;
-	height:0;
+	/*height:0;*/
 }
 .gllr_image_text, .gllr_link_text {
 	margin-top:10px;
