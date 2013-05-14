@@ -47,18 +47,22 @@ class Customfield_widget extends WP_Widget {
 	  		 }
 
 	  	}
+	  	if (count($result)) {
+	  		# code...
+	  		echo $before_widget;
+			echo $before_title.$title.$after_title;
 
-		echo $before_widget;
-		echo $before_title.$title.$after_title;
-
-		woocommerce_get_template( 'widgets/linked_product.php', array(
-			'products'	=> $result,
-			'width' => $width,
-			'count' => $count
-		), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
+			woocommerce_get_template( 'widgets/linked_product.php', array(
+				'products'	=> $result,
+				'width' => $width,
+				'count' => $count
+			), 'oscommerce_importer', untrailingslashit( plugin_dir_path( dirname( dirname( __FILE__ ) ) ) ) . '/oscommerce_importer/templates/' );
 
 
-		echo $after_widget;
+			echo $after_widget;
+	  	}
+
+
 	}
 
 	/**
