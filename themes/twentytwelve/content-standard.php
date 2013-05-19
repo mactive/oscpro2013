@@ -16,7 +16,7 @@
 		<div class="entry-content f_eft">
  
 			<?php 
-				if (in_category('cases',$post_id)) {
+				if (in_category('cases',$post_id) || in_category('video',$post_id)) {
 					# code...
 					// 成功案例不显示 文章缩率图
 				}else{

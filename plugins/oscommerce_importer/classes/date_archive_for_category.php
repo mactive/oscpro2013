@@ -79,7 +79,7 @@ function my_date_archive_for_category() {
 				
 			}
 
-			$os = array("news", "cases");
+			$os = array("news", "cases","videoaudio");
 
 			if (in_array($category_array['slug'] , $os)) {
 				# code...
