@@ -1123,6 +1123,7 @@ if ( ! function_exists ( 'gllr_shortcode' ) ) {
 				global $post;
 				$second_query->the_post(); ?>
 				<div class="gallery_box_single">
+					<div class="gallery_title"><?php _e('相册')?></div>
 					<?php the_content(); 
 					$posts = get_posts( array(
 						"showposts"			=> -1,

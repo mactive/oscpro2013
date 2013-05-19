@@ -13,9 +13,16 @@
 			<?php 
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
                 $url = $thumb['0'];
+                if (empty($url)) {
+                	# code...
+                	$template_url = get_bloginfo('template_url');
+                	$url = $template_url."/img/logo_150.png";
+                }
+
+
             ?>
 
-            <a class="radius_3px" href="<?php echo get_permalink($post->ID)?>" style="background-image:url('<?php _e($url);?>');">
+            <a class="radius_3px" href="<?php echo get_permalink($post->ID)?>" style="background-image:url('<?php echo $url;?>');">
             </a>
 
 

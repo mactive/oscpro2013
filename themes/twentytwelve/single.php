@@ -9,19 +9,38 @@
 
 get_header(); ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
-		<div id="secondary" class="lite_full_ad">
-			<?php dynamic_sidebar( 'sidebar-4' ); ?>
-		</div><!-- #secondary -->
-	<?php endif; ?>
+	<?php 
+		$categories = get_the_category(); 
+		$post_cat = $categories[0];
+		$post_cat_slug = $categories[0]->slug;
+	?>
 
+	<?php if ($post_cat_slug != "cases"): ?>
+
+		<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+			<div id="secondary">
+				<?php dynamic_sidebar( 'sidebar-4' ); ?>
+			</div><!-- #secondary -->
+		<?php endif; ?>
+
+	<?php else: ?>
+
+		<aside class="widget_fullad_widget" >
+			<?php 
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+                $url = $thumb['0'];
+            ?>
+            <img src="<?php _e($url);?>">
+            </a>
+		</aside>
+
+	<?php endif ?>
 
 <div class="single_nav">
 	<nav class="nav-single">
 		<span class="nav-previous block">
 			<?php previous_post_link( '%link',  '&larr;上一篇'); ?></span>
-		<span class="nav-next block">
-			<?php next_post_link( '%link', '下一篇&rarr;'  ); ?></span>
+		<span class="nav-next block"><?php next_post_link( '%link', '下一篇&rarr;'  ); ?></span>
 
 	</nav><!-- .nav-single -->
 	<div class="single_nav_title f_left">
@@ -41,7 +60,8 @@ get_header(); ?>
 	<?php endif; ?>
 
 
-	<div id="primary" class="site-content f_left">
+
+	<div id="primary" class="site-content f_left <?php if ($post_cat_slug == "cases"): ?>single_narrow<?php endif ?>">
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -59,6 +79,17 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
+
 	</div><!-- #primary -->
+
+
+	<?php if ($post_cat_slug == "cases"): ?> 
+		<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
+		<div id="left_side">
+			<?php dynamic_sidebar( 'sidebar-5' ); ?>
+		</div><!-- #secondary -->
+		<?php endif ?>
+
+	<?php endif; ?>
 
 <?php get_footer(); ?>

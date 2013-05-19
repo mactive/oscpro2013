@@ -79,7 +79,15 @@ function my_date_archive_for_category() {
 				
 			}
 
-			include(TEMPLATEPATH . '/category-'.$category_array['slug'].'.php');
+			$os = array("news", "cases");
+
+			if (in_array($category_array['slug'] , $os)) {
+				# code...
+				include(TEMPLATEPATH . '/category-'.$category_array['slug'].'.php');
+			}else{
+				include(TEMPLATEPATH . '/category.php');
+			}
+
 
 		}
 
