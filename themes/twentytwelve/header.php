@@ -33,7 +33,6 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/mactive.css" />
 
 
-
 </head>
 
 <body <?php body_class(); ?>>

@@ -8,10 +8,9 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<a class=" block" href="<?php echo get_permalink($post->ID)?>">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+			<a class="block" href="<?php echo get_permalink($post->ID)?>" >
 				<?php the_title() ?>
 			</a>
-
 
 	</article><!-- #post -->

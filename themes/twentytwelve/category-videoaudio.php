@@ -13,6 +13,7 @@
 
 get_header(); ?>
 
+
 	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 		<div id="secondary">
 			<?php dynamic_sidebar( 'sidebar-4' ); ?>
@@ -63,3 +64,4 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+

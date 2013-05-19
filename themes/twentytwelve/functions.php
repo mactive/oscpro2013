@@ -470,6 +470,12 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+function jquery_tools_js() {
+	wp_enqueue_script( 'jquery-tools', get_template_directory_uri() . '/js/jquery.tools.min.js', array( 'customize-preview' ), '20130519', true );
+}
+
+// add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
 function echo_tar(){
 	echo "=======================";
 	echo "<br><br>";
