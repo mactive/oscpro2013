@@ -2,7 +2,7 @@ upgrade/*
 themes/twentyten/*
 themes/twentyeleven/*
 languages/*
-plugins/woocommerce/*
+plugins/woocommerce/i18n/*
 plugin/akismet/*
 
 #upload
