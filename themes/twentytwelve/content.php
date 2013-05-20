@@ -34,7 +34,12 @@
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
-			<?php the_excerpt(); ?>
+			<?php //the_excerpt(); ?>
+			<?php 
+				$content = get_the_content();
+  				$content = str_replace('&nbsp;','',trim(strip_tags($content)));
+				echo mb_substr($content, 0, 120);
+			?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">

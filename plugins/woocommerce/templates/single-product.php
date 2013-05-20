@@ -13,6 +13,22 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header('shop'); ?>
 
+<style type="text/css" media="screen">
+	.site-content{width: 670px !important; margin-left: 20px !important;}
+	.product_cell_right{width: 400px !important;}
+</style>
+
+
+	<div class="product_left">
+	<?php
+		/**
+		 * woocommerce_sidebar hook
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		do_action('woocommerce_sidebar');
+	?>
+	</div>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -38,13 +54,6 @@ get_header('shop'); ?>
 		do_action('woocommerce_after_main_content');
 	?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action('woocommerce_sidebar');
-	?>
+
 
 <?php get_footer('shop'); ?>

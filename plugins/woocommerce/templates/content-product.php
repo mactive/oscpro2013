@@ -74,6 +74,8 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 				?>
 			</div>
 
+
+
 				<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 		</div>

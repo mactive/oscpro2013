@@ -273,6 +273,13 @@ ul.show_case li span{
 	height: 30px; line-height: 30px;
 	width: 100%;
 }
+.cell_title{
+	height: 30px; line-height: 30px;
+	background:url(img/icon_cell.png) no-repeat 10px center;
+	text-indent: 30px;
+	font-size: 16px; color: #666666;
+	clear: both;
+}
 
 
 /* NEWS */
@@ -356,7 +363,6 @@ ul.calendar a{text-decoration: none;}
 	text-indent: 30px;
 	font-size: 16px; color: #666666;
 }
-
 
 .single_nav{ 
 	height: 40px; margin-bottom: 40px;
@@ -472,6 +478,14 @@ a.footer_a{width: 100%; text-align: center;}
 	height: 90px; width: 90%;
 	line-height: 20px;
 }
+.product_description{
+	line-height: 24px;padding: 20px 10px; width: 640px;
+	word-wrap:break-word; overflow:hidden;
+}
+.product_description img{
+	width: 100%; margin: 10px 0px;
+}
+
 /*
 ================================================================================================================
 ================================================================================================================

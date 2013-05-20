@@ -521,6 +521,19 @@ if ( ! function_exists( 'woocommerce_output_product_data_tabs' ) ) {
 		woocommerce_get_template( 'single-product/tabs/tabs.php' );
 	}
 }
+if ( ! function_exists( 'woocommerce_output_product_desc' ) ) {
+
+	/**
+	 * Output the product tabs.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_output_product_desc() {
+		woocommerce_get_template( 'single-product/description.php' );
+	}
+}
 if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
 
 	/**

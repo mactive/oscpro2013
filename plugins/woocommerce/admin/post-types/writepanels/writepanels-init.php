@@ -52,7 +52,7 @@ function woocommerce_meta_boxes() {
 	// Excerpt
 	if ( function_exists('wp_editor') ) {
 		remove_meta_box( 'postexcerpt', 'product', 'normal' );
-		add_meta_box( 'postexcerpt', __( 'Product Short Description', 'woocommerce' ), 'woocommerce_product_short_description_meta_box', 'product', 'normal' );
+		add_meta_box( 'postexcerpt', __( '规格参数', 'woocommerce' ), 'woocommerce_product_short_description_meta_box', 'product', 'normal' );
 	}
 
 	// Comments/Reviews
