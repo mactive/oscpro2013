@@ -253,7 +253,6 @@ class WC_Query {
 		$q->set( 'meta_query', $meta_query );
 		$q->set( 'post__in', $post__in );
 		$q->set( 'posts_per_page', $q->get( 'posts_per_page' ) ? $q->get( 'posts_per_page' ) : apply_filters( 'loop_shop_per_page', get_option( 'posts_per_page' ) ) );
-
 		// Set a special variable
 		$q->set( 'wc_query', true );
 

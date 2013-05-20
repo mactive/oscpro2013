@@ -408,11 +408,29 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	 */
 	function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $placeholder_width = 0, $placeholder_height = 0  ) {
 		global $post;
+		if ( has_post_thumbnail() ){
 
-		if ( has_post_thumbnail() )
-			return get_the_post_thumbnail( $post->ID, $size );
-		elseif ( woocommerce_placeholder_img_src() )
+
+			$product_img = "";
+			$b_size = '';
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size );
+            $url = $thumb['0'];
+            $width = $thumb[1];
+            $height = $thumb[2];
+            if ($width >= $height) {
+            	$b_size = 'background-size:'.$width.'px auto;';
+            }else{
+            	$b_size = 'background-size:auto '.$height.'px;';
+            }
+            $product_img = '<b class="radius_3px" style="'.$b_size.'background-image:url('.$url.');"></b>';
+            return $product_img;
+
+
+			// return get_the_post_thumbnail( $post->ID, $size );
+		}elseif ( woocommerce_placeholder_img_src() ){
 			return woocommerce_placeholder_img( $size );
+		}
+
 	}
 }
 
