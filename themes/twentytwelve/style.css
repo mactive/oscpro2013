@@ -524,7 +524,7 @@ a:hover {
 
 /* Page structure */
 .site {
-	background-color: #fff;
+	/*background-color: #fff;*/
 }
 .site-content {
 	margin: 24px 0 0;
@@ -1590,10 +1590,11 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 975px) {
 	body {
-		background-color: #fbfbfb;
+		/*background-color: #fbfbfb;*/
+		background: url('img/squairy_light.png');
 	}
 	body .site {
-		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+		/*box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);*/
 	}
 	body.custom-background-empty {
 		background-color: #fff;
@@ -1756,7 +1757,7 @@ section.inner a{color: #fff;}
 
 
 div.logo{
-	background: url(img/logo.png) no-repeat;
+	background: url(img/logo_w.png) no-repeat;
 	width: 220px; height: 70px;
 	margin: 25px 10px;
 }
