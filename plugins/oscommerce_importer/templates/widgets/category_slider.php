@@ -48,7 +48,7 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
             // fix jquery 1.5
 	        var $insert = $(items[currentItem]).css({
 			    height : 0,
-			    opacity : 0
+			    opacity : 1
 			}).prependTo($list);
 
                         
