@@ -32,6 +32,21 @@
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo( 'template_url' ); ?>/img/favicon.png" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/mactive.css" />
 
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+		$('ul.nav-menu a').hover(
+			function () {
+				$(this).data('en', $(this).attr('title'));
+				$(this).data('zh', $(this).html());
+			    $(this).html($(this).data('en'));
+			},
+			function () {
+			    $(this).html($(this).data('zh'));
+			}
+		);
+	});
+
+</script>
 
 </head>
 
