@@ -1730,7 +1730,7 @@ img#wpstats {
 osc-pro feature
 
  */
-#top_nav{background: #000;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
+#top_nav{background: #393939;height: 30px; line-height: 30px;color: #fff;font-size: 12px;}
 section.inner{width: 975px; margin:0px auto;display: block;}
 section.inner a{color: #fff;}
 #top_nav span{
@@ -1751,7 +1751,7 @@ section.inner a{color: #fff;}
 }
 
 
-#top_nav .top_tel{float: left;}
+#top_nav .top_tel{float: left;font-size: 14px;}
 #top_nav .top_sns{float: right;}
 #top_nav .top_action{float: right;}
 
