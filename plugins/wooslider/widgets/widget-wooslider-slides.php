@@ -78,7 +78,8 @@ class WooSlider_Widget_Slides extends WooSlider_Widget_Base {
 				}
 			}
 		}
-
+		print_r($settings);
+		print_r($extra_args);
 		$html = wooslider( $settings, $extra_args, false );
 
 		return $html;

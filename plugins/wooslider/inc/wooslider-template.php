@@ -33,7 +33,7 @@ function wooslider ( $args = array(), $extra_args = array(), $echo = true ) {
 	}
 
 	$slides = $wooslider->frontend->sliders->get_slides( $settings['slider_type'], $extra_args, $settings );
-
+	// print_r($slides) ;
 	$wooslider->frontend->sliders->add( $slides, $settings, $extra_args );
 
 	$theme = 'default';

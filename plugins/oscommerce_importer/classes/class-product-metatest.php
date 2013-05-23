@@ -89,7 +89,7 @@ function macplugin_inner_custom_box( $post ) {
                         'include'       => $posts_in,
                     );
                     $grouped_products = get_posts( $args );
-
+                    wp_reset_postdata();
                     if ( $grouped_products ) {
                         foreach ( $grouped_products as $product ) {
 

@@ -13,22 +13,27 @@
 
 get_header(); ?>
 
-
 	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 		<div id="secondary">
 			<?php dynamic_sidebar( 'sidebar-4' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
 
+	<?php echo_tar(); ?>
 
 	<section id="primary" class="site-content category_content">
 		<div id="content" role="main" >
 		<div class="list_title mb_20px">
 		<?php 
-			$cat = get_the_category();
-			echo "全部".$cat[0]->name;
+			// $cat = get_the_category();
+			// echo "全部".$cat[0]->name;
 		 ?>
 		</div>
+		<?php 		
+			query_posts(array(
+				'cat' => 233,
+			));
+		?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -38,6 +43,8 @@ get_header(); ?>
 				get_template_part( 'content', $cat[0]->slug );
 
 			endwhile;
+
+			wp_reset_query();
 
 			twentytwelve_content_nav( 'nav-below' );
 			?>

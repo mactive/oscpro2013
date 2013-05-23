@@ -13,6 +13,8 @@
     <?php
         global $post;
         $myposts = get_posts( $args );
+        wp_reset_postdata();
+
         foreach( $myposts as $post ) :  setup_postdata($post); ?>
             <li class="block"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 

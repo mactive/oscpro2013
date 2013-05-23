@@ -10,11 +10,11 @@ function my_date_archive_for_category() {
 		// print_r($request_parts);
 
         /* lets make sure yyyy and mm are integers */
-		$request_parts["4"] = intval($request_parts["4"]);
-		if($request_parts["4"] < 0) $request_parts["4"] = 0;
+		// $request_parts["4"] = intval($request_parts["4"]);
+		// if($request_parts["4"] < 0) $request_parts["4"] = 0;
 
-		$request_parts["5"] = intval($request_parts["5"]);
-		if($request_parts["5"] < 0) $request_parts["5"] = 0;
+		// $request_parts["5"] = intval($request_parts["5"]);
+		// if($request_parts["5"] < 0) $request_parts["5"] = 0;
 
 		/*
 		lets check if all parts are in place
@@ -23,7 +23,7 @@ function my_date_archive_for_category() {
 		if(($request_parts[1] == 'archives') && ($request_parts[2] == 'category') && (!empty($request_parts["3"])) && (!empty($request_parts["4"])) && (!empty($request_parts["5"]))) {
 
 			get_header();
-
+			$is404 = false;
 			/* your theme stuff goes here */
 			
 			/* check if category exists */
@@ -72,9 +72,13 @@ function my_date_archive_for_category() {
 						'paged' => $request_parts["5"]
 					));
 				}else{
-					query_posts(array(
-						'cat' => $category_array["term_id"],
-					));
+					// $args = array( 'category' => $category_array["term_id"] );
+					// global $posts;
+					// $posts = get_posts( $args );
+					// print_r($posts);
+					// query_posts(array(
+					// 	'cat' => $category_array["term_id"],
+					// ));
 				}
 				
 			}
@@ -84,6 +88,7 @@ function my_date_archive_for_category() {
 			if (in_array($category_array['slug'] , $os)) {
 				# code...
 				include(TEMPLATEPATH . '/category-'.$category_array['slug'].'.php');
+
 			}else{
 				include(TEMPLATEPATH . '/category.php');
 			}

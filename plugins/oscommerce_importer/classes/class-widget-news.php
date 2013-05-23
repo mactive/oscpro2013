@@ -41,6 +41,8 @@ class News_Widget extends WP_Widget {
 
 		// global $wpdb;
 		$posts = get_posts('category='.$catid);
+		wp_reset_postdata();
+
 		$out = '<ul class="news_image_slider">';
 		foreach($posts as $post) {
 			$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );

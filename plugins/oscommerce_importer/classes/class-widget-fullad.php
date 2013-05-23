@@ -39,6 +39,7 @@ class Fullad_Widget extends WP_Widget {
 
 		// global $wpdb;
 		$posts = get_posts('category='.$catid);
+		wp_reset_postdata();
 		$rand_num = count($posts)-1;
 		$rand_post = $posts[rand(0,$rand_num)];
 
