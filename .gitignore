@@ -14,5 +14,8 @@ uploads/2012/*
 uploads/2013/04/*
 uploads/2013/01/*
 uploads/2013/03/*
+uploads/articlelogo/*
+uploads/oldarticle/*
+images/*
 *.tar
 .DS_Store

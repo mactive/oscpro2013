@@ -23,7 +23,9 @@
 		</div>
 		<div class="article_brief f_left">
 			<a class="article_title" href="<?php echo get_permalink($post->ID)?>">
-				<?php the_title() ?>
+				<?php 
+					the_title();
+				?>
 				<span class="time f_right"><?php echo get_post_time('Y-m-d'); ?></span>
 			</a>
 			<?php 

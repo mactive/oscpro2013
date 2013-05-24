@@ -46,6 +46,8 @@ function oscimp_admin() {
 	// include('goods_transform/import_goods.php');
 	// include('goods_transform/update_goods_image.php');	//指定image 然后刷新数量
 	// include('goods_transform/update_goods_gallery.php');	//gallery 机制
+	// include('goods_transform/import_article.php');
+	// include('goods_transform/update_article_image.php');
 	// include('download_parse.php');
 
 }
