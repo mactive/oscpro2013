@@ -16,14 +16,14 @@
 		<div class="entry-content f_eft">
  
 			<?php 
-				if (in_category('cases',$post_id) || in_category('video',$post_id)) {
-					# code...
-					// 成功案例不显示 文章缩率图
-				}else{
-					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				  		the_post_thumbnail();
-					} 
-				}
+				// if (in_category('cases',$post_id) || in_category('video',$post_id)) {
+				// 	# code...
+				// 	// 成功案例不显示 文章缩率图
+				// }else{
+				// 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+				//   		the_post_thumbnail();
+				// 	} 
+				// }
 				
 
 
