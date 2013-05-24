@@ -5,13 +5,14 @@
  * @usedby [product_brand_list]
  */
 ?>
-<div id="brands_a_z">
-		
+<div id="brands_a_z" class="radius_3px">
+	
+	<div class="cell_title mb_20px">快速查找</div>
 	<ul class="brands_index">
 		<?php		
 		foreach ( $index as $i )
 			if ( isset( $product_brands[ $i ] ) )
-				echo '<li><a href="#brands-' . $i . '">' . $i . '</a></li>';
+				echo '<li><a href="#brands-' . $i . '">' . strtoupper($i) . '</a></li>';
 			elseif ( $show_empty )
 				echo '<li><span>' . $i . '</span></li>';
 		?>
@@ -19,8 +20,8 @@
 					
 	<?php foreach ( $index as $i ) if ( isset( $product_brands[ $i ] ) ) : ?>
 		
-		<h3 id="brands-<?php echo $i; ?>"><?php echo $i; ?></h3>
-		
+		<span class="first_letter" id="brands-<?php echo $i; ?>"><?php echo strtoupper($i); ?></span>
+		<div class="keyline"></div>
 		<ul class="brands">
 			<?php
 			foreach ( $product_brands[ $i ] as $brand )
