@@ -60,9 +60,7 @@ class WooSlider_Sliders {
 		$supported_types = WooSlider_Utils::get_slider_types();
 
 		if ( in_array( $type, array_keys( $supported_types ) ) ) {
-			echo "============1============";
 			if ( method_exists( $this, 'slideshow_type_' . esc_attr( $type ) ) ) {
-				echo "============2============";
 				$slides = call_user_func( array( $this, 'slideshow_type_' . esc_attr( $type ) ), $args, $settings );
 			} else {
 				if ( isset( $supported_types[$type]['callback'] ) && $supported_types[$type]['callback'] != 'method' ) {
@@ -248,8 +246,6 @@ class WooSlider_Sliders {
 						);
 
 		$args = wp_parse_args( $args, $defaults );
-		print_r($args);
-		print_r($settings);
 
 		$query_args = array( 'post_type' => 'slide', 'numberposts' => intval( $args['limit'] ) );
 		
@@ -264,11 +260,8 @@ class WooSlider_Sliders {
 					);
 			}
 		}
-		print_r($query_args);
 
 		$posts = get_posts( $query_args );
-		echo "========here======<br>";
-		print_r($posts);
 
 		if ( ! is_wp_error( $posts ) && ( count( $posts ) > 0 ) ) {
 			foreach ( $posts as $k => $post ) {

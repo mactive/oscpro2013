@@ -37,12 +37,7 @@ class Postcale_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$catid = $instance['catid'];
 
-		// global $wpdb;
-		// $posts = get_posts('category='.$catid);
-		// $rand_num = count($posts)-1;
-		// $rand_post = $posts[rand(0,$rand_num)];
 
-		// $out = $rand_post->post_content;
 		$cat = get_the_category();
 
 		$out = '<div class="news_title">'.$cat[0]->name.'日历</div>';

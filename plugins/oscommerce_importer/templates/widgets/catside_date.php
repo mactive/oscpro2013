@@ -21,7 +21,6 @@
 <?php global $woocommerce; ?>
         
         <div class="news_title"><?php _e($title) ?>日历</div>
-
         <ul class="calendar">
             <?php wp_get_archives($args) ?>
         </ul>

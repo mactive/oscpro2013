@@ -10,11 +10,11 @@ function my_date_archive_for_category() {
 		// print_r($request_parts);
 
         /* lets make sure yyyy and mm are integers */
-		// $request_parts["4"] = intval($request_parts["4"]);
-		// if($request_parts["4"] < 0) $request_parts["4"] = 0;
+		$request_parts["4"] = intval($request_parts["4"]);
+		if($request_parts["4"] < 0) $request_parts["4"] = 0;
 
-		// $request_parts["5"] = intval($request_parts["5"]);
-		// if($request_parts["5"] < 0) $request_parts["5"] = 0;
+		$request_parts["5"] = intval($request_parts["5"]);
+		if($request_parts["5"] < 0) $request_parts["5"] = 0;
 
 		/*
 		lets check if all parts are in place
@@ -55,7 +55,6 @@ function my_date_archive_for_category() {
 			}
 		}
 		else {
-
 			/*
 			 * 正常的分页数据
 			 * /archives/category/cases/page/2
@@ -87,6 +86,8 @@ function my_date_archive_for_category() {
 
 			if (in_array($category_array['slug'] , $os)) {
 				# code...
+				echo "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&";
+
 				include(TEMPLATEPATH . '/category-'.$category_array['slug'].'.php');
 
 			}else{
@@ -104,8 +105,8 @@ function my_date_archive_for_category() {
 	}
 }
 
-add_action('init','my_date_archive_for_category');
-               
-
+// add_action('init','my_date_archive_for_category');
+// 看看日期的问题如何解决吧
+// http://local.osc-pro.com/archives/category/news/2013/05
 
 ?>

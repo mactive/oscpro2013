@@ -75,7 +75,6 @@ class cb_archive_widget extends WP_Widget {
 
         echo $before_widget;
         echo $before_title . $arc_title . $after_title;
-
         woocommerce_get_template( 'widgets/catside_date.php', array(
             'title' => $cat_info->name,
             'args' => $args,

@@ -11,7 +11,8 @@
  * @since Twenty Twelve 1.0
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 		<div id="secondary">
@@ -19,21 +20,16 @@ get_header(); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>
 
-	<?php echo_tar(); ?>
 
 	<section id="primary" class="site-content category_content">
 		<div id="content" role="main" >
 		<div class="list_title mb_20px">
 		<?php 
-			// $cat = get_the_category();
-			// echo "全部".$cat[0]->name;
+			$cat = get_the_category();
+			echo "全部".$cat[0]->name;
 		 ?>
 		</div>
-		<?php 		
-			query_posts(array(
-				'cat' => 233,
-			));
-		?>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -41,10 +37,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 				$cat = get_the_category() ;
 				get_template_part( 'content', $cat[0]->slug );
-
 			endwhile;
-
-			wp_reset_query();
 
 			twentytwelve_content_nav( 'nav-below' );
 			?>
