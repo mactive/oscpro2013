@@ -52,7 +52,7 @@ div.logo a{display: block; width: 100%; height: 100%;}
 .index_theme{
 	float:left;
 	width: 100%;
-	height: 1020px;
+	height: 1040px;
 }
 
 .index_theme aside.widget_news_widget{
@@ -84,7 +84,7 @@ div.logo a{display: block; width: 100%; height: 100%;}
 .index_theme aside.widget_brandwall_widget{
 	float:left;
 	width: 100%;
-	height: 110px;
+	height: 130px;
 	margin-top: 20px;
 }
 .category-cases aside.widget_wooslider_slideshow_slides{
@@ -129,6 +129,54 @@ aside.widget_customfield_widget{
 
 /* index brand wall*/
 .brand_wall_title a{float:left; width: 170px;height: 24px; line-height: 24px;}
+.brand_wall{height: 90px; clear: both; margin-top: 10px; float: left; position: absolute; }
+.brand_wall li{height: 90px;width: 145px; display: block; margin: 0px 14px; float: left;}
+.brand_wall li a{
+	line-height: 70px; font-size: 16px;
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 120px;
+
+	height: 70px !important;
+}
+.brand_wall li a:hover{
+	background-repeat: no-repeat !important;
+	background-position: center center;
+	background-size: 100px;
+}
+
+.brand_wall li span{
+	height:20px; line-height: 20px; font-size: 14px; display: block;
+	color: #666; text-align: center; width: 100%;
+}
+
+#brand_wall_div{}
+section.brand_container{width: 100%;height: 100px; float: left;}
+a.brand_left_handle{ display: block; width: 30px !important; 
+	height: 70px !important; float: left; margin-top: 10px;
+	background-image:url('img/left_arrow.png'); 
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+a.brand_left_handle:hover{
+	background-image:url('img/left_arrow.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+}
+div.brand_center{ position: relative; width: 885px; margin:0px 5px; 
+	height: 100%; float: left; overflow: hidden;}
+a.brand_right_handle{ display: block; margin-left: 10px; 
+	width: 30px !important;  height: 70px !important; margin-top: 10px;
+	float: left;
+	background-image:url('img/right_arrow.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+a.brand_right_handle:hover{
+	background-image:url('img/right_arrow.png') !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;}
+
 
 a.gray_block{
 	background: #e3e3e3;
@@ -141,11 +189,7 @@ a.black_block{
 	color: #fff; font-size: 14px;
 }
 
-.brand_wall{height: 70px; clear: both; margin-top: 10px; float: left; }
-.brand_wall li{height: 70px;width: 145px; display: block; margin: 0px 8px; float: left;}
-.brand_wall li a{
-	line-height: 70px; font-size: 20px;
-}
+
 /* index show case widget_showcase_widget*/
 .show_case_title a{float:left; width: 170px;height: 24px; line-height: 24px;}
 
@@ -602,7 +646,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 
 a.block{
 	display: block;
-	background: #f6f6f6;
+	background-color: #f6f6f6;
 	color: #7a7a7a; font-size: 14px; font-weight: bold;
 	line-height: 100%; width:100%; height:100%;
 	border: 1px solid #dcdcdc; text-align: center;
