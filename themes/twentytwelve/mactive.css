@@ -474,6 +474,28 @@ a.footer_a{width: 100%; text-align: center;}
 .product_left{
 	width: 240px; float: left;
 }
+.product_right{
+	width: 710px; float: left; margin-left: 20px;
+}
+.product_main_area .product_left{width: 200px;}
+
+.product_title_area{width: 100%;float: left; margin:10px 0px 30px 0px;}
+.product_title_area .images{width: 360px !important;}
+.product_title_area .images img{max-width: 360px !important; max-height: 360px !important; display: block; width: auto !important;}
+.thumbnails a{width: 25% !important; height: 108px;}
+
+
+.product_service_note
+{
+	line-height: 24px; margin-top: 10px;padding: 10px 20px;
+	border: 1px solid #ccc;
+	width: 200px; background-color: #f0f0f0; 
+}
+.product_service_note ul li{list-style-type: disc; margin-left: 20px;}
+
+
+/*================================================================================================================*/
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product
 {
 	width: 95% !important;

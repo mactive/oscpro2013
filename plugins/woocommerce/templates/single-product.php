@@ -14,21 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 get_header('shop'); ?>
 
 <style type="text/css" media="screen">
-	.site-content{width: 670px !important; margin-left: 20px !important;}
+	.woocommerce-breadcrumb{text-indent: 10px;margin-top: 20px !important;}
+	.site-content{width: 670px !important;  width: 100% !important;}
 	.product_cell_right{width: 400px !important;}
+	.entry-summary{width: 560px !important; margin-top: 20px;}
 </style>
 
 
-	<div class="product_left">
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action('woocommerce_sidebar');
-	?>
-	</div>
+<?php do_action('woocommerce_before_mac_single_breadcrumb'); ?>
+
+
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -36,7 +31,7 @@ get_header('shop'); ?>
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
-		do_action('woocommerce_before_main_content');
+		do_action('woocommerce_before_mac_single_product');
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>

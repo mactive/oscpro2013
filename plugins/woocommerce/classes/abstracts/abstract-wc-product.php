@@ -850,6 +850,7 @@ class WC_Product {
 			} else {
 
 				$price = __( 'Free!', 'woocommerce' );
+				$price = __( '暂无报价,请致电咨询!', 'woocommerce' );
 
 				$price = apply_filters( 'woocommerce_free_price_html', $price, $this );
 

@@ -23,9 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+<section class="product_title_area">
 	<div class="cell_title">产品信息</div>
 	
-	<div class="keyline"></div>
+	<div class="keyline mb_20px"></div>
 	
 	<?php
 		/**
@@ -52,18 +53,43 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-
+		<div class="product_service_note radius_3px">
+			<span>Osc为您提供：</span>
+			<ul>
+				<li>免费技术支持</li>
+				<li>免费保修（一年内）</li>
+				<li>免费送货</li>
+			</ul>
+		</div>
 	</div><!-- .summary -->
 
-	<?php
-		/**
-		 * woocommerce_after_single_product_summary hook
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
+</section>
+	<section class="product_main_area">
+		<div class="product_left">
+		<?php
+			/**
+			 * woocommerce_sidebar hook
+			 *
+			 * @hooked woocommerce_get_sidebar - 10
+			 */
+			do_action('woocommerce_sidebar');
+		?>
+		</div>
+
+		<div class="product_right">
+			<?php
+				/**
+				 * woocommerce_after_single_product_summary hook
+				 *
+				 * @hooked woocommerce_output_product_data_tabs - 10
+				 * @hooked woocommerce_output_related_products - 20
+				 */
+				do_action( 'woocommerce_after_single_product_summary' );
+			?>
+		</div>
+	</section>
+
+
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
