@@ -12,7 +12,8 @@
 			echo "<br>=====".$post_id."=======<br>";
 			
 			// update_product_guid($post_id);
-			wp_set_object_terms($post_id, 232, 'category');
+			// 232 news 233 cases
+			wp_set_object_terms($post_id, 233, 'category');
 
 			// insert_goods_relationship($post_id,$cat_name,'product_cat'); 	// refresh cat count
 			// insert_goods_relationship($post_id,$brand_name,'product_brand');	// refresh brand count
@@ -95,7 +96,7 @@
 		" SELECT g.article_id,g.title,g.logo,g.content,g.keywords,g.add_time FROM sm_article as g ".
 		// " LEFT JOIN sm_brand as b on b.brand_id = g.brand_id ".
 		// " LEFT JOIN sm_category as c on c.cat_id = g.cat_id ".
-		" WHERE g.cat_id =13 "
+		" WHERE g.cat_id =12 "
 		." AND g.article_id > 0 "
 	 	,ARRAY_A);
 	// print_r($result);
@@ -119,7 +120,7 @@
 
 			// print_r($my_post);
 			// import handle
-			// insert_product($my_post);
+			insert_product($my_post);
 
 
 

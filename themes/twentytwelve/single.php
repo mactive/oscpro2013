@@ -30,8 +30,7 @@ get_header(); ?>
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
                 $url = $thumb['0'];
             ?>
-            <img src="<?php _e($url);?>">
-            </a>
+            <a style="background:url(<?php _e($url);?>) no-repeat center; width:100%; height:370px; display:block;"></a>
 		</aside>
 
 	<?php endif ?>

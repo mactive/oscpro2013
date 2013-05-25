@@ -48,6 +48,8 @@ function oscimp_admin() {
 	// include('goods_transform/update_goods_gallery.php');	//gallery 机制
 	// include('goods_transform/import_article.php');
 	// include('goods_transform/update_article_image.php');
+	// include('goods_transform/update_article_gallery.php');	//gallery 机制
+
 	// include('download_parse.php');
 
 }

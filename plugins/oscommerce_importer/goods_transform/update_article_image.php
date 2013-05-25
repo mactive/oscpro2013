@@ -188,7 +188,7 @@
 		// ." WHERE g.goods_id >= 600 AND g.goods_id < 800 "
 		// ." WHERE g.goods_id >= 800 AND g.goods_id < 979 "
 		// ." WHERE g.goods_id >= 979 AND g.goods_id < 1100 "
-		." WHERE p.post_type like 'post' AND g.article_id > 0  "
+		." WHERE p.post_type like 'post' AND g.cat_id = 12 AND g.article_id > 0  "
 
 	 	,ARRAY_A);
 	// print_r($result);
