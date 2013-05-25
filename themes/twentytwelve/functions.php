@@ -480,3 +480,28 @@ function echo_tar(){
 	echo "=======================";
 	echo "<br><br>";
 }
+
+add_filter( 'the_content', 'the_content_filter_extra_page' );
+
+function the_content_filter_extra_page($content) 
+{
+    global $post;
+    $viewFile = get_post_meta($post->ID, 'extra-page', true);
+    if($viewFile !== '')
+    {
+        $viewFile = ABSPATH . $viewFile;
+        ob_start();
+        ob_implicit_flush(false);
+        require($viewFile);
+        return $content . ob_get_clean();
+    }
+    else
+    {
+        return $content;    
+    }
+    
+}
+
+
+
+

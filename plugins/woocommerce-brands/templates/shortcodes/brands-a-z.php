@@ -5,7 +5,7 @@
  * @usedby [product_brand_list]
  */
 ?>
-<div id="brands_a_z" class="radius_3px">
+<div id="brands_a_z" class="radius_3px white_section">
 	
 	<div class="cell_title mb_20px">快速查找</div>
 	<ul class="brands_index">
