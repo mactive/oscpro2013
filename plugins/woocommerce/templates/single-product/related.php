@@ -31,15 +31,15 @@ $woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="related products">
+	<div class="related products related_products">
 
-		<div class="cell_title"><?php _e( 'Related Products', 'woocommerce' ); ?></div>
+		<div class="cell_title">相关产品<?php //_e( 'Related Products', 'woocommerce' ); ?></div>
 		<div class="keyline"></div>
 		<?php woocommerce_product_loop_start(); ?>
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-				<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+				<?php woocommerce_get_template_part( 'content', 'product-square' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 

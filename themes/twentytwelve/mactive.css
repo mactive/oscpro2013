@@ -498,7 +498,7 @@ a.footer_a{width: 100%; text-align: center;}
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product
 {
-	width: 95% !important;
+	width: 95% ;
 	margin: 10px 0px 20px 2% !important;
 }
 .woocommerce ul.products li.product:hover, .woocommerce-page ul.products li.product:hover{
@@ -563,6 +563,8 @@ ul.category_list li{list-style-type: square; }
 
 ul.category_list ul li{border:none; list-style-type: disc;}
 
+
+.related_products ul.products li{width: 200px !important; float: left;}
 /*
 ================================================================================================================
 ================================================================================================================
@@ -570,6 +572,7 @@ ul.category_list ul li{border:none; list-style-type: disc;}
 */
 /* mactive's personal collection*/
 /* mactive style*/
+.center{text-align: center; line-height: 24px;}
 .ml_10px{margin-left: 10px !important;}
 .ml_15px{margin-left: 15px !important;}
 .ml_20px{margin-left: 20px !important;}
