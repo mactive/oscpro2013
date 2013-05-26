@@ -51,7 +51,7 @@ class Customfield_widget extends WP_Widget {
 	  		# code...
 	  		echo $before_widget;
 			echo $before_title.$title.$after_title;
-
+			
 			woocommerce_get_template( 'widgets/linked_product.php', array(
 				'products'	=> $result,
 				'width' => $width,

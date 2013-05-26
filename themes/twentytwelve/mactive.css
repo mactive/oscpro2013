@@ -338,6 +338,9 @@ ul.show_case li span{
 a.article_title{
 	font-size: 16px; display: block;
 	height: 40px; line-height: 40px; color: #575757;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 span.time{font-size: 12px; color: #c2c2c2;}
 .category_news{margin-left: 30px;}
@@ -347,7 +350,7 @@ article.format-standard{ height: 115px; margin:15px 0px !important; padding: 0 !
 /* cases */
 
 section.category_cases{width: 100%;}
-.category_content{margin-left: 30px; width: 100%;}
+.category_content{margin-left: 20px; width: 100%;}
 div.category_cases{width: 100%;}
 
 .article_square_thumbnail{}
@@ -356,7 +359,13 @@ div.category_cases{width: 100%;}
 	border: 1px solid #dcdcdc;
 	box-shadow: 0 0 1px #ccc;
 }
-
+.article_rectangle_thumbnail{}
+.article_rectangle_thumbnail a{
+	width: 150px; height: 120px; display: block;
+	border: 1px solid #dcdcdc;
+	box-shadow: 0 0 1px #ccc;
+	background-position: center;
+}
 
 .article_square_medium{}
 
@@ -383,12 +392,9 @@ article.category-audio a {
 
 .subcat_area{float: left;}
 
-
-
-
 article.category-cases {width: 450px; height: 150px !important; float: left; margin:10px 30px 20px 0px !important;}
 article.category-cases .article_brief{
-	width: 220px;
+	width: 250px;
 }
 
 .single_narrow{width: 540px; margin-right: 10px;}
@@ -565,6 +571,20 @@ ul.category_list ul li{border:none; list-style-type: disc;}
 
 
 .related_products ul.products li{width: 200px !important; float: left;}
+
+
+.grouped_custom_field{
+	float: left; width: 180px !important; 
+	margin-right: 20px;margin-left: 0px !important;
+}
+.grouped_custom_field span, a {
+	/*height: 30px !important; */
+	line-height: 30px !important; display: block; 
+	float: left;
+}
+.grouped_custom_field span{ text-indent: 10px; background:#eaeaea; width: 100%;}
+.grouped_custom_field a { width: 85%; margin-left: 15%;}
+.grouped_custom_field a:hover{ color: #444 !important;}
 /*
 ================================================================================================================
 ================================================================================================================
@@ -706,6 +726,12 @@ span.block, li.block{
 	line-height: 100%; width:100%; height:100%;
 	border: 1px solid #dcdcdc; text-align: center;
 	box-shadow:inset 0 1px #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+li.block a{
+	display: block; width: 85%; margin: 0px 10%; text-align: center;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;

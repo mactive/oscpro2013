@@ -481,6 +481,18 @@ function echo_tar(){
 	echo "<br><br>";
 }
 
+function get_group_custom_field_array()
+{
+	$result = array(
+		'cfg_sys' =>'系统工作站' , 
+		'cfg_io' =>'I/O及周边' , 
+		'cfg_jt' =>'监听系统' , 
+		'cfg_sy' =>'拾音系统' , 
+		'cfg_other' =>'其他' 
+		);
+	return $result;
+}
+
 add_filter( 'the_content', 'the_content_filter_extra_page' );
 
 function the_content_filter_extra_page($content) 

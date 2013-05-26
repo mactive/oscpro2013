@@ -16,7 +16,7 @@
         wp_reset_postdata();
 
         foreach( $myposts as $post ) :  setup_postdata($post); ?>
-            <li class="block"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            <li class="block"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
 
         <?php endforeach; ?>
 </ul>

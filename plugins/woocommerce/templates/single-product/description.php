@@ -27,11 +27,16 @@ if ( ! empty( $tabs ) ) : ?>
 		<?php the_content(); ?>
 	</div>
 
+<?php if (has_excerpt()) { ?>
+	
 	<div class="cell_title">规格参数</div>
 	<div class="keyline"></div>
 	<div class="product_description">
+		<?php echo_tar(); ?>
 		<?php the_excerpt(); ?>
 	</div>
+<? } ?>
+
 
 
 <?php endif; ?>

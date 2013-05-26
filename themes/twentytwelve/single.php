@@ -52,11 +52,36 @@ get_header(); ?>
 	<div class="keyline"></div>
 </div>
 
-	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+
+
+	<?php if ($post_cat_slug != "cases"): ?>
+		<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
 		<div id="left_side">
 			<?php dynamic_sidebar( 'sidebar-3' ); ?>
 		</div><!-- #secondary -->
-	<?php endif; ?>
+		<?php endif; ?>
+
+	<?php else: ?>
+		
+		<div id="left_side" class="grouped_custom_field">
+			<div class="list_title mb_20px">设备列表</div>
+
+			<?php
+				$group =  get_group_custom_field_array(); 
+				foreach ($group as $key => $title) {
+					# code...
+					echo '<span class="radius_3px">'.$title.'</span>';
+					$items = $cfs->get($key);
+					foreach ($items as $value) {
+						# code...
+						$_post = get_post($value);
+						echo '<a href="'.get_permalink($_post->ID).'">'.$_post->post_title.'</a>';
+					}
+				}
+	 		?>
+ 		</div>
+	<?php endif ?>
+
 
 
 
