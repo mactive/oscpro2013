@@ -14,7 +14,9 @@
 		margin-right:3px !important;
 		text-decoration:none !important;
 		font-size:12px !important;
+		float: left;
 }
+span.current{float: left;}
 .wp-pagenavi a:hover {
 		border-color:#202020 !important;
 		background:#525252 !important;

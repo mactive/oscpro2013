@@ -66,9 +66,12 @@
     <?php } ?>
     </ul>
 
-
 </div>
 
 
 <?php endif; ?>
+
+
+
+
 <?php echo wpautop( wptexturize( term_description() ) ); ?>
