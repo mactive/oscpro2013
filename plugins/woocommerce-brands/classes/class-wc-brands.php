@@ -267,7 +267,7 @@ class WC_Brands {
 	function output_product_brand_list( $atts ) {
 
 		 extract( shortcode_atts( array(
-		      'show_top_links' 	=> true,
+		      'show_top_links' 	=> false,
 		      'show_empty' 		=> true
 	     ), $atts ) );
 

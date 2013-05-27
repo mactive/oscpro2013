@@ -20,8 +20,7 @@
 					
 	<?php foreach ( $index as $i ) if ( isset( $product_brands[ $i ] ) ) : ?>
 		
-		<span class="first_letter" id="brands-<?php echo $i; ?>"><?php echo strtoupper($i); ?></span>
-		<div class="keyline"></div>
+		<span class="first_letter brand_letter_line" id="brands-<?php echo $i; ?>"><?php echo strtoupper($i); ?></span>
 		<ul class="brands">
 			<?php
 			foreach ( $product_brands[ $i ] as $brand )

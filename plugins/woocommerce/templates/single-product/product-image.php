@@ -17,6 +17,8 @@ global $post, $woocommerce;
 	<?php
 		if ( has_post_thumbnail() ) {
 
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'shop_single' );
+            $bg_url = $thumb['0'];
 			$image       		= get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 			$image_title 		= esc_attr( get_the_title( get_post_thumbnail_id() ) );
 			$image_link  		= wp_get_attachment_url( get_post_thumbnail_id() );
@@ -28,7 +30,9 @@ global $post, $woocommerce;
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s"  rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_title, $image ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', 
+				sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image radius_3px zoom" title="%s"  rel="prettyPhoto' . $gallery . '"'
+					.'style="background-image:url(%s);"'.'></a>', $image_link, $image_title,$bg_url ), $post->ID );
 
 		} else {
 
