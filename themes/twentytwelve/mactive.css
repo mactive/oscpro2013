@@ -65,7 +65,7 @@ div.logo a{display: block; width: 100%; height: 100%;}
 .index_theme aside.widget_wooslider_slideshow_slides{
 	float:left;
 	width: 720px;
-	height: 403px;
+	height: 404px;
 	margin-left: 2px;
 }
 
@@ -256,7 +256,7 @@ ul.show_case li a .show_hover{
 	width: 100%; height: 100%; margin: 0;
 }
 ul.show_case li a .show_hover b{
-	background: url(img/right_arraw.png ) no-repeat #333132 90% center; 
+	background: url(img/right_arrow.png) no-repeat #333132 90% center; 
 	color: #fff; text-indent: 20px; font-size: 14px;
 	width: 120px; height: 40px; line-height: 40px;
 	margin: auto ; text-align: left;
@@ -289,7 +289,7 @@ ul.show_case li span{
 	width: 720px;
 	height: 400px;
 }
-#wooslider-id-1 {width: 100%; height: 403px;}
+#wooslider-id-1 {width: 100%; height: 404px;}
 
 
 /* kinds of title*/
