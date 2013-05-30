@@ -268,7 +268,7 @@ class WooSlider_Sliders {
 				setup_postdata( $post );
 				$content = get_the_content();
 
-				$data = array( 'content' => '<div class="slide-content">' . "\n" . apply_filters( 'wooslider_slide_content_slides', $content, $args ) . "\n" . '</div>' . "\n" );
+				$data = array( 'content' => '<div class="slide-content">' . "\n" . $content . "\n" . '</div>' . "\n" );
 				if ( 'true' == $args['thumbnails'] || 1 == $args['thumbnails'] ) {
 					$thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' );
 					if ( ! is_bool( $thumb_url ) && isset( $thumb_url[0] ) ) {
