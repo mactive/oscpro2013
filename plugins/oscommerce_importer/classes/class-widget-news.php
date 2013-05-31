@@ -40,7 +40,8 @@ class News_Widget extends WP_Widget {
 		$count = $instance['count'];
 
 		// global $wpdb;
-		$posts = get_posts('category='.$catid);
+		$args = array( 'numberposts' => 15, 'category' => $catid );
+		$posts = get_posts($args);
 		wp_reset_postdata();
 
 		$out = '<ul class="news_image_slider">';

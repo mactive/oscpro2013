@@ -740,6 +740,8 @@ div.height_10px{height:10px;line-height:10px;font-size:8px;width:100%;#width:750
 div.height_20px{height:20px;line-height:20px;}
 div.height_70px{height:70px;line-height:70px;}
 
+.black_word{padding:7%; width: 86%; color: #fff; background:#000; line-height: 20px;margin-bottom: 20px;}
+
 /* style reuse */
 .no-style{
 	background: none !important;

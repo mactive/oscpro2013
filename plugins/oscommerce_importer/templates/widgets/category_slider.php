@@ -82,7 +82,6 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
 
 <?php global $woocommerce; ?>
 <?php if ( $posts ) : ?>
-
 <div id="sidebar" style="width: <?php _e($width); ?>px !important;">
 	<ul class="news_image_slider">
 	<?php 
@@ -91,7 +90,7 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
 			$url = $thumb['0'];
 	?>
 		<li>
-            <a href="<?php get_permalink($post->ID)?>" title="<?php echo $post->post_title ?>" style="background-image:url(<?php echo $url; ?>);">
+            <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background-image:url(<?php echo $url; ?>);">
                 <b><?php echo $post->post_title ?></b>
             </a>
         </li>
