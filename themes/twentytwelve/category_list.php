@@ -7,6 +7,24 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+
+// <script type="text/javascript" charset="utf-8" async defer>
+//     jQuery(document).ready(function ($) {
+//         $(function() {
+//             $( ".category_list li" ).find('ul').hide();
+//             $( ".category_list li" ).click(function(){
+//               console.log($(this));
+//               if ($(this).children('ul').is(":visible")) {
+//                 $(this).children('ul').hide();
+//               }else{
+//                 $(this).children('ul').show();
+//               }
+              
+//             })
+//         });
+//     });
+// </script>
+
 <?php
 //list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
 
