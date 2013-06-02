@@ -53,14 +53,14 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
 
                         
             // fade the LAST item out
-            $list.find('> li:last').animate({ opacity : 0}, 1000, function () {
+            $list.find('> li:last').animate({ opacity : 1}, 1000, function () {
                 // increase the height of the NEW first item
                 $insert.animate({ height : height }, 1000).animate({ opacity : 1 }, 1000);
                 
                 // AND at the same time - decrease the height of the LAST item
                 // $(this).animate({ height : 0 }, 1000, function () {
                     // finally fade the first item in (and we can remove the last)
-                    $(this).remove();
+                    // $(this).remove();
                 // });
             });
             
@@ -91,7 +91,18 @@ $.fn.simpleSpy = function (limit, interval, sep_height) {
 	?>
 		<li>
             <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title ?>" style="background-image:url(<?php echo $url; ?>);">
-                <b><?php echo $post->post_title ?></b>
+            <b>
+
+                <?php
+                    $short_title = get_post_meta($post->ID,'short_title');
+                    if (empty($short_title[0])) {
+                        echo $post->post_title;
+                    }else{
+                        echo $short_title[0];
+                    }
+
+                ?>
+            </b>
             </a>
         </li>
 	<?php } ?>

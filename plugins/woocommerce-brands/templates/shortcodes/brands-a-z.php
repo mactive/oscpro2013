@@ -24,7 +24,9 @@
 		<ul class="brands">
 			<?php
 			foreach ( $product_brands[ $i ] as $brand )
-				echo '<li><a href="' . get_term_link( $brand->slug, 'product_brand' ) . '">' . $brand->name . '</a></li>';
+				if ($brand->slug != "topbrand") {
+					echo '<li><a href="' . get_term_link( $brand->slug, 'product_brand' ) . '">' . $brand->name . '</a></li>';
+				}
 			?>
 		</ul>
 		

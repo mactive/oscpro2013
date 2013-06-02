@@ -35,6 +35,10 @@ get_header(); ?>
 
 	<?php endif ?>
 
+<?php if ($post_cat_slug != "cases"): ?>
+
+
+
 <div class="single_nav">
 	<nav class="nav-single">
 		<span class="nav-previous block">
@@ -51,6 +55,9 @@ get_header(); ?>
 
 	<div class="keyline"></div>
 </div>
+<?php else: ?>
+	<div class="keyline mt_30px"></div>
+<?php endif ?>
 
 
 
@@ -63,14 +70,14 @@ get_header(); ?>
 
 	<?php else: ?>
 		
-		<div id="left_side" class="grouped_custom_field">
-			<div class="list_title mb_20px">设备列表</div>
+		<div id="left_side" class="grouped_custom_field radius_3px">
+			<div class="list_title mb_20px mt_10px">设备列表</div>
 
 			<?php
 				$group =  get_group_custom_field_array(); 
 				foreach ($group as $key => $title) {
 					# code...
-					echo '<span class="radius_3px">'.$title.'</span>';
+					echo '<span >'.$title.'</span>';
 					$items = $cfs->get($key);
 					foreach ($items as $value) {
 						# code...

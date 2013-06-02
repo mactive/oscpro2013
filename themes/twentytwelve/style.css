@@ -551,7 +551,7 @@ a:hover {
 	text-align: center;
 	width: 700px;
 	height: 36px;
-	background: #1c1c1c;
+	background: #393939;
 }
 .main-navigation div:first-child{
 	width: 581px;float: left;
@@ -1482,8 +1482,9 @@ img#wpstats {
 		margin: 0 !important;
 	}
 	.main-navigation li a:hover {
-		color: #aaaaaa;
-
+		color: #fff;
+		font-weight: normal;
+		font-size: 12px;
 	}
 	.main-navigation li {
 		margin: 0;
@@ -1588,9 +1589,9 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 975px) {
 	body {
-		/*background-color: #fbfbfb;*/
+		background-color: #f3f3f3;
 		/*background: url('img/squairy_light_l.png');*/
-		background: url('img/subtlenet2.png');
+		/*background: url('img/subtlenet2.png');*/
 
 	}
 	body .site {
@@ -1757,9 +1758,9 @@ section.inner a{color: #fff;}
 
 
 div.logo{
-	background: url(img/logo_ws.png) no-repeat;
-	width: 220px; height: 70px;
-	margin: 22px 10px;
+	background: url(img/logo_w1.png) no-repeat;
+	width: 250px; height: 100px;
+	margin: 7px 0px;
 }
 div.logo a{
 	display: block;

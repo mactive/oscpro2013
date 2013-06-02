@@ -39,7 +39,16 @@
                     <b>查看产品</b>
                 </div>
             </a>
-            <span><?php echo $post->post_title ?></span>
+            <span>
+                <?php
+                    $short_title = get_post_meta($post->ID,'short_title');
+                    if (empty($short_title[0])) {
+                        echo $post->post_title;
+                    }else{
+                        echo $short_title[0];
+                    }
+                ?>
+            </span>
         </li>
 	<?php } ?>
 	</ul>

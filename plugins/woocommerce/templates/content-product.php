@@ -66,11 +66,14 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 				 */
 				do_action( 'woocommerce_after_shop_loop_item_title' );
 			?>
+
 			<div class='cell_content'>
+				所有产品均免费送货上门
+
 				<?php 
-					$content = get_the_content();
-      				$content = str_replace('&nbsp;','',trim(strip_tags($content)));
-					echo mb_substr($content, 0, 120);
+					// $content = get_the_content();
+     //  				$content = str_replace('&nbsp;','',trim(strip_tags($content)));
+					// echo mb_substr($content, 0, 120);
 				?>
 			</div>
 
