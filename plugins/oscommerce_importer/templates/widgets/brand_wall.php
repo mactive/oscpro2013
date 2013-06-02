@@ -45,10 +45,11 @@ jQuery(document).ready(function ($) {
 <?php if ( $posts ) : ?>
 
 <div id="brand_wall_div">
-    <div class="brand_wall_title">
-        <a class="black_block">推荐厂牌 Top Brand</a>
-        <a href="brand-list/" class="gray_block">所有品牌 All Brand</a>
-    </div>
+    <ul class="show_case_title">
+        <li><a class="black_block">推荐厂牌 Top Brand</a></li>
+        <li><a href="/brand-list" class="gray_block">所有品牌 All Brand</a></li>
+    </ul>
+
     <section class="brand_container">
         <a class="brand_left_handle block"></a>
         <div class="brand_center">
@@ -61,7 +62,7 @@ jQuery(document).ready(function ($) {
             		<li style="width: <?php _e($width); ?>px !important;">
 
                         <a href="brand/<?php _e($post->slug)?>" 
-                            title="<?php echo $post->name ?>" class="block radius_3px"
+                            title="<?php echo $post->name ?>"
                             style="background-image:url(<?php echo $url; ?>);">
                         </a>
                         <span><?php echo $post->name;?></span>

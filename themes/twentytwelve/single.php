@@ -41,10 +41,10 @@ get_header(); ?>
 
 <div class="single_nav">
 	<nav class="nav-single">
-		<span class="nav-previous block">
+		<!-- <span class="nav-previous block">
 			<?php previous_post_link( '%link',  '&larr;上一篇'); ?></span>
 		<span class="nav-next block"><?php next_post_link( '%link', '下一篇&rarr;'  ); ?></span>
-
+ -->
 	</nav><!-- .nav-single -->
 	<div class="single_nav_title f_left">
 		<header class="entry-header">

@@ -123,7 +123,7 @@ if ( ! is_admin() || defined('DOING_AJAX') ) {
 	// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 	add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_desc', 10 );
 	// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
-	add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 	/**
 	 * Product Summary Box
