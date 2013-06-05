@@ -18,8 +18,8 @@ class Brandwall_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'brandwall_Widget', // Base ID
-			'Brandwall_Widget', // Name
-			array( 'description' => __( 'A Brandwall Widget', 'text_domain' ), ) // Args
+			__( 'Brandwall_Widget', 'oscpro' ), // Name
+			array( 'description' => __( 'A Brandwall Widget', 'oscpro' ), ) // Args
 		);
 	}
 

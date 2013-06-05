@@ -18,8 +18,8 @@ class Whyosc_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'whyosc_Widget', // Base ID
-			'Whyosc_Widget', // Name
-			array( 'description' => __( 'A Whyosc Widget', 'text_domain' ), ) // Args
+			__('Whyosc_Widget','oscpro'), // Name
+			array( 'description' => __( 'A Whyosc Widget', 'oscpro' ), ) // Args
 		);
 	}
 

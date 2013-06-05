@@ -3,7 +3,7 @@
 Plugin Name: OSCommerce Product Display
 Plugin URI: http://mactive.github.com
 Description: Plugin for import old echsop infos
-Author: mactive 
+Author: mactive
 Version: 1.0
 Author URI: http://mactive.github.com
 */
@@ -26,6 +26,16 @@ function oscimp_admin() {
 function oscimp_admin_actions() {
     add_options_page("OSCommerce Product Display", "OSCommerce Product Display", 1, "oscommerce_importer.php", "oscimp_admin");
 }
+
+
+if ( ! function_exists ( 'oscpro_plugin_init' ) ) {
+	function oscpro_plugin_init() {
+	// Internationalization, first(!)
+		load_plugin_textdomain( 'oscpro', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
+}
+
+add_action( 'plugins_loaded', 'oscpro_plugin_init' );
 
 // add_action('admin_menu', 'oscimp_admin_actions');
 
@@ -76,8 +86,8 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Fullad_Widge
  * Widget archive calc
  * 横贯全页面面 随机展示大图
  */
-require_once( 'classes/class-widget-postcale.php' );
-add_action( 'widgets_init', create_function( '', 'register_widget( "Postcale_Widget" );' ) );
+// require_once( 'classes/class-widget-postcale.php' );
+// add_action( 'widgets_init', create_function( '', 'register_widget( "Postcale_Widget" );' ) );
 
 /* 	
  *	新闻页面的当前分类下的文章 按照日期统计

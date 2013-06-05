@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: gallery\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-22 16:13+0300\n"
-"PO-Revision-Date: 2013-04-22 16:13+0300\n"
+"PO-Revision-Date: 2013-06-05 20:19+0800\n"
 "Last-Translator: \n"
 "Language-Team: Xiaobo Chen <mibcxb@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,23 +16,26 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: gallery-plugin.php:103
-#: gallery-plugin.php:794
-msgid "The following files \"gallery-template.php\" and \"gallery-single-template.php\" were not found in the directory of your theme. Please copy them from the directory `/wp-content/plugins/gallery-plugin/template/` to the directory of your theme for the correct work of the Gallery plugin"
-msgstr "在您的主题目录中没有找到文件  \"gallery-template.php\" 和  \"gallery-single-template.php\"。为了图集插件的正常运行，请从目录 `/wp-content/plugins/gallery-plugin/template/` 中复制他们到您的主题目录中"
+#: gallery-plugin.php:103 gallery-plugin.php:794
+msgid ""
+"The following files \"gallery-template.php\" and \"gallery-single-template."
+"php\" were not found in the directory of your theme. Please copy them from "
+"the directory `/wp-content/plugins/gallery-plugin/template/` to the "
+"directory of your theme for the correct work of the Gallery plugin"
+msgstr ""
+"在您的主题目录中没有找到文件  \"gallery-template.php\" 和  \"gallery-single-"
+"template.php\"。为了图集插件的正常运行，请从目录 `/wp-content/plugins/"
+"gallery-plugin/template/` 中复制他们到您的主题目录中"
 
-#: gallery-plugin.php:127
-#: gallery-plugin.php:137
+#: gallery-plugin.php:127 gallery-plugin.php:137
 msgid "Galleries"
 msgstr "图库"
 
-#: gallery-plugin.php:128
-#: gallery-plugin.php:661
+#: gallery-plugin.php:128 gallery-plugin.php:661
 msgid "Gallery"
 msgstr "图集"
 
 #: gallery-plugin.php:129
-#, fuzzy
 msgid "Add a Gallery"
 msgstr "新增图集"
 
@@ -72,8 +75,13 @@ msgstr "图集简码"
 
 #: gallery-plugin.php:209
 #, fuzzy
-msgid "The gallery temp directory (gallery-plugin/upload/files) is not available for record on your webserver. Please use the standard WP functionality to upload images (media library)"
-msgstr "您网页服务器上的图集临时目录 (gallery-plugin/upload/files) 不可写。请使用标准WP函数上传图像 (media library)"
+msgid ""
+"The gallery temp directory (gallery-plugin/upload/files) is not available "
+"for record on your webserver. Please use the standard WP functionality to "
+"upload images (media library)"
+msgstr ""
+"您网页服务器上的图集临时目录 (gallery-plugin/upload/files) 不可写。请使用标准"
+"WP函数上传图像 (media library)"
 
 #: gallery-plugin.php:213
 #, fuzzy
@@ -91,15 +99,16 @@ msgstr "在图集中允许为图像使用下载链接"
 
 #: gallery-plugin.php:226
 #, fuzzy
-msgid "Please use the drag and drop function to change an order of the images displaying and do not forget to save the post."
+msgid ""
+"Please use the drag and drop function to change an order of the images "
+"displaying and do not forget to save the post."
 msgstr "请使用拖拽功能改变图像的输出顺序，且不要忘记保存提交。"
 
 #: gallery-plugin.php:228
 msgid "Please make a choice"
 msgstr ""
 
-#: gallery-plugin.php:228
-#: gallery-plugin.php:908
+#: gallery-plugin.php:228 gallery-plugin.php:908
 #, fuzzy
 msgid "Sort images by"
 msgstr "一行中图像的数目"
@@ -145,12 +154,16 @@ msgstr "删除"
 
 #: gallery-plugin.php:292
 #, fuzzy
-msgid "You can add a Single Gallery to the page or post by inserting this shortcode into the content"
+msgid ""
+"You can add a Single Gallery to the page or post by inserting this shortcode "
+"into the content"
 msgstr "您可以在页面上添加一个图集或在正文中插入简码"
 
 #: gallery-plugin.php:294
 #, fuzzy
-msgid "If you want to display a short description containing a screenshot and the link to the Single Gallery Page"
+msgid ""
+"If you want to display a short description containing a screenshot and the "
+"link to the Single Gallery Page"
 msgstr "如果您想使用具有指向一个图集的链接的概要图集"
 
 #: gallery-plugin.php:478
@@ -171,8 +184,7 @@ msgstr "照片的"
 msgid "Publishing"
 msgstr "公共的"
 
-#: gallery-plugin.php:482
-#: gallery-plugin.php:912
+#: gallery-plugin.php:482 gallery-plugin.php:912
 msgid "Date"
 msgstr "日期"
 
@@ -180,15 +192,11 @@ msgstr "日期"
 msgid "Activated plugins"
 msgstr "已激活的插件"
 
-#: gallery-plugin.php:632
-#: gallery-plugin.php:640
-#: gallery-plugin.php:648
+#: gallery-plugin.php:632 gallery-plugin.php:640 gallery-plugin.php:648
 msgid "Read more"
 msgstr "阅读更多"
 
-#: gallery-plugin.php:632
-#: gallery-plugin.php:977
-#: gallery-plugin.php:992
+#: gallery-plugin.php:632 gallery-plugin.php:977 gallery-plugin.php:992
 msgid "Settings"
 msgstr "设置"
 
@@ -215,8 +223,12 @@ msgstr "现在从 wordpress.org 安装"
 
 #: gallery-plugin.php:650
 #, fuzzy
-msgid "If you have any questions, please feel free to contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
-msgstr "如果您有任何问题，请通过 plugin@bestwebsoft.com 或在我们的网站上填写联系表格来联系我们"
+msgid ""
+"If you have any questions, please feel free to contact us via "
+"plugin@bestwebsoft.com or fill out the contact form on our website"
+msgstr ""
+"如果您有任何问题，请通过 plugin@bestwebsoft.com 或在我们的网站上填写联系表格"
+"来联系我们"
 
 #: gallery-plugin.php:688
 #, fuzzy
@@ -235,28 +247,28 @@ msgstr "图集选项"
 
 #: gallery-plugin.php:804
 #, fuzzy
-msgid "If you would like to add a Single Gallery to your page or post, just copy and paste this shortcode into your post or page:"
-msgstr "如果您想添加一个图集到页面或公告中，仅需要将图集简码放到页面或公告的内容中即可："
+msgid ""
+"If you would like to add a Single Gallery to your page or post, just copy "
+"and paste this shortcode into your post or page:"
+msgstr ""
+"如果您想添加一个图集到页面或公告中，仅需要将图集简码放到页面或公告的内容中即"
+"可："
 
 #: gallery-plugin.php:808
 #, fuzzy
 msgid "Image size for the album cover"
 msgstr "Размер для "
 
-#: gallery-plugin.php:810
-#: gallery-plugin.php:818
-#: gallery-plugin.php:831
+#: gallery-plugin.php:810 gallery-plugin.php:818 gallery-plugin.php:831
 #, fuzzy
 msgid "Image size"
 msgstr "图像尺寸名称"
 
-#: gallery-plugin.php:811
-#: gallery-plugin.php:819
+#: gallery-plugin.php:811 gallery-plugin.php:819
 msgid "Width (in px)"
 msgstr "宽度（像素）"
 
-#: gallery-plugin.php:812
-#: gallery-plugin.php:820
+#: gallery-plugin.php:812 gallery-plugin.php:820
 msgid "Height (in px)"
 msgstr "高度（像素）"
 
@@ -267,7 +279,9 @@ msgstr "图库"
 
 #: gallery-plugin.php:824
 #, fuzzy
-msgid "WordPress will create a new thumbnail with the specified dimensions when you upload a new photo."
+msgid ""
+"WordPress will create a new thumbnail with the specified dimensions when you "
+"upload a new photo."
 msgstr "当您上传一幅新的照片时，WordPress会创建一个特定尺寸的缩略图副本。"
 
 #: gallery-plugin.php:829
@@ -301,8 +315,7 @@ msgstr ""
 msgid "left"
 msgstr "删除"
 
-#: gallery-plugin.php:843
-#: gallery-plugin.php:850
+#: gallery-plugin.php:843 gallery-plugin.php:850
 msgid "center"
 msgstr ""
 
@@ -344,7 +357,9 @@ msgid "Background color"
 msgstr ""
 
 #: gallery-plugin.php:870
-msgid "This functionality is available in the Pro version of the plugin. For more details, please follow the link"
+msgid ""
+"This functionality is available in the Pro version of the plugin. For more "
+"details, please follow the link"
 msgstr ""
 
 #: gallery-plugin.php:877
@@ -355,8 +370,7 @@ msgstr "图像边缘"
 msgid "Border width in px, just numbers"
 msgstr "边缘宽度，以像素为单位，只能使用数字"
 
-#: gallery-plugin.php:882
-#: gallery-plugin.php:884
+#: gallery-plugin.php:882 gallery-plugin.php:884
 #, fuzzy
 msgid "Select a border color"
 msgstr "为边缘选择颜色"
@@ -386,7 +400,9 @@ msgstr "图像"
 
 #: gallery-plugin.php:913
 #, fuzzy
-msgid "Sorting order (the input field for sorting order in the Insert / Upload Media Gallery dialog)"
+msgid ""
+"Sorting order (the input field for sorting order in the Insert / Upload "
+"Media Gallery dialog)"
 msgstr "附件顺序（插入/上传媒体图集对话框中的整型字段）"
 
 #: gallery-plugin.php:914
@@ -404,7 +420,8 @@ msgid "ASC (ascending order from lowest to highest values - 1, 2, 3; a, b, c)"
 msgstr "升序（由低到高 -  1, 2, 3; a, b, c）"
 
 #: gallery-plugin.php:921
-msgid "DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
+msgid ""
+"DESC (descending order from highest to lowest values - 3, 2, 1; c, b, a)"
 msgstr "降序（由高到低 - 3, 2, 1; c, b, a）"
 
 #: gallery-plugin.php:925
@@ -459,14 +476,12 @@ msgstr "常问问题"
 msgid "Support"
 msgstr "支持"
 
-#: gallery-plugin.php:1186
-#: template/gallery-single-template.php:76
+#: gallery-plugin.php:1186 template/gallery-single-template.php:76
 #, fuzzy
 msgid "Sorry, nothing found."
 msgstr "对不起 - 没有找到。"
 
-#: gallery-plugin.php:1208
-#: template/gallery-single-template.php:101
+#: gallery-plugin.php:1208 template/gallery-single-template.php:101
 #, fuzzy
 msgid "Download high resolution image"
 msgstr "下载高分辨率图像"
@@ -478,28 +493,39 @@ msgstr "图像"
 
 #~ msgid "Add New"
 #~ msgstr "新增"
+
 #~ msgid "Search Galleries"
 #~ msgstr "搜索图集"
+
 #~ msgid "Please do not forget to select "
 #~ msgstr "请不要忘记选择"
+
 #~ msgid "Attachments order by"
 #~ msgstr "附件按"
+
 #~ msgid "attachments order"
 #~ msgstr "附件排序"
+
 #~ msgid "Link URL"
 #~ msgstr "链接网址"
+
 #~ msgid "The size of the cover album for gallery"
 #~ msgstr "封面专辑的图像尺寸"
+
 #~ msgid "Size for gallery image"
 #~ msgstr "图集中图像的尺寸"
+
 #~ msgid "attachment title"
 #~ msgstr "附件标题"
+
 #~ msgid "date"
 #~ msgstr "日期"
+
 #~ msgid "Attachments order"
 #~ msgstr "附件排序"
+
 #~ msgid "Label for Return link"
 #~ msgstr "返回链接的标签"
+
 #~ msgid "URL for Return link"
 #~ msgstr "返回链接的地址"
-

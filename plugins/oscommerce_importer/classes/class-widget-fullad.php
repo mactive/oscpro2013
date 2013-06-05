@@ -18,8 +18,8 @@ class Fullad_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'fullad_Widget', // Base ID
-			'Fullad_Widget', // Name
-			array( 'description' => __( 'A full width AD', 'text_domain' ), ) // Args
+			__('Fullad_Widget','oscpro'), // Name
+			array( 'description' => __( 'A full width AD', 'oscpro' ), ) // Args
 		);
 	}
 

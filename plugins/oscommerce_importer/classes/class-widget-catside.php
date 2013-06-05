@@ -12,8 +12,8 @@ class cb_archive_widget extends WP_Widget {
     function cb_archive_widget() {
         parent::WP_Widget(
             false, // Base ID
-            'Custom Archive Widget', // Name
-            array( 'description' =>  'Use this widget to place Specific Archives depending on category selection', ) // Args
+            __('Custom_Archive_Widget','oscpro'), // Name
+            array( 'description' =>  __('Custom_Archive_Widget desc','oscpro'), ) // Args
         );
     }
 

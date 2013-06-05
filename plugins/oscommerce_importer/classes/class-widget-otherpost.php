@@ -18,8 +18,8 @@ class Otherpost_widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'otherpost_widget', // Base ID
-			'Otherpost_widget', // Name
-			array( 'description' => __( 'A Other post Widget', 'text_domain' ), ) // Args
+			__('Otherpost_widget','oscpro'), // Name
+			array( 'description' => __( 'A Other post Widget', 'oscpro' ), ) // Args
 		);
 	}
 

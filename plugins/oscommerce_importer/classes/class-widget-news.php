@@ -18,8 +18,8 @@ class News_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'news_Widget', // Base ID
-			'News_Widget', // Name
-			array( 'description' => __( 'A News Widget', 'text_domain' ), ) // Args
+			__('News_Widget','oscpro'), // Name
+			array( 'description' => __( 'A News Widget', 'oscpro' ), ) // Args
 		);
 	}
 

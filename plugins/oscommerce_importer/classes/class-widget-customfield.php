@@ -18,8 +18,8 @@ class Customfield_widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'customfield_widget', // Base ID
-			'Customfield_widget', // Name
-			array( 'description' => __( 'A Custom field Widget', 'text_domain' ), ) // Args
+			__('Customfield_widget','oscpro'), // Name
+			array( 'description' => __( 'A Custom field Widget', 'oscpro' ), ) // Args
 		);
 	}
 

@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: oscpro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-22 16:13+0300\n"
+"PO-Revision-Date: 2013-06-05 20:59+0800\n"
+"Last-Translator: \n"
+"Language-Team: Xiaobo Chen <mactive@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class-widget-brandwall.php:21
+msgid "Brandwall_Widget"
+msgstr "&hearts;  品牌墙插件"
+
+#: class-widget-brandwall.php:22
+msgid "A Brandwall Widget"
+msgstr "&hearts;  左右滚动品牌墙插件"
+
+#: class-widget-catside.php:22
+msgid "Custom_Archive_Widget"
+msgstr "&hearts;  月份分类插件"
+
+msgid "Custom_Archive_Widget desc"
+msgstr "单个分类,每月份统计列表"
+
+#: class-widget-customfield.php:22
+msgid "Customfield_widget"
+msgstr "&hearts;  自定义栏目插件"
+
+msgid "A Custom field Widget"
+msgstr "每篇文章的自定义栏目"
+
+#: class-widget-news.php:22
+msgid "News_Widget"
+msgstr "&hearts;  滚动文章插件"
+
+msgid "A News Widget"
+msgstr "必须指定一类文章,可以设定数量"
+
+#: class-widget-fullad.php:22
+msgid "Fullad_Widget"
+msgstr "&hearts;  随机广告插件"
+
+msgid "A full width AD"
+msgstr "指定一类文章,随机显示其中一个,大图 宽975px 高370px.小图 宽200px 高不限"
+
+#: class-widget-otherpost.php:22
+msgid "Otherpost_widget"
+msgstr "&hearts;  其他文章插件"
+
+msgid "A Other post Widget"
+msgstr "同分类其他文章,可以指定数量"
+
+#: class-widget-showcase.php:22
+msgid "Showcase_Widget"
+msgstr "&hearts;  首页产品"
+
+msgid "A Showcase Widget"
+msgstr "推荐产品 新上产品"
+
+#: class-widget-whyosc.php:22
+msgid "Whyosc_Widget"
+msgstr "&hearts;  为什么插件"
+
+msgid "A Whyosc Widget"
+msgstr "为什么选择/相信奥斯中乐 上下排列"

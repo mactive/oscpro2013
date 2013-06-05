@@ -18,8 +18,8 @@ class Showcase_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 	 		'showcase_Widget', // Base ID
-			'Showcase_Widget', // Name
-			array( 'description' => __( 'A Showcase Widget', 'text_domain' ), ) // Args
+			__('Showcase_Widget','oscpro'), // Name
+			array( 'description' => __( 'A Showcase Widget', 'oscpro' ), ) // Args
 		);
 	}
 

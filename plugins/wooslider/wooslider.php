@@ -32,6 +32,15 @@ License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2
     if ( ! function_exists( 'woothemes_queue_update' ) )
         require_once( 'inc/woo-functions.php' );
 
+    if ( ! function_exists ( 'wooslider_plugin_init' ) ) {
+        function wooslider_plugin_init() {
+        // Internationalization, first(!)
+            load_plugin_textdomain( 'wooslider', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+        }
+    }
+
+    add_action( 'plugins_loaded', 'wooslider_plugin_init' );
+
     /* Integrate with the WooThemes Updater plugin for plugin updates. */
     woothemes_queue_update( plugin_basename( __FILE__ ), '209d98f3ccde6cc3de7e8732a2b20b6a', '46506' );
 
