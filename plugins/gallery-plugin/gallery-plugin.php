@@ -1412,7 +1412,7 @@ add_filter( 'plugin_action_links', 'gllr_plugin_action_links', 10, 2 );
 //Additional links on the plugin page
 add_filter( 'plugin_row_meta', 'gllr_register_plugin_links', 10, 2 );
 
-add_action( 'admin_menu', 'add_gllr_admin_menu' );
+// add_action( 'admin_menu', 'add_gllr_admin_menu' );
 add_action( 'init', 'gllr_plugin_init' );
 
 add_action( 'init', 'post_type_images' ); // register post type

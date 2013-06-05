@@ -1,4 +1,4 @@
-/*
+G/*
 Theme Name: Twenty Twelve
 Theme URI: http://wordpress.org/extend/themes/twentytwelve
 Author: the WordPress team
@@ -613,7 +613,6 @@ section[role="banner"] {
 	-moz-hyphens: auto;
 	hyphens: auto;
 	margin-bottom: 48px;
-	margin-bottom: 3.428571429rem;
 	word-wrap: break-word;
 }
 .widget-area .widget h3 {

@@ -14,6 +14,10 @@
 get_header();
 ?>
 
+<style type="text/css">
+#wooslider-id-1{height: 370px !important;}
+</style>
+
 	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 		<div id="secondary">
 			<?php dynamic_sidebar( 'sidebar-4' ); ?>

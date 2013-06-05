@@ -87,7 +87,7 @@ function wp_pn_style_admin_menu()
 	add_menu_page('PageNavi Style', 'PageNavi Style', $level, __FILE__, 'wp_pn_style_options_page',WP_PAGENAVI_STYLE_PATH.'images/icon.png');
 }
 
-add_action('admin_menu','wp_pn_style_admin_menu');	
+// add_action('admin_menu','wp_pn_style_admin_menu');	
 
 
 function wp_pn_style_options_page()

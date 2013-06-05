@@ -30,7 +30,7 @@
 			<?php 
 				$content = get_the_content();
       			$content = strip_tags($content);
-				echo mb_substr($content, 0, 70);
+				echo mb_substr($content, 0, 60);
 			?>
 				<span class="time f_right"><?php echo get_post_time('Y-m-d'); ?></span>
 
