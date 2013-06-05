@@ -86,6 +86,6 @@ if ( ! class_exists( 'WooThemes_Updater' ) && ! function_exists( 'woothemes_upda
 		echo '<div class="updated fade"><p>' . $message . '</p></div>' . "\n";
 	}
 
-	add_action( 'admin_notices', 'woothemes_updater_notice' );
+	// add_action( 'admin_notices', 'woothemes_updater_notice' );
 }
 ?>
