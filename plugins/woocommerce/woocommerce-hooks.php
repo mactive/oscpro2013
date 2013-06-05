@@ -134,10 +134,14 @@ if ( ! is_admin() || defined('DOING_AJAX') ) {
 	 * @see woocommerce_template_single_meta()
 	 * @see woocommerce_template_single_sharing()
 	 */
+
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
 	// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+	// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_brand', 45 );
+
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
 
 

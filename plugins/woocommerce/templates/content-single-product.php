@@ -26,42 +26,44 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <section class="product_title_area">
 	<div class="cell_title">产品信息</div>
 	
-	<div class="keyline mb_20px"></div>
 	
-	<?php
-		/**
-		 * woocommerce_show_product_images hook
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
+	<div class="product_white_bg">
 
 		<?php
 			/**
-			 * woocommerce_single_product_summary hook
+			 * woocommerce_show_product_images hook
 			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
 			 */
-			do_action( 'woocommerce_single_product_summary' );
+			do_action( 'woocommerce_before_single_product_summary' );
 		?>
-		<div class="product_service_note radius_3px">
-			<span>Osc为您提供：</span>
-			<ul>
-				<li>免费技术支持</li>
-				<li>免费保修（一年内）</li>
-				<li>免费送货</li>
-			</ul>
-		</div>
-	</div><!-- .summary -->
+
+		<div class="summary entry-summary">
+
+			<?php
+				/**
+				 * woocommerce_single_product_summary hook
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+			?>
+			<div class="product_service_note radius_3px">
+				<span>Osc为您提供：</span>
+				<ul>
+					<li>免费技术支持</li>
+					<li>免费保修（一年内）</li>
+					<li>免费送货</li>
+				</ul>
+			</div>
+		</div><!-- .summary -->
+	</div>
 
 </section>
 	<section class="product_main_area">

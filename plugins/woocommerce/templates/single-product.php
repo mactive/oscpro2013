@@ -16,8 +16,7 @@ get_header('shop'); ?>
 <style type="text/css" media="screen">
 	.woocommerce-breadcrumb{text-indent: 10px;margin-top: 20px !important;}
 	.site-content{width: 670px !important;  width: 100% !important;}
-	.product_cell_right{width: 400px !important;}
-	.entry-summary{width: 450px !important; margin-top: 20px;}
+	.entry-summary{width: 500px !important; margin: 40px 0px 0px 40px; float: left !important;}
 </style>
 
 

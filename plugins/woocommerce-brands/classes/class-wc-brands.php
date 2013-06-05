@@ -21,6 +21,7 @@ class WC_Brands {
 		add_action( 'wp', array( $this, 'body_class' ) );
 
 		add_action( 'woocommerce_product_meta_end', array( $this, 'show_brand' ) );
+		add_action( 'woocommerce_product_meta_brand', array( $this, 'show_brand_thumbnail' ) );
 
 		if ( function_exists( 'add_image_size' ) ) {
 			add_image_size( 'brand-thumb', 300, 9999 );
@@ -192,6 +193,34 @@ class WC_Brands {
 			echo get_brands( $post->ID, ', ', ' <span class="posted_in">' . __('Brand:', 'wc_brands').' ', '.</span>' );
 		}
 	}
+
+		/**
+	 * show_brand function.
+	 *
+	 * @access public
+	 * @return void
+	 */
+	function show_brand_thumbnail() {
+		global $post;
+
+		$brands = wp_get_post_terms( $post->ID, 'product_brand' );
+		if ( $brands )
+			$brand = $brands[0];
+			$url = get_brand_thumbnail_url($brand->term_id);
+
+		if ( is_singular( 'product' ) ) {
+			if (empty($url)) {
+				echo get_brands( $post->ID, ', ', ' <span class="posted_in">' . __('品牌:', 'wc_brands').' ', '.</span>' );
+			}else{
+				echo '<a class="product_brand_thumbnail" href="/brand/'.$brand->slug.'" '. 
+	               	'title="'.$brand->name.'" '.
+	                'style="background-image:url('.$url.');">'.
+	                "</a>";
+   			}
+
+		}
+	}
+
 
 	/**
 	 * register_shortcodes function.

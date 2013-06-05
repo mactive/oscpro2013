@@ -514,26 +514,36 @@ a.footer_a{width: 100%; text-align: center;}
 	width: 240px; float: left;
 }
 .product_right{
-	width: 750px; float: left; margin-left: 20px;
+	width: 720px; float: left; margin-left: 25px;
 }
-.product_main_area .product_left{width: 200px;}
+.product_main_area .product_left{width: 225px;}
 
 .product_title_area{width: 100%;float: left; margin:10px 0px 30px 0px;}
-.product_title_area .images{width: 460px !important;}
+.product_title_area .images{width: 360px !important;}
 .product_title_area .images img{max-width: 360px !important; max-height: 360px !important; display: block; width: auto !important;}
-.thumbnails a{width: 25% !important; height: 108px;}
+
+
+.product_white_bg{
+	background:#fff; 	
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+	float: left; width: 100%;
+	border-top: 1px solid #ddd;
+	margin-top: 10px;
+}
 
 /* product-image.php */
-.images {width: 500px; }
+.images {width: 360px; margin: 20px 0px 20px 40px; }
 .images a{
 	width: 360px; height: 360px; display: block;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #fff;
-	box-shadow: 0 0 2px #ccc;float: left;
 }
-.thumbnails {width: 90px; margin-left:10px;  }
-.thumbnails a{width: 50px !important; height: 50px !important;}
+.thumbnails {width: 90%; margin:0px 5%; margin-top: -50px;float: left; }
+.thumbnails a{width: 50px !important; height: 50px !important; float: left; margin: 5px; display: block; clear: none;}
+.thumbnails a img{width: 50px !important; height: 50px !important;}
+
+
 a.hover_block{width: 100%; height: 100%; display: block; z-index: 1; position: absolute; }
 
 
@@ -595,12 +605,26 @@ a.hover_block{width: 100%; height: 100%; display: block; z-index: 1; position: a
 	line-height: 20px;
 }
 .product_description{
-	line-height: 24px;padding: 20px 10px; width: 640px;
+	line-height: 24px;padding: 5%; width: 90%;
 	word-wrap:break-word; overflow:hidden;
 }
 .product_description img{
 	width: 100%; margin: 10px 0px;
 }
+
+/*single_product*/
+p.price ins .amount{color: #419ad1 !important;}
+p.price {margin-bottom: 20px !important;}
+.summary form{margin-bottom: 20px !important;}
+a.product_brand_thumbnail{width: 150px; height: 75px; display: block; 
+	background-repeat: no-repeat;
+	border-radius: 5px; background-color: #fff;
+	background-position: center center;
+}
+
+.product_meta{width: 150px;}
+h1.product_title{font-size: 24px; line-height: 30px;}
+
 
 
 .white_section{background: #fff;box-shadow: 0 0 1px #ccc; padding: 20px;float: left;}

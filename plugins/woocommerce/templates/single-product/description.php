@@ -21,17 +21,15 @@ if ( ! empty( $tabs ) ) : ?>
 
 	<div class="cell_title">产品说明</div>
 
-	<div class="keyline"></div>
 
-	<div class="product_description">
+	<div class="product_description product_white_bg">
 		<?php the_content(); ?>
 	</div>
 
 <?php if (has_excerpt()) { ?>
 	
 	<div class="cell_title">规格参数</div>
-	<div class="keyline"></div>
-	<div class="product_description">
+	<div class="product_description product_white_bg">
 		<?php echo_tar(); ?>
 		<?php the_excerpt(); ?>
 	</div>
