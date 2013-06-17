@@ -445,7 +445,7 @@ ul.calendar a{text-decoration: none;}
 }
 
 .single_nav{ 
-	height: 40px; margin-bottom: 40px;
+	height: 40px; margin-bottom: 40px; clear: both;
 }
 
 .single_nav span{ 
