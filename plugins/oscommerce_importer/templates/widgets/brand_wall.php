@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
     var marginLeft = $('ul.brand_wall li').css('marginLeft').replace("px", "");
     var width =  $('ul.brand_wall li').width()+ marginLeft*2;
     var count = <?php echo $count; ?>;
-    $('a.brand_left_handle').click(function(){
+    $('a.brand_right_handle').click(function(){
         var offset = $('ul.brand_wall').offset();
         console.log(offset.left);
 
@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
         };
     });
 
-    $('a.brand_right_handle').click(function(){
+    $('a.brand_left_handle').click(function(){
         var offset = $('ul.brand_wall').offset();
         console.log(offset.left);
 
@@ -51,15 +51,15 @@ jQuery(document).ready(function ($) {
     </ul>
 
     <section class="brand_container">
-        <a class="brand_left_handle block"></a>
+        <a class="brand_left_handle"></a>
         <div class="brand_center">
         	<ul class="brand_wall">
             	<?php 
             		foreach($posts as $post){
                     $url = get_brand_thumbnail_url($post->term_id);
             	?>
-
-            		<li style="width: <?php _e($width); ?>px !important;">
+                    
+            		<li >
 
                         <a href="brand/<?php _e($post->slug)?>" 
                             title="<?php echo $post->name ?>"
@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
             	<?php } ?>
         	</ul>
         </div>
-        <a class="brand_right_handle block"></a>
+        <a class="brand_right_handle"></a>
 
     </section>
 

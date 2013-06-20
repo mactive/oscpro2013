@@ -10,6 +10,7 @@
     jQuery(document).ready(function ($) {
         $(function() {
             $( "#show_case_div" ).tabs();
+
         });
     });
 </script>

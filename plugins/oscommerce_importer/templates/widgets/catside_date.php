@@ -7,7 +7,7 @@
     jQuery(document).ready(function ($) {
         $(function() {
             var count = $("ul.calendar li").length;
-            var default_count = 18;
+            var default_count = 16;
             if (count > default_count) {
               $('a#more').show();
             }else{
@@ -43,4 +43,4 @@
             <?php wp_get_archives($args) ?>
         </ul>
 
-        <a id="more" class="calendar_more">展开更多&darr;</a>
+        <a id="more" class="calendar_more">更多&darr;</a>

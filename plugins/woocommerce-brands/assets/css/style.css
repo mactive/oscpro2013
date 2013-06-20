@@ -62,7 +62,7 @@ ul.brands_index li {
 	margin: 0 2px 2px 0;
 }
 ul.brands_index li a, ul.brands_index li span {
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	padding: 6px;
 	line-height: 1em;
 	float: left;
@@ -70,21 +70,23 @@ ul.brands_index li a, ul.brands_index li span {
 	width:30px;text-align: center;
 }
 ul.brands_index li span {
-	border-color: #eee;
+	/*border-color: #eee;*/
 	color: #ddd;
 }
 ul.brands_index li a:hover {
-	border-width: 2px;
-	padding: 5px;
+	/*border-width: 2px;*/
+	padding: 6px;
 	text-decoration: none;
+	background: #f3f3f3;
+
 }
 ul.brands_index li a.active {
-	border-width: 2px;
-	padding: 5px;
+	/*border-width: 2px;*/
+	padding: 6px;
 }
 div#brands_a_z a.top {
-	border: 1px solid #ccc;
-	padding: 4px;
+	/*border: 1px solid #ccc;*/
+	padding: 6px;
 	line-height: 1em;
 	float: right;
 	text-decoration: none;

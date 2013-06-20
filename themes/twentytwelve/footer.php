@@ -24,7 +24,7 @@
 </div>
 
 <div id="top_nav">
-	<section class="inner"> 
+	<section class="inner center"> 
 		<a class="footer_a" href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>">
 			Copyright © 2009 osc pro.All rights reserved. 京工网安备：110112002015</a>
 	</section>
