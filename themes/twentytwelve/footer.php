@@ -32,8 +32,8 @@
 			<p>
 				电话Tel：010-81596084-8002 /8004    <br>       
 				电邮E-mail: <a href="mailto:tangchao@osc-pro.com?subject=市场合作" target="_blank">tangchao@osc-pro.com</a>     <br>        
-				微博Microblog:<br>  @北京奥斯中乐科技有限公司 <br>
-				淘宝Taobao：<a href="http://shop34040495.taobao.com/" target="_blank">http://shop34040495.taobao.com/</a>  <br>
+				微博Microblog:<br>  <a href="http://e.weibo.com/u/3061090233" target="_blank"></a>@北京奥斯中乐科技有限公司 <br>
+				淘宝Taobao：<br><a href="http://shop34040495.taobao.com/" target="_blank">http://shop34040495.taobao.com/</a>  <br>
 			</p>
 		</div>
 
