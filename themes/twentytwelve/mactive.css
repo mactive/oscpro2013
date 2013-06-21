@@ -137,7 +137,7 @@ aside.widget_customfield_widget{
 	float:left; width: 190px;height: 24px; line-height: 24px;
 }
 .brand_wall{height: 90px; clear: both; margin-top: 10px; float: left; position: absolute; }
-.brand_wall li{height: 90px;width: 147px; display: block; margin: 0px 0px; float: left;border-right:1px solid #ddd; }
+.brand_wall li{height: 90px;width: 147px; display: block; margin: 0px 0px; float: left;border-right:1px solid #000; }
 .brand_wall li a{
 	line-height: 70px; font-size: 16px;
 	background-repeat: no-repeat !important;
@@ -495,7 +495,7 @@ ul.calendar a{text-decoration: none;}
 a.footer_a{width: 100%; text-align: center;}
 .footer_custom{
 	background: #444444;
-	height: 200px; line-height: 22px;color: #fff;font-size: 14px;
+	height: 260px; line-height: 22px;color: #fff;font-size: 14px;
 	padding-top: 20px;
 }
 .footer_custom h3{
@@ -505,6 +505,12 @@ a.footer_a{width: 100%; text-align: center;}
 	width: 80%;
 	text-align: left;
 }
+
+.footer_cell{ width: 30%; margin: 0px 3% 0px 0px; float: left;}
+.footer_cell h4{font-size: 20px;margin: 0px 0px 20px 0px;}
+.footer_cell p{font-size: 12px; line-height: 20px; 	text-align: left; }
+.footer_cell span.fixed_title{ display: block; float: left; width: 150px; height: 20px;}
+
 
 
 /* product

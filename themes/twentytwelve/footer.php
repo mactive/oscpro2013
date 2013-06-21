@@ -16,9 +16,34 @@
 
 <div class="footer_custom">
 	<section class="inner">
-		<h3>HERE OUR CUSTOMER</h3>
-		<p>“Dear Sirs, I am writing you to let you know you have a newly acquired life long customer thanks to your sales rep Carl. As a singer songwriter, who has found himself thrust into the unfamiliar world of self production, the extent of the hand holding and tutelage has been unprecedented and doesn't go unappreciated.” <br><br>
-		- Tony T</p>
+		<div class="footer_cell">
+			<h4>销售咨询<br>Sales Services</h4>
+			<p>	电话Tel：010-81596084-8001<br>                    
+				手机Mob：13720028098 / 15901159960   <br>                     
+				电邮E-mail：Sales@osc-pro.com       <br>                            
+				传真Fax：010-81596084-8003            <br>  
+				地址Address：北京市通州区北苑路天时名苑5-2-1401<br>
+	             2-1401,Building 5,Tianshimingyuan,Beiyuan No.52,North Lane Yangzhuang,Tongzhou District
+			</p>
+		</div>
+
+		<div class="footer_cell">
+			<h4>市场合作 <br> Market Cooperation</h4>
+			<p>
+				电话Tel：010-81596084-8002 /8004    <br>       
+				电邮E-mail: <a href="mailto:tangchao@osc-pro.com?subject=市场合作" target="_blank">tangchao@osc-pro.com</a>     <br>        
+				微博Microblog:<br>  @北京奥斯中乐科技有限公司 <br>
+				淘宝Taobao：<a href="http://shop34040495.taobao.com/" target="_blank">http://shop34040495.taobao.com/</a>  <br>
+			</p>
+		</div>
+
+		<div class="footer_cell">
+			<h4>技术支持<br>  Technical Support</h4>
+			<p>	电话Tel：15901159960<br> 
+				电邮E-mail：<a href="mailto:support@osc-pro.com?subject=技术支持" target="_blank">support@osc-pro.com</a>
+			</p>
+		</div>
+
 	</section>
 
 </div>
