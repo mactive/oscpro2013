@@ -8,28 +8,36 @@
  */
 ?>
 
-// <script type="text/javascript" charset="utf-8" async defer>
-//     jQuery(document).ready(function ($) {
-//         $(function() {
-//             $( ".category_list li" ).find('ul').hide();
-//             $( ".category_list li" ).click(function(){
-//               console.log($(this));
-//               if ($(this).children('ul').is(":visible")) {
-//                 $(this).children('ul').hide();
-//               }else{
-//                 $(this).children('ul').show();
-//               }
-              
-//             })
-//         });
-//     });
-// </script>
+<script type="text/javascript" charset="utf-8" async defer>
+    jQuery(document).ready(function ($) {
+        $(function() {
+            $( ".category_list > li" ).each(function(index,element){
+              if ($(this).children('ul').length) {
+                console.log(index);
+              }else{
+                $(this).css('background','none');
+              }
+            });
+
+
+            $( ".category_list > li" ).children('ul').hide();
+            $( ".category_list > li" ).click(function(){
+              console.log($(this));
+              if ($(this).children('ul').is(":visible")) {
+                $(this).children('ul').hide();
+              }else{
+                $(this).children('ul').show();
+              }
+            })
+        });
+    });
+</script>
 
 <?php
 //list terms in a given taxonomy using wp_list_categories (also useful as a widget if using a PHP Code plugin)
 
 $taxonomy     = 'product_cat';
-$orderby      = 'name';
+$orderby      = 'count';
 $show_count   = 0;      // 1 for yes, 0 for no
 $pad_counts   = 0;      // 1 for yes, 0 for no
 $hierarchical = 1;      // 1 for yes, 0 for no
@@ -41,7 +49,8 @@ $args = array(
   'show_count'   => $show_count,
   'pad_counts'   => $pad_counts,
   'hierarchical' => $hierarchical,
-  'title_li'     => $title
+  'title_li'     => $title,
+  'exclude'      => '245,246'
 );
 ?>
 <div class="white_section radius_3px">
