@@ -16,7 +16,17 @@ get_header('shop'); ?>
 <style type="text/css" media="screen">
 	.woocommerce-breadcrumb{text-indent: 10px;margin-top: 20px !important;}
 	.site-content{width: 670px !important;  width: 100% !important;}
-	.entry-summary{width: 500px !important; margin: 40px 0px 0px 40px; float: left !important;}
+	.entry-summary{
+		width: 500px !important; 
+		margin: 40px 0px 0px 30px; 
+		padding-left: 30px;
+	 	float: left !important; 
+	 	border-left: 1px solid #eee;
+	}
+	p.price ins .amount{color: #000 !important; font-size: 30px;}
+	del .amount{color: #ccc; font-size: 20px;}
+	.product_meta{ width: 150px; float: left;}
+	.product_service_note{ width: 150px; float: left; margin-left: 20px;}
 </style>
 
 

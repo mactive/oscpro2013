@@ -11,6 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post, $product;
 ?>
+
+
+
+
+
 <div class="product_meta">
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>

@@ -480,6 +480,13 @@ ul.calendar a{text-decoration: none;}
 	width: 100%; margin:10px 0px; 
 	clear: both;
 }
+.lite_keyline{
+	height: 1px; font-size: 1px; background-color: #eee;
+	padding: 0px; line-height: 1px;
+	width: 80%; margin:10px 0px; 
+	clear: both;
+}
+
 
 .lite_full_ad {
 	height: 170px;
@@ -502,7 +509,7 @@ a.footer_a{width: 100%; text-align: center;}
 	font-size: 20px;margin:10px 0px;
 }
 .footer_custom p{
-	width: 80%;
+	width: 100%;
 	text-align: left;
 }
 
@@ -561,7 +568,7 @@ a.hover_block{width: 100%; height: 100%; display: block; z-index: 1; position: a
 
 .product_service_note
 {
-	line-height: 24px; margin-top: 10px;padding: 10px 20px;
+	line-height: 24px; padding: 10px 20px;
 	border: 1px solid #ccc;
 	width: 200px; background-color: #f0f0f0; 
 }
@@ -631,9 +638,9 @@ a.calendar_more{
 }
 
 /*single_product*/
-p.price ins .amount{color: #419ad1 !important;}
-p.price {margin-bottom: 20px !important;}
-.summary form{margin-bottom: 20px !important;}
+p.price ins .amount{color: #419ad1;}
+p.price {margin:20px 0px !important;}
+.summary form{margin-bottom: 30px !important;}
 a.product_brand_thumbnail{width: 150px; height: 75px; display: block; 
 	background-repeat: no-repeat;
 	border-radius: 5px; background-color: #fff;
@@ -744,6 +751,8 @@ ul.category_list li ul li a{color: #21759B;};
 .mt_10px{margin-top: 10px !important;}
 .mt_15px{margin-top: 15px !important;}
 .mt_20px{margin-top: 20px !important;}
+.mt_30px{margin-top: 30px !important;}
+.mt_40px{margin-top: 40px !important;}
 
 .pt_10px{padding-top: 10px;}
 .pt_15px{padding-top: 15px;}

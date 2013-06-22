@@ -16,31 +16,31 @@
 
 <div class="footer_custom">
 	<section class="inner">
-		<div class="footer_cell">
+		<div class="footer_cell" style="width:35% !important;">
 			<h4>销售咨询<br>Sales Services</h4>
-			<p>	电话Tel：010-81596084-8001<br>                    
-				手机Mob：13720028098 / 15901159960   <br>                     
-				电邮E-mail：Sales@osc-pro.com       <br>                            
-				传真Fax：010-81596084-8003            <br>  
-				地址Address：北京市通州区北苑路天时名苑5-2-1401<br>
+			<p>	电话 Tel：010-81596084-8001<br>                    
+				手机 Mob：13720028098 / 15901159960   <br>                     
+				电邮 E-mail：Sales@osc-pro.com       <br>                            
+				传真 Fax：010-81596084-8003            <br>  
+				地址 Address：北京市通州区北苑路天时名苑5-2-1401<br>
 	             2-1401,Building 5,Tianshimingyuan,Beiyuan No.52,North Lane Yangzhuang,Tongzhou District
 			</p>
 		</div>
 
-		<div class="footer_cell">
+		<div class="footer_cell" style="width:30% !important;">
 			<h4>市场合作 <br> Market Cooperation</h4>
 			<p>
-				电话Tel：010-81596084-8002 /8004    <br>       
-				电邮E-mail: <a href="mailto:tangchao@osc-pro.com?subject=市场合作" target="_blank">tangchao@osc-pro.com</a>     <br>        
-				微博Microblog:<br>  <a href="http://e.weibo.com/u/3061090233" target="_blank"></a>@北京奥斯中乐科技有限公司 <br>
-				淘宝Taobao：<br><a href="http://shop34040495.taobao.com/" target="_blank">http://shop34040495.taobao.com/</a>  <br>
+				电话 Tel：010-81596084-8002 /8004    <br>       
+				电邮 E-mail: <a href="mailto:tangchao@osc-pro.com?subject=市场合作" target="_blank">tangchao@osc-pro.com</a>     <br>        
+				微博 Weibo: <a href="http://e.weibo.com/u/3061090233" target="_blank">@北京奥斯中乐科技有限公司</a> <br>
+				淘宝 Taobao：<a href="http://shop34040495.taobao.com/" target="_blank">http://shop34040495.taobao.com/</a>  <br>
 			</p>
 		</div>
 
-		<div class="footer_cell">
+		<div class="footer_cell" style="width:25% !important;">
 			<h4>技术支持<br>  Technical Support</h4>
-			<p>	电话Tel：15901159960<br> 
-				电邮E-mail：<a href="mailto:support@osc-pro.com?subject=技术支持" target="_blank">support@osc-pro.com</a>
+			<p>	电话 Tel：15901159960<br> 
+				电邮 E-mail：<a href="mailto:support@osc-pro.com?subject=技术支持" target="_blank">support@osc-pro.com</a>
 			</p>
 		</div>
 

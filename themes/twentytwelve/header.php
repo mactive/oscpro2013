@@ -61,8 +61,8 @@
 			<a class="f_left" href="">注册</a>
 		</span>
 		<span class="top_sns">
-			<a href="" class="taobao_30 f_left"></a>
-			<a href="" class="weibo_30 f_left"></a>
+			<a href="http://e.weibo.com/u/3061090233" target="_blank" class="weibo_30 f_left"></a>
+			<a href="http://shop34040495.taobao.com/" target="_blank" class="taobao_30 f_left"></a>
 		</span>
 	</section>
 </div>
