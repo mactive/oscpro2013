@@ -416,12 +416,14 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size );
             $url = $thumb['0'];
             $width = $thumb[1];
-            $height = $thumb[2];
-            if ($width >= $height) {
-            	$b_size = 'background-size:'.$width.'px auto;';
-            }else{
-            	$b_size = 'background-size:auto '.$height.'px;';
-            }
+            $height = $thumb[2];	
+            // if ($width >= $height) {
+            // 	$b_size = 'background-size:'.$width.'px auto;';
+            // }else{
+            // 	$b_size = 'background-size:auto '.$height.'px;';
+            // }
+            $b_size = 'background-size:auto '.$height.'px;';
+
             $product_img = '<b class="radius_3px" style="'.$b_size.'background-image:url('.$url.');"></b>';
             return $product_img;
 
