@@ -406,7 +406,7 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	 * @param int $placeholder_height (default: 0)
 	 * @return string
 	 */
-	function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $placeholder_width = 0, $placeholder_height = 0  ) {
+	function woocommerce_get_product_thumbnail( $size = 'shop_single', $placeholder_width = 0, $placeholder_height = 0  ) {
 		global $post;
 		if ( has_post_thumbnail() ){
 
@@ -416,7 +416,7 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size );
             $url = $thumb['0'];
             $width = $thumb[1];
-            $height = $thumb[2];	
+            $height = $thumb[2] * 0.7;	
             // if ($width >= $height) {
             // 	$b_size = 'background-size:'.$width.'px auto;';
             // }else{

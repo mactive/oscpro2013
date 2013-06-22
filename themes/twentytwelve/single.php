@@ -71,7 +71,7 @@ get_header(); ?>
 	<?php else: ?>
 		
 		<div id="left_side" class="grouped_custom_field radius_3px">
-			<div class="list_title mb_20px mt_10px">设备列表</div>
+			<div class="list_title mb_10px mt_10px">设备列表</div>
 
 			<?php
 				$group =  get_group_custom_field_array(); 
