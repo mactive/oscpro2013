@@ -65,7 +65,6 @@ jQuery(document).ready(function ($) {
                             title="<?php echo $post->name ?>"
                             style="background-image:url(<?php echo $url; ?>);">
                         </a>
-                        <span><?php echo $post->name;?></span>
 
                     </li>
             	<?php } ?>

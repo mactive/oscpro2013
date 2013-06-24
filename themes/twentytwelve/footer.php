@@ -16,7 +16,7 @@
 
 <div class="footer_custom">
 	<section class="inner">
-		<div class="footer_cell" style="width:35% !important;">
+		<div class="footer_cell" style="width:41% !important;margin-left:1% !important;">
 			<h4>销售咨询<br>Sales Services</h4>
 			<p>	电话 Tel：010-81596084-8001<br>                    
 				手机 Mob：13720028098 / 15901159960   <br>                     
@@ -37,9 +37,10 @@
 			</p>
 		</div>
 
-		<div class="footer_cell" style="width:25% !important;">
+		<div class="footer_cell" style="width:22% !important;margin:0 !important;">
 			<h4>技术支持<br>  Technical Support</h4>
-			<p>	电话 Tel：15901159960<br> 
+			<p>	电话Tel：010-81596084-8001<br> 
+				手机Mob：15901159960<br>
 				电邮 E-mail：<a href="mailto:support@osc-pro.com?subject=技术支持" target="_blank">support@osc-pro.com</a>
 			</p>
 		</div>
@@ -55,5 +56,15 @@
 	</section>
 </div>
 <?php wp_footer(); ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5684234-2', 'osc-pro.com');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
