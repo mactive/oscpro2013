@@ -515,5 +515,16 @@ function the_content_filter_extra_page($content)
 }
 
 
+if (class_exists('MultiPostThumbnails')) {
+  new MultiPostThumbnails(
+    array(
+     'label' => '第二张特色图像',
+     'id' => 'secondary-image',
+     'post_type' => 'post'
+     )
+  );
+}
+
+
 
 

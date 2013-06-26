@@ -13,8 +13,15 @@
 
 		<div class="article_thumbnail f_left">
 			<?php 
+				if (class_exists('MultiPostThumbnails'))
+				{
+					$custom = MultiPostThumbnails::get_post_thumbnail_id('post', 'secondary-image', $post->ID); 
+					$custom=wp_get_attachment_image_src($custom,'post-secondary-image-thumbnail'); 
+				}
+
+
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
-                $url = $thumb['0'];
+                $url = empty($custom['0']) ? $thumb['0'] : $custom['0'];
             ?>
 
             <div class="radius_3px thumbnail_img" style="background-image:url('<?php _e($url);?>');">
