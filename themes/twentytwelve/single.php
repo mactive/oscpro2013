@@ -74,15 +74,14 @@ get_header(); ?>
 			<div class="list_title mb_10px mt_10px">设备列表</div>
 
 			<?php
-				$group =  get_group_custom_field_array(); 
+				$group =  get_group_custom_field_array();
 				foreach ($group as $key => $title) {
 					# code...
 					echo '<span >'.$title.'</span>';
 					$items = $cfs->get($key);
 					foreach ($items as $value) {
 						# code...
-						$_post = get_post($value);
-						echo '<a href="'.get_permalink($_post->ID).'">'.$_post->post_title.'</a>';
+						echo '<a href="'.$value['device_url'].'">'.$value['device_name'].'</a>';
 					}
 				}
 	 		?>
