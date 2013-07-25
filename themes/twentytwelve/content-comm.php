@@ -27,9 +27,18 @@
 	                	$template_url = get_bloginfo('template_url');
 	                	$url = $template_url."/img/logo_150.png";
 	                }
+
+	                // ratio = width / height
+	                $ratio = $thumb['1'] / $thumb['2'];
+	                $ratio_css = '';
+	                if ($ratio > 3 ) {
+	                	$ratio_css = "background-size:90% auto !important;";
+	                }else{
+	                	$ratio_css = "background-size:auto 90% !important;";
+	                }
 	            ?>
 
-	            <div class="radius_3px thumbnail_img" style="background-image:url('<?php echo $url;?>');">
+	            <div class="radius_3px thumbnail_img" style="background-image:url('<?php echo $url;?>');<?php echo $ratio_css;?>">
 	            </div>
 
 
