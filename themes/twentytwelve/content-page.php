@@ -7,6 +7,15 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+	<style type="text/css">
+   		#wooslider-id-1{height: 200px !important;}
+   	</style>
+
+	<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+		<div id="secondary">
+			<?php dynamic_sidebar( 'sidebar-4' ); ?>
+		</div><!-- #secondary -->
+	<?php endif; ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
