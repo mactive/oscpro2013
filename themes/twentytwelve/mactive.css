@@ -724,7 +724,30 @@ ul.category_list li ul li a{color: #21759B;};
 .grouped_custom_field a { width: 80%; margin:0 10% 0 10%;}
 .grouped_custom_field a:hover{ color: #444 !important;}
 
+/* user */
+.main-navigation li i.unread{
+	position: absolute;
+	width: 20px;
+	height: 20px; line-height: 20px;
+	display: block;
+	z-index: 2;
+	top: -10px; right: -5px;
+	border: 2px solid #fff !important;
+	box-shadow: 0px 1px 1px rgba( #000, 0.6) !important;
+	color: #fff;
+	text-align: center;
+	font-size: 14px; font-weight: 700;
 
+	background: #cc6e6e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cc6e6e 0%, #c42727 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc6e6e), color-stop(100%,#c42727)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cc6e6e 0%,#c42727 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cc6e6e 0%,#c42727 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cc6e6e 0%,#c42727 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cc6e6e 0%,#c42727 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc6e6e', endColorstr='#c42727',GradientType=0 ); /* IE6-9 */
+
+}
 /*
 ================================================================================================================
 ================================================================================================================
@@ -807,6 +830,7 @@ ul.category_list li ul li a{color: #21759B;};
 .radius_2px{-moz-border-radius: 2px;-khtml-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;}
 .radius_3px{-moz-border-radius: 3px;-khtml-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;}
 .radius_5px{-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.radius_7px{-moz-border-radius: 7px;-khtml-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
 .radius_10px{-moz-border-radius: 10px;-khtml-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 .radius_12px{-moz-border-radius: 12px;-khtml-border-radius: 12px;-webkit-border-radius: 12px;border-radius: 12px;}
 .radius_15px{-moz-border-radius: 15px;-khtml-border-radius: 15px;-webkit-border-radius: 15px;border-radius: 15px;}
