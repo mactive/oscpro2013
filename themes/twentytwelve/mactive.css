@@ -748,6 +748,43 @@ ul.category_list li ul li a{color: #21759B;};
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc6e6e', endColorstr='#c42727',GradientType=0 ); /* IE6-9 */
 
 }
+
+/*overlay video play*/
+.overlay-close{
+	width: 30px; height: 30px;
+	background: url('img/overlay-close.png') no-repeat center;
+	display: block;
+	position: absolute; top: -35px; right: -5px; 
+}
+.overlay {  
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10000;
+    display: none;
+    background: rgba(0,0,0,0.4);
+}
+#media_area{
+	position: relative;
+	width:600px;height:400px;padding: 0;
+	margin: 200px auto;
+	display: none;
+	border: 5px solid #ccc;
+	text-align: center;
+	padding: 0px;
+	background: #fff;
+
+	font-size: 40px;
+	line-height: 1.5em;
+}
+#media_area iframe{
+	width: 100%;
+	height: 100%;
+	overflow: none;
+	background: #fff;
+}
 /*
 ================================================================================================================
 ================================================================================================================

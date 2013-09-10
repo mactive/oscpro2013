@@ -34,8 +34,37 @@ get_header(); ?>
 </div>
 
 
+<?php 
+
+$the_slug = 'special-index-info';
+$page = get_page_by_path( $the_slug );
+
+?>
+<div class="overlay">
+
+    <div id="media_area">
+        <a class="overlay-close"></a>
+        <?php echo $page->post_content; ?>
+
+    </div>
+</div>
 
 
+
+<script type="text/javascript">
+
+jQuery(document).ready(function ($) {
+	$('div.overlay').children('#media_area').show();
+    $('div.overlay').fadeIn();
+
+    // close 
+    $('a.overlay-close').click(function(){
+        $('div.overlay').fadeOut();
+    })
+});
+
+
+</script>
 
 
 
