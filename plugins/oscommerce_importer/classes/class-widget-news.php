@@ -40,7 +40,7 @@ class News_Widget extends WP_Widget {
 		$count = $instance['count'];
 
 		// global $wpdb;
-		$args = array( 'numberposts' => 15, 'category' => $catid );
+		$args = array( 'numberposts' => 6, 'category' => $catid );
 		$posts = get_posts($args);
 		wp_reset_postdata();
 
