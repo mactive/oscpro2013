@@ -54,8 +54,13 @@ $page = get_page_by_path( $the_slug );
 <script type="text/javascript">
 
 jQuery(document).ready(function ($) {
-	$('div.overlay').children('#media_area').show();
-    $('div.overlay').fadeIn();
+    if ($.cookie('special_show') == null) {
+        $.cookie('special_show', 'yes', { expires: 1, path: '/' });
+        
+        $('div.overlay').children('#media_area').show();
+        $('div.overlay').fadeIn();
+    }
+
 
     // close 
     $('a.overlay-close').click(function(){
