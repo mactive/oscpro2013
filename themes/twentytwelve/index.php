@@ -34,6 +34,11 @@ get_header(); ?>
 </div>
 
 
+
+<?php $options = get_option('ozh_sample'); ?>
+
+<?php if($options['enabled']): ?>
+
 <?php 
 
 $the_slug = 'special-index-info';
@@ -52,10 +57,10 @@ $page = get_page_by_path( $the_slug );
 
 
 <script type="text/javascript">
-
 jQuery(document).ready(function ($) {
+    var expiresDays = parseInt(<?php echo $options['duration']?>);
     if ($.cookie('special_show') == null) {
-        $.cookie('special_show', 'yes', { expires: 1, path: '/' });
+        $.cookie('special_show', 'yes', { expires: expiresDays, path: '/' });
         
         $('div.overlay').children('#media_area').show();
         $('div.overlay').fadeIn();
@@ -67,10 +72,9 @@ jQuery(document).ready(function ($) {
         $('div.overlay').fadeOut();
     })
 });
-
-
 </script>
 
+<?php endif; ?>
 
 
 

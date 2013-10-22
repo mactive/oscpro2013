@@ -526,5 +526,58 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 
+/**
+ * 首页弹出广告设置 开关和天数
+ */
+
+add_action('admin_init', 'ozh_sampleoptions_init' );
+add_action('admin_menu', 'ozh_sampleoptions_add_page');
+
+// Init plugin options to white list our options
+function ozh_sampleoptions_init(){
+	register_setting( 'ozh_sampleoptions_options', 'ozh_sample', 'ozh_sampleoptions_validate' );
+}
+
+// Add menu page
+function ozh_sampleoptions_add_page() {
+	add_options_page('首页弹出广告设置', '首页弹出广告设置', 'manage_options', 'ozh_sampleoptions', 'ozh_sampleoptions_do_page');
+}
+
+// Draw the menu page itself
+function ozh_sampleoptions_do_page() {
+	?>
+	<div class="wrap">
+		<h2>首页弹出广告设置</h2>
+		<form method="post" action="options.php">
+			<?php settings_fields('ozh_sampleoptions_options'); ?>
+			<?php $options = get_option('ozh_sample'); ?>
+			<table class="form-table">
+				<tr valign="top"><th scope="row">是否开启</th>
+					<td><input name="ozh_sample[enabled]" type="checkbox" value="1" <?php checked('1', $options['enabled']); ?> /></td>
+				</tr>
+				<tr valign="top"><th scope="row">有效间隔</th>
+					<td><input type="text" name="ozh_sample[duration]" value="<?php echo $options['duration']; ?>" size="5"/>天</td>
+				</tr>
+			</table>
+			<p class="submit">
+			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+			</p>
+		</form>
+	</div>
+	<?php	
+}
+
+// Sanitize and validate input. Accepts an array, return a sanitized array.
+function ozh_sampleoptions_validate($input) {
+	// Our first value is either 0 or 1
+	$input['enabled'] = ( $input['enabled'] == 1 ? 1 : 0 );
+	
+	// Say our second option must be safe text with no HTML tags
+	$input['duration'] =  wp_filter_nohtml_kses($input['duration']);
+	
+	return $input;
+}
+
+
 
 
