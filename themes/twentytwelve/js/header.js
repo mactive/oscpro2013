@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
 		}
 	);
 
-	$('li#menu-item-5931').append("<i class='unread radius_20px'>1</i>");
+	$('li[id^="menu-item"]').find('a[title="SPECIAL"]').parent().append("<i class='unread radius_20px'>1</i>");
 
 });
 
