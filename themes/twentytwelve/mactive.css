@@ -232,10 +232,17 @@ a.black_block{
 }
 a.black_block:hover{background: #eee;}
 
+.full-width{
+}
+
+.full-width ul.show_case{
+	width: 100% !important;
+}
 ul.show_case{
 	height: 414px; clear: both; 
 	margin-top: 0px; float: left;
-	background: #ffffff; width: 765px;
+	background: #ffffff; 
+	width: 765px;
 	box-shadow: 0 2px 3px #ccc;
 }
 ul.show_case li{

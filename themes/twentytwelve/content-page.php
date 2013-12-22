@@ -30,3 +30,10 @@
 			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
+
+
+	<?php if ( is_active_sidebar( 'sidebar-6' ) ) : ?>
+		<div id="secondary full-width">
+			<?php dynamic_sidebar( 'sidebar-6' ); ?>
+		</div><!-- #secondary -->
+	<?php endif; ?>
