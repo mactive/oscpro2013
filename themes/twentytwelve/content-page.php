@@ -33,7 +33,7 @@
 
 
 	<?php if ( is_active_sidebar( 'sidebar-6' ) ) : ?>
-		<div id="secondary full-width">
+		<div id="secondary">
 			<?php dynamic_sidebar( 'sidebar-6' ); ?>
 		</div><!-- #secondary -->
 	<?php endif; ?>

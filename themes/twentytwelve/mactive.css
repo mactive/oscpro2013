@@ -237,7 +237,9 @@ a.black_block:hover{background: #eee;}
 
 .full-width ul.show_case{
 	width: 100% !important;
+	height: auto !important;
 }
+
 ul.show_case{
 	height: 414px; clear: both; 
 	margin-top: 0px; float: left;
@@ -952,4 +954,8 @@ li.block a{
 span.block:hover, li.block:hover{
 	background: #f0f0f0;
 	box-shadow:inset 0 1px #f6f6f6;
+}
+.hide,  .hidden{
+	display: none !important;
+}
 }

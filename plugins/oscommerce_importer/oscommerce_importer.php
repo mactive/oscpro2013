@@ -70,6 +70,15 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "Whyosc_Widge
 
 
 /*
+ * Widget top_brand
+ * 页头或者页脚的产品显示
+ */
+require_once( 'classes/class-widget-multiline-showcase.php' );
+add_action( 'widgets_init', create_function( '', 'register_widget( "MultilineShowcase_Widget" );' ) );
+
+/*
+
+/*
  * Widget very big
  * 横贯全页面面 随机展示大图
  */
