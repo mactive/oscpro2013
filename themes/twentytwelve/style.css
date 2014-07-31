@@ -488,9 +488,11 @@ body {
 	text-rendering: optimizeLegibility;
 	color: #444;
 }
+/*
 body.custom-font-enabled {
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+*/
 a {
 	outline: none;
 	color: #21759b;
