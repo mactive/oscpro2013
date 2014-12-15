@@ -19,7 +19,7 @@
 		<div class="footer_cell" style="width:41% !important;margin-left:1% !important;">
 			<h4>销售咨询<br>Sales Services</h4>
 			<p>	电话 Tel：010-81596084-8001<br>                    
-				手机 Mob：13720028098 / 15901159960   <br>                     
+				手机 Mob：13720028098   <br>                     
 				电邮 E-mail：Sales@osc-pro.com       <br>                            
 				传真 Fax：010-81596084-8003            <br>  
 				地址 Address：北京市通州区北苑路天时名苑5-2-1401<br>
