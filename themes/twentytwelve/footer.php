@@ -40,7 +40,6 @@
 		<div class="footer_cell" style="width:22% !important;margin:0 !important;">
 			<h4>技术支持<br>  Technical Support</h4>
 			<p>	电话Tel：010-81596084-8001<br> 
-				手机Mob：15901159960<br>
 				电邮 E-mail：<a href="mailto:support@osc-pro.com?subject=技术支持" target="_blank">support@osc-pro.com</a>
 			</p>
 		</div>
